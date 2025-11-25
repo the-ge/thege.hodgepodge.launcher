@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name=""/>
+    <group name="Behavior">
+        <entry key="isAlphaSorted" type="bool">
+            <default>false</default>
+        </entry>
+        <entry key="isNewHighlighted" type="bool">
+            <default>true</default>
+        </entry>
+        <entry key="isUpdateOnHover" type="bool">
+            <default>false</default>
+        </entry>
+        <entry key="appNameFormat" type="int">
+            <default>2</default>
+        </entry>
+        <entry key="startWith" type="int">
+            <default>0</default>
+        </entry>
+        <entry key="powerActions" type="stringlist">
+            <default>suspend,hibernate,reboot,shutdown</default>
+        </entry>
+        <entry key="sessionActions" type="stringlist">
+            <default>lock-screen,logout,save-session,switch-user</default>
+        </entry>
+        <entry key="isPowerVisible" type="bool">
+            <default>true</default>
+        </entry>
+        <entry key="isSessionVisible" type="bool">
+            <default>false</default>
+        </entry>
+        <entry key="hasToolbarCaptions" type="bool">
+            <default>false</default>
+        </entry>
+        <entry key="isAppletPinned" type="bool">
+            <default>false</default>
+        </entry>
+        <entry key="favoritesPortedToKAstats" type="bool">
+            <default>false</default>
+        </entry>
+        <entry key="systemApplications" type="stringlist">
+            <default>systemsettings.desktop,org.kde.kinfocenter.desktop,org.kde.discover.desktop</default>
+        </entry>
+        <entry key="sidebarActions" type="stringlist">
+            <default>preferred://browser,org.kde.kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,org.kde.discover.desktop</default>
+        </entry>
+    </group>
+    <group name="Appearance">
+        <entry name="isPaneOrderReversed" type="bool">
+            <default>false</default>
+        </entry>
+        <entry name="isListCompact" type="bool">
+            <default>false</default>
+        </entry>
+        <entry name="launcherIcon" type="string">
+            <default>start-here-kde-symbolic</default>
+        </entry>
+        <entry name="launcherIconText" type="string">
+            <default></default>
+        </entry>
+        <entry name="userIconSize" type="int">
+            <default>3</default>
+        </entry>
+        <entry name="gridIconSize" type="int">
+            <default>3</default>
+        </entry>
+        <entry name="listIconSize" type="int">
+            <default>2</default>
+        </entry>
+        <entry name="favoritesLayout" type="int">
+            <default>0</default>
+        </entry>
+        <entry name="appsLayout" type="int">
+            <default>1</default>
+        </entry>
+        <entry name="separatorLineWidth" type="int">
+            <default>1</default>
+            <min>0</min>
+            <max>10</max>
+        </entry>
+        <entry name="separatorLineColor" type="string">
+            <default>#15ffffff</default>
+        </entry>
+    </group>
+</kcfg>
