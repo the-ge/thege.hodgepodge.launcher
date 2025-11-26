@@ -170,7 +170,7 @@ KCM {
             rightActions: QQC.Action {
                 icon.name: "edit-clear"
                 enabled: launcherIconText.text !== ""
-                text: Global.i18nContext.i18nc("@action:button", "Reset menu label")
+                text: Global.i18nContext.i18nc("@action:button", "Remove launcher icon text")
                 onTriggered: {
                     launcherIconText.clear()
                     root.cfg_launcherIconText = ""
@@ -183,7 +183,7 @@ KCM {
             Layout.fillWidth: true
             Layout.maximumWidth: Kirigami.Units.gridUnit * 25
             visible: Plasmoid.formFactor === PCore.Types.Vertical // qmllint disable unqualified
-            text: Global.i18nContext.i18nc("@info", "A text label cannot be set when the Panel is vertical.")
+            text: Global.i18nContext.i18nc("@info", "An icon text cannot be set when the launcher's container is vertical.")
             wrapMode: Text.Wrap
             font: Kirigami.Theme.smallFont
         }
@@ -193,7 +193,7 @@ KCM {
         }
 
         RowLayout { // userIconSize
-            Kirigami.FormData.label: Global.i18nContext.i18n("User icon size:")
+            Kirigami.FormData.label: Global.i18nContext.i18n("User avatar size:")
             QQC.ComboBox {
                 id: userIconSize
                 model: Global.iconSizes
@@ -226,7 +226,7 @@ KCM {
         }
 
         KCMNote {
-            text: Global.i18nContext.i18nc("@info:userIconSize", "The size of the header user icon.")
+            text: Global.i18nContext.i18nc("@info:userIconSize", "The size of the user avatar located in the launcher header.")
         }
 
         Item {
