@@ -85,7 +85,7 @@ KCM {
         }
 
         KCMNote {
-            text: Global.i18nContext.i18nc("@info:startWith", "Select what is visible when opened.")
+            text: Global.i18nContext.i18nc("@info:startWith", "Select what is first visible when the launcher is opened.")
         }
 
         QQC.ComboBox { // appNameFormat
@@ -147,7 +147,7 @@ KCM {
                     source: 'dialog-warning'
                 }
                 QQC.Label {
-                    text: Global.i18nContext.i18n("Clicking 'OK' will reset the settings.")
+                    text: Global.i18nContext.i18n("Clicking 'OK' will reset the launcher settings.")
                     font.bold: true
                     wrapMode: Text.WordWrap
                 }
