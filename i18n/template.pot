@@ -1,0 +1,425 @@
+# Translation of Hodgepodge Application Launcher (thege.hodgepodge.launcher) in LANGUAGE
+# Copyright (C) 2025 Gabriel Tenita
+# This file is distributed under the same license as the thege.hodgepodge.launcher package.
+# Gabriel Tenita <g1704578400@tenita.eu>, 2025
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: thege.hodgepodge.launcher\n"
+"Report-Msgid-Bugs-To: https://github.com/the-ge/thege.hodgepodge.launcher/issues\n"
+"POT-Creation-Date: 2025-11-26 21:59+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../contents/config/config.qml
+#, kde-format
+msgid "Behavior"
+msgstr ""
+
+#: ../contents/config/config.qml
+#, kde-format
+msgid "Appearance"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAbout.qml
+#, kde-format
+msgid "Report a Bug…"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "Sidebar position:"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "Left"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "Right"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "List style:"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "Normal"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "Compact"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+msgid "Disabled in Touch Mode"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgctxt "@info:isListCompact"
+msgid "Normal: two rows, compact: one row."
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "Launcher icon:"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgctxt "@action:button"
+msgid "Change Application Launcher's icon"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Current icon is %1. Click to open menu to change the current icon or reset to the default icon."
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Icon name is \"%1\""
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose an icon for Application Launcher"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Reset to default icon"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Launcher icon text:"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label next to the launcher icon..."
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove launcher icon text"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgctxt "@info"
+msgid "An icon text cannot be set when the launcher's container is vertical."
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "User avatar size:"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "px"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "Grid icons size:"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "List icons size:"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgctxt "@info:userIconSize"
+msgid "The size of the user avatar located in the launcher header."
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "Favorites layout:"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "Grid"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "List"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "Applications layout:"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "Separator lines width:"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "Separator lines color:"
+msgstr ""
+
+#: ../contents/ui/Config/KCMAppearance.qml
+#, kde-format
+msgid "Separator lines color"
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgid "Always sort applications alphabetically"
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgid "Highlight new apps"
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgid "Update main panel when hovering over sidebar categories"
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgctxt "@info:isUpdateOnHover"
+msgid "If unchecked, the apps in the main panel will be updated when clicking (instead of hovering) on a sidebar category."
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgctxt "@action:button opens plasmasearch kcm"
+msgid "Configure Search Plugins…"
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgid "Open launcher in:"
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgctxt "@info:startWith"
+msgid "Select what is first visible when the launcher is opened."
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgid "Show applications as:"
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgid "Name only"
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgid "Description only"
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgid "Name (Description)"
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgid "Description (Name)"
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgid "Show buttons for:"
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgid "Power actions"
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgid "Session actions"
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgctxt "@info:isPowerVisible,isSessionVisible"
+msgid "If unchecked or not enough space, buttons will move to the 'Power/Session' menu."
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgid "Show button captions in the Power/Session toolbar"
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgid "Reset configuration"
+msgstr ""
+
+#: ../contents/ui/Config/KCMBehavior.qml
+#, kde-format
+msgid "Clicking 'OK' will reset the launcher settings."
+msgstr ""
+
+#: ../contents/ui/Config/KCMShortcuts.qml
+#, kde-format
+msgid "Shortcuts"
+msgstr ""
+
+#: ../contents/ui/Config/KCMShortcuts.qml
+#, kde-format
+msgid "This shortcut will activate the applet as though it had been clicked."
+msgstr ""
+
+#: ../contents/ui/FullRepresentationHeader.qml
+#, kde-format
+msgid "Open user settings"
+msgstr ""
+
+#: ../contents/ui/FullRepresentationHeader.qml
+#, kde-format
+msgid "Keep Open"
+msgstr ""
+
+#: ../contents/ui/FullRepresentation.qml
+#, kde-format
+msgctxt "@info:status"
+msgid "No matches"
+msgstr ""
+
+#: ../contents/ui/Helper/Global.qml
+#, kde-format
+msgid "Favorites"
+msgstr ""
+
+#: ../contents/ui/Helper/Global.qml
+#, kde-format
+msgid "Apps"
+msgstr ""
+
+#: ../contents/ui/Helper/Global.qml
+#, kde-format
+msgid "All Apps"
+msgstr ""
+
+#: ../contents/ui/Helper/Global.qml
+#, kde-format
+msgid "Places"
+msgstr ""
+
+#: ../contents/ui/Helper/Tools.js
+#, kde-format
+msgid "Remove from Favorites"
+msgstr ""
+
+#: ../contents/ui/Helper/Tools.js
+#, kde-format
+msgid "Add to Favorites"
+msgstr ""
+
+#: ../contents/ui/Helper/Tools.js
+#, kde-format
+msgid "On All Activities"
+msgstr ""
+
+#: ../contents/ui/Helper/Tools.js
+#, kde-format
+msgid "On the Current Activity"
+msgstr ""
+
+#: ../contents/ui/Helper/Tools.js
+#, kde-format
+msgid "Show in Favorites"
+msgstr ""
+
+#: ../contents/ui/main.qml
+#, kde-format
+msgid "Edit Applications…"
+msgstr ""
+
+#: ../contents/ui/Page/PageFooterLeaveButtons.qml
+#, kde-format
+msgid "Power/Session"
+msgstr ""
+
+#: ../contents/ui/Page/PageFooterLeaveButtons.qml
+#, kde-format
+msgid "Session"
+msgstr ""
+
+#: ../contents/ui/Page/PageFooterLeaveButtons.qml
+#, kde-format
+msgid "Power"
+msgstr ""
+
+#: ../contents/ui/Page/PageFooterLeaveButtons.qml
+#, kde-format
+msgid "More"
+msgstr ""
+
+#: ../contents/ui/Page/PlacesPage.qml
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Computer"
+msgstr ""
+
+#: ../contents/ui/Page/PlacesPage.qml
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "History"
+msgstr ""
+
+#: ../contents/ui/Page/PlacesPage.qml
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Frequently Used"
+msgstr ""
+
+#: ../contents/ui/View/KickoffGridView.qml
+#, kde-format
+msgid "Grid with %1 rows, %2 columns"
+msgstr ""
