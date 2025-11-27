@@ -6,8 +6,6 @@
 
 
 set -eEu
-# shellcheck source=/media/sync/var/linux/bin/xtra/.env-checks
-. .events
 
 
 help()
@@ -279,7 +277,10 @@ main()
             fi
             ;;
 
-         *) logErrorAndExit "Unsupported option: $1"; help;;
+         *) 
+            echo -e "  🚨 $1" >&2
+            exit 1
+            ;;
     esac
 }
 
