@@ -278,7 +278,8 @@ main()
             ;;
 
          *) 
-            echo -e "  🚨 $1" >&2
+            echo -e "🚨 Unsupported option: $1" >&2
+            help
             exit 1
             ;;
     esac
