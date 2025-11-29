@@ -269,25 +269,46 @@ KCM {
             Kirigami.FormData.isSection: true
         }
 
-        RowLayout { // separatorLineWidth
-            Kirigami.FormData.label: i18n("Separator lines width:")
-            QQC.SpinBox {
-                id: separatorLineWidth
-                from: 0
-                to: 10
-                editable: false
-                // TODO get min and max from main.xml
-            }
-            QQC.Label {
-                text: i18n("px")
+        RowLayout {
+            Kirigami.FormData.label: i18n("Separator lines:")
+            ColumnLayout {
+                RowLayout { // separatorLineWidth
+                    QQC.Label {
+                        text: i18n("Width:")
+                    }
+                    QQC.SpinBox {
+                        id: separatorLineWidth
+                        from: 0
+                        to: 10
+                        editable: false
+                        // TODO get min and max from main.xml
+                    }
+                    QQC.Label {
+                        text: i18n("px")
+                    }
+                }
+                RowLayout { // separatorLineColor
+                    QQC.Label {
+                        text: i18n("Color:")
+                    }
+                    KQC.ColorButton {
+                        id: separatorLineColor
+                        dialogTitle: i18n("Separator lines color")
+                        color: root.cfg_separatorLineColorDefault
+                        showAlphaChannel: true
+                        onAccepted: root.separatorLineColor = color
+                    }
+                }
             }
             KSvg.FrameSvgItem {
                 imagePath: "widgets/background"
                 readonly property int blurWidth: 7
-                Layout.fillHeight: true
-                Layout.minimumWidth: parent.height * 2 + blurWidth * 3
-                Layout.topMargin: blurWidth * -1
-                Layout.bottomMargin: - parent.height * 1 - blurWidth * 2
+                implicitHeight: Kirigami.Units.gridUnit * 4
+                implicitWidth: Kirigami.Units.gridUnit * 4
+                //Layout.fillHeight: true
+                //Layout.minimumWidth: parent.height * 2 + blurWidth * 3
+                //Layout.topMargin: blurWidth * -1
+                //Layout.bottomMargin: - parent.height * 1 - blurWidth * 2
                 Rectangle {
                     color: root.cfg_separatorLineColor
                     implicitWidth: root.cfg_separatorLineWidth
@@ -296,17 +317,5 @@ KCM {
                 }
             }
         }
-
-        RowLayout { // separatorLineColor
-            Kirigami.FormData.label: i18n("Separator lines color:")
-            KQC.ColorButton {
-                id: separatorLineColor
-                dialogTitle: i18n("Separator lines color")
-                color: root.cfg_separatorLineColorDefault
-                showAlphaChannel: true
-                onAccepted: root.separatorLineColor = color
-            }
-        }
-
     }
 }
