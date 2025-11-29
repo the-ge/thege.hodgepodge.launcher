@@ -1,0 +1,47 @@
+#!/bin/bash
+# Version: 23
+# https://techbase.kde.org/Development/Tutorials/Localization/i18n_Build_Systems
+# https://techbase.kde.org/Development/Tutorials/Localization/i18n_Build_Systems/Outside_KDE_repositories
+# https://invent.kde.org/sysadmin/l10n-scripty/-/blob/master/extract-messages.sh
+#
+# Step 1: `./bin/i18n extract` to build the i18n template (template.pot)
+# Step 2: `./bin/i18n compile` to compile the i18n catalog (i.e. ro.po, de.po, etc.)
+
+
+
+set -eEu
+. "$( dirname "$0" )/.i18n"
+
+
+main()
+{
+    local lang="${1:-}" pot poFile result
+
+    [ -n "$lang" ] || {
+        hint 0 'Usage:' $LINENO
+        warn 1 "$0 LANGUAGE"
+        hint 0 'where LANGUAGE is the language ISO code, i.e. en, en-UK, ca@valencia.'
+        panic 0 'Missing language argument!'
+    }
+
+    hint 0 "Initializing new language '$lang'..." $LINENO
+
+    local -A data=()
+    store-metadata-in 'data'
+    data['year']="$(date +%Y)"
+    potFile="${data['pot']}"
+    poPath="${data['poPath']}"
+    poFile="$poPath/$lang.po"
+
+    cd "$poPath"  || panic 0 "Could not enter '${data['poPath']}'" $LINENO
+
+    [ -f "$potFile" ] || panic 0 "Template file '$potFile' not found. Run i18n-extract first" $LINENO
+
+    [ -f "$poFile" ] && { warn 0 "The '$poFile' file already exists"; exit 1; }
+
+    result=$( msginit --no-translator --no-wrap --input="$potFile" --locale="$lang" --output-file="$poFile" 2>&1 ) || panic 0 "$result" $LINENO
+
+    shout 0 "...done initializing new language '$lang' ($poFile)." $LINENO
+}
+
+main "$@"

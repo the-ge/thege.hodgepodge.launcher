@@ -1,0 +1,142 @@
+#!/bin/bash
+# Version: 23
+# https://techbase.kde.org/Development/Tutorials/Localization/i18n_Build_Systems
+# https://techbase.kde.org/Development/Tutorials/Localization/i18n_Build_Systems/Outside_KDE_repositories
+# https://invent.kde.org/sysadmin/l10n-scripty/-/blob/master/extract-messages.sh
+#
+# `./bin/i18n-extract` to build the i18n template (template.pot)
+# `./bin/i18n-compile` to compile the i18n catalog (i.e. ro.po, de.po, etc.)
+
+
+set -eEu
+. "$( dirname "$0" )/.i18n"
+
+
+extract-strings()
+{
+    local -n data="$1"
+    local tmpPath workPot tmpPot listFile
+    tmpPath="${data['path']}/../tmp"
+    tmpPot="$tmpPath/template.pot.tmp"
+    listFile="$tmpPath/infiles.list"
+
+    hint 0 "Extracting translation strings..." $LINENO
+    mkdir -p "$tmpPath"
+    find "${data['path']}" -name '*.cpp' -o -name '*.h' -o -name '*.c' -o -name '*.qml' -o -name '*.js' | sort > "$listFile"
+
+    # See Ki18n's extract-messages.sh for a full example:
+    # https://invent.kde.org/sysadmin/l10n-scripty/-/blob/master/extract-messages.sh#L25
+    # The -kN_ and -kaliasLocale keywords are mentioned in the Outside_KDE_repositories wiki.
+    # We don't need -kN_ since we don't use intltool-extract but might as well keep it.
+    # I have no idea what -kaliasLocale is used for. Googling aliasLocale found only listed kde1 code.
+    # We don't need to parse -ki18nd since that'll extract messages from other domains.
+    error=$( xgettext \
+        --package-name="${data['id']}" \
+        --msgid-bugs-address="${data['issuesUrl']}" \
+        --directory="${data['path']}" \
+        --directory="${data['poPath']}" \
+        --files-from="$listFile" \
+        --copyright-holder="${data['author']} <${data['email']}>" \
+        --from-code=UTF-8 \
+        --width=400 \
+        --add-location=file \
+        --c++ \
+        --kde \
+        -ci18n \
+        -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 \
+        -kki18n:1 -kki18nc:1c,2 -kki18np:1,2 -kki18ncp:1c,2,3 \
+        -ktr2i18n:1 -kI18N_NOOP:1  -kI18N_NOOP2:1c,2 \
+        -kN_:1 \
+        -kaliasLocale \
+        --output="$tmpPot" 2>&1 )\
+    || panic 0 "$error" $LINENO
+
+    update-i18n-metadata "$tmpPot" 'data'
+    update-template "${data['pot']}" "$tmpPot"
+    rm -r "$tmpPath"
+    shout 0 "...done extracting translation strings." $LINENO
+}
+
+update-template()
+{
+    local workPot="$1" tmpPot="$2" workPotName tmpPotName
+    workPotName="$( basename "$workPot")"
+    tmpPotName="$( basename "$tmpPot")"
+
+    if [ -f "$workPot" ]; then
+        local nowDate oldDate changes
+        nowDate="$( grep "POT-Creation-Date:" "$tmpPot" | sed 's/.\{3\}$//' )"
+        oldDate="$( grep "POT-Creation-Date:" "$workPot" | sed 's/.\{3\}$//' )"
+
+        sed -i 's/'"$nowDate"'/'"$oldDate"'/' "$tmpPot"
+
+        # HACK diff returns exit code 1 when finds any difference. The ` || true` part mitigates that.
+        changes="$( diff "$workPot" "$tmpPot" )" || true
+        if [ -n "$changes" ]; then
+            sed -i 's/'"$oldDate"'/'"$nowDate"'/' "$tmpPot"
+            mv "$tmpPot" "$workPot"
+            addedKeys="$( echo "$changes" | grep "> msgid" | cut -c 9- | sort )"
+            removedKeys="$( echo "$changes" | grep "< msgid" | cut -c 9- | sort )"
+            if [ -n "$addedKeys" ]; then
+                shout 1 "Translation strings newly added to code:" $LINENO
+                shout 2 "$addedKeys"
+            fi
+            if [ -n "$removedKeys" ]; then
+                warn 1 "Translation strings removed from code:" $LINENO
+                warn 2 "$removedKeys"
+                warn 1 "Check at the end of .po files for obsolete strings" $LINENO
+            fi
+        else
+            rm "$tmpPot"
+            hint 1 "No changes in '$workPotName', removed '$tmpPotName'." $LINENO
+        fi
+    else
+        # template.pot didn't already exist
+        mv "$tmpPot" "$workPot"
+        hint 1 "No '$workPotName', renamed '$tmpPotName' to '$workPotName'." $LINENO
+    fi
+}
+
+update-translations()
+{
+    local translations="$1" template="$2" output="$3"
+
+    msgmerge \
+       --width=400 \
+       --add-location=file \
+       --no-fuzzy-matching \
+       --quiet \
+       --output-file="$output" \
+       "$translations" "$template"
+}
+
+main()
+{
+    check-gettext-command 'xgettext'
+
+    local tmpPot workPot
+
+    local -A podata=()
+    store-metadata-in 'podata'
+    podata['year']="$(date +%Y)"
+
+    mkdir -p "${podata['poPath']}"
+    extract-strings 'podata'
+
+    hint 0 "Merging translation strings..." $LINENO
+    cd "${podata['poPath']}" || panic 0 "Could not enter '${podata['poPath']}'" $LINENO
+    for poFile in $( find . -name '*.po' | sort ); do
+        local locale tmpfile="$poFile.tmp"
+        locale="$( basename "${poFile%.*}" )"
+
+        cp "$poFile" "$tmpfile"
+        update-translations "$poFile" "${podata['pot']}" "$tmpfile"
+        update-i18n-metadata "$tmpfile" 'podata' "$locale"
+        mv "$tmpfile" "$poFile"
+
+        hint 1 "Updated $( basename "$poFile" )." $LINENO
+    done
+    shout 0 "...done merging translation strings." $LINENO
+}
+
+main

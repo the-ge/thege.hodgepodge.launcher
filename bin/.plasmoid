@@ -1,0 +1,31 @@
+#!/bin/bash
+
+
+help()
+{
+    cat << HELP
+
+Plasmoid utilities  --  install/upgrade/uninstall
+
+USAGE:
+    plasmoid --install
+    plasmoid --upgrade
+    plasmoid --uninstall
+
+HELP
+}
+
+plasmoid()
+{
+    cd "$( dirname "$0" )/../src" || { echo 'ERROR: /src/ directory not found!'; exit 1; } # go to the metadata.json location
+
+    case "$1" in
+        -h|--help)     help ;;
+        '--install')   kpackagetool6 --type Plasma/Applet --install . ;;
+        '--upgrade')   kpackagetool6 --type Plasma/Applet --upgrade . ;;
+        '--uninstall') kpackagetool6 --type Plasma/Applet --remove 'thege.hodgepodge.launcher' ;;
+         *)            help; kpackagetool6 --type Plasma/Applet --show 'thege.hodgepodge.launcher'; exit 0 ;;
+    esac
+
+    systemctl --user restart plasma-plasmashell.service
+}

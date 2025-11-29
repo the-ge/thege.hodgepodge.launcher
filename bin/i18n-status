@@ -1,0 +1,136 @@
+#!/bin/bash
+
+
+set -eEu
+. "$( dirname "$0" )/.i18n"
+
+
+main ()
+{
+    local translatableCount potFile output="${1:-}"
+    local -A data=() totalMissing=()
+    store-metadata-in 'data'
+
+    translatableCount="$(grep -Pzo 'msgstr ""\n(\n|$)' "${data['pot']}" | grep -c 'msgstr ""')"
+    potFile="$( basename "${data['pot']}" )"
+
+    local -A th=(
+        ['locale']='Locale'         # locale
+        ['total']='Translatable'    # translatableCount
+        ['count']='Translated'      # translatedCount
+        ['ratio']='% translated'    # translatedRatio
+    )
+    local -A len=(
+        ['locale']=${#th['locale']} # locale
+        ['total']=${#th['total']}   # translatableCount
+        ['count']=${#th['count']}   # translatedCount
+        ['ratio']=${#th['ratio']}   # translatedRatio
+    )
+    local -a locales=() states=() totals=() counts=() ratios=()
+    local i=0 tips devRoot poPaths poPath
+    devRoot="$( realpath "$( dirname "$0" )/.." )" || panic 0 'Development root not found.' $LINENO
+    poPaths="$( find "${data['poPath']}" -name '*.po' | sort )"
+    for poPath in $poPaths; do
+        local poFile locale translatablePoCount missing missingCount row text
+        poFile="$( basename "$poPath" )"
+        locale="$( basename "$poPath" '.po' )"
+        translatablePoCount="$( grep -Ec '^msgid ".+"' "$poPath" )"
+
+        # HACK pcregrep returns exit code 1 if no match found. The ` || missing=''` part mitigates that.
+        missing="$( pcregrep -Mno1 '^msgid "(.+?)".*?\nmsgstr ""' "$poPath" )" || missing=''
+        if [ -z "$missing" ]; then
+            missingCount=0
+        else
+            missingCount="${missing//[^$'\n']/}"
+            missingCount=$(( ${#missingCount} + 1 ))
+            totalMissing["$poFile:${missing%%:*}"]="${missing#*.}"
+        fi
+        translatedCount=$(( translatableCount - missingCount ))
+        translatedRatio="$( LC_NUMERIC='en_US.UTF-8' printf '%5.2f%%' "$( bc <<< "scale=4; 100 * $translatedCount / $translatableCount" )" )"
+
+        locales["$i"]="$locale"
+        (( missingCount > 0 )) && states["$i"]='⚠️ Incomplete.' || states["$i"]=''
+        totals["$i"]="$translatableCount"
+        counts["$i"]="$translatedCount"
+        ratios["$i"]="$translatedRatio"
+        if (( translatableCount != translatablePoCount )); then
+            states["$i"]+="⚠️ ${states["$i"]} Translatable mismatch - $potFile:$translatableCount / $poFile:$translatablePoCount"
+        fi
+        while IFS= read -r row; do
+            if [[ $row =~ ^([0-9]+):msgid(.+)$ ]]; then
+                tips+="\n$poPath:$(( BASH_REMATCH[1] + 1 ))\nmsgid ${BASH_REMATCH[2]}\n"
+            else
+                tips+="$row\n"
+            fi
+        done < <( pcregrep -Mno 'msgid "(.+?)([[:punct:]])"\s*\nmsgstr "(?!.*\2"$).*"' "$poPath" || true )
+
+        (( ${#locale}            > len['locale'] )) && len['locale']=${#locale}
+        (( ${#translatableCount} > len['total']  )) && len['total']=${#translatableCount}
+        (( ${#translatedCount}   > len['count']  )) && len['count']=${#translatedCount}
+        (( ${#translatedRatio}   > len['ratio']  )) && len['ratio']=${#translatedRatio}
+
+        (( ++i ))
+    done
+
+    local separator statusReport
+    separator+='+'
+    for max in "${len[@]}"; do
+        for i in $( seq 1 "$max" ); do separator+='-'; done
+        separator+='--+' # 2 more dashes to account for the padding spaces in $format
+    done
+
+    separator+="\n"
+    format="| %-${len['locale']}s | %${len['total']}s | %${len['count']}s | %${len['ratio']}s |"
+
+    statusReport+="$separator"
+    # shellcheck disable=2059
+    statusReport+="$( printf "$format" "${th['locale']}" "${th['total']}" "${th['count']}" "${th['ratio']}" )\n"
+    statusReport+="$separator"
+    for i in "${!locales[@]}"; do
+        # shellcheck disable=2059
+        statusReport+="$( printf "$format" "${locales["$i"]}" "${totals["$i"]}" "${counts["$i"]}" "${ratios["$i"]}" ) ${states["$i"]}\n"
+    done
+    statusReport+="$separator"
+
+    local h1Status='TRANSLATION STATUS' h1Alerts='TRANSLATION MISMATCHES' h1Missing='NOT TRANSLATED YET [file:line  string]'
+    case "$output" in
+        '--md')
+            local file
+            file="$devRoot/i18n-status.md"
+            echo -e "# ${data['name']}\n" > "$file"
+            echo -e "\n## PACKAGE\n" >> "$file"
+            echo -e "ID: ${data['id']}" >> "$file"
+            echo -e "Date: $( date +'%Y-%m-%d %H:%M:%S' )\n" >> "$file"
+            echo -e "\n## $h1Status\n" >> "$file"
+            echo -e "$statusReport" >> "$file"
+            if [ "${#totalMissing[@]}" -gt 0 ]; then
+                echo -e "## $h1Missing\n" >> "$file"
+                local prefix
+                prefix="${poPath//$devRoot}"
+                for lang in "${!totalMissing[@]}"; do
+                    # shellcheck disable=2001
+                    echo "${totalMissing["$lang"]}" | sed "s|^\([0-9]*\):\(.*\)|$prefix:\1  \"\2\"|" >> "$file"
+                done
+                echo
+            fi
+            [ -n "$tips" ] && echo -e "\n## $h1Alerts:\n$tips\n" >> "$file"
+            ;;
+        *)
+            echo "PACKAGE NAME    ${data['name']}"
+            echo "PACKAGE ID      ${data['id']}"
+            echo -e "\nTRANSLATION STATUS\n"
+            echo -e "$statusReport"
+            if [ "${#totalMissing[@]}" -gt 0 ]; then
+                echo -e "$h1Missing\n"
+                for lang in "${!totalMissing[@]}"; do
+                    # shellcheck disable=2001
+                    echo "${totalMissing["$lang"]}" | sed "s|^\([0-9]*\):\(.*\)|$poPath:\1  \"\2\"|"
+                done
+                echo
+            fi
+            [ -n "$tips" ] && echo -e "$h1Alerts:\n$tips"
+            ;;
+    esac
+}
+
+main "$@"

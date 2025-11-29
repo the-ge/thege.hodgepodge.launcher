@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -eEu
+. "$( dirname "$0" )/.plasmoid"
+
+plasmoid --uninstall
