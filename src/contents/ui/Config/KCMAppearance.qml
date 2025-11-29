@@ -43,44 +43,44 @@ KCM {
     Kirigami.FormLayout {
 
         RowLayout { // isPaneOrderReversed
-            Kirigami.FormData.label: Global.i18nContext.i18n("Sidebar position:")
+            Kirigami.FormData.label: i18n("Sidebar position:")
             QQC.RadioButton {
                 id: isPaneOrderReversedOff
-                text: Global.i18nContext.i18n("Left")
+                text: i18n("Left")
                 checked: root.cfg_isPaneOrderReversed === false
             }
             QQC.RadioButton {
                 id: isPaneOrderReversedOn
-                text: Global.i18nContext.i18n("Right")
+                text: i18n("Right")
                 checked: root.cfg_isPaneOrderReversed === true
             }
         }
 
         RowLayout { // isListCompact
             //Layout.columnSpan: 2
-            Kirigami.FormData.label: Global.i18nContext.i18n("List style:")
+            Kirigami.FormData.label: i18n("List style:")
             QQC.RadioButton {
                 id: isListNormal
-                text: Global.i18nContext.i18n("Normal")
+                text: i18n("Normal")
                 checked: !root.cfg_isListCompact
                 enabled: !Kirigami.Settings.tabletMode
                 onToggled: root.cfg_isListCompact = false
             }
             QQC.RadioButton {
                 id: isListCompact
-                text: Global.i18nContext.i18n("Compact")
+                text: i18n("Compact")
                 checked: root.cfg_isListCompact
                 enabled: !Kirigami.Settings.tabletMode
                 onToggled: root.cfg_isListCompact = true
             }
             KCMNote {
-                text: Global.i18nContext.i18nc("@info:usagetip under a checkbox when Touch Mode is on", "Disabled in Touch Mode")
+                text: i18nc("@info:usagetip under a checkbox when Touch Mode is on", "Disabled in Touch Mode")
                 visible: Kirigami.Settings.tabletMode
             }
         }
 
         KCMNote {
-            text: Global.i18nContext.i18nc("@info:isListCompact", "Normal: two rows, compact: one row.")
+            text: i18nc("@info:isListCompact", "Normal: two rows, compact: one row.")
         }
 
         Item {
@@ -88,16 +88,16 @@ KCM {
         }
 
         QQC.Button { // launcherIcon
-            Kirigami.FormData.label: Global.i18nContext.i18n("Launcher icon:")
+            Kirigami.FormData.label: i18n("Launcher icon:")
             id: launcherIcon
             implicitWidth: previewFrame.width
             implicitHeight: previewFrame.height
             hoverEnabled: true
-            Accessible.name: Global.i18nContext.i18nc("@action:button", "Change Application Launcher's icon")
-            Accessible.description: Global.i18nContext.i18nc("@info:whatsthis", "Current icon is %1. Click to open menu to change the current icon or reset to the default icon.", root.cfg_launcherIcon)
+            Accessible.name: i18nc("@action:button", "Change Application Launcher's icon")
+            Accessible.description: i18nc("@info:whatsthis", "Current icon is %1. Click to open menu to change the current icon or reset to the default icon.", root.cfg_launcherIcon)
             Accessible.role: Accessible.ButtonMenu
             QQC.ToolTip.delay: Kirigami.Units.toolTipDelay
-            QQC.ToolTip.text: Global.i18nContext.i18nc("@info:tooltip", "Icon name is \"%1\"", root.cfg_launcherIcon)
+            QQC.ToolTip.text: i18nc("@info:tooltip", "Icon name is \"%1\"", root.cfg_launcherIcon)
             QQC.ToolTip.visible: launcherIcon.hovered && root.cfg_launcherIcon.length > 0
 
             KIconThemes.IconDialog {
@@ -130,19 +130,19 @@ KCM {
                 y: parent.height
 
                 QQC.MenuItem {
-                    text: Global.i18nContext.i18nc("@item:inmenu Open icon chooser dialog", "Choose…")
+                    text: i18nc("@item:inmenu Open icon chooser dialog", "Choose…")
                     icon.name: "document-open-folder"
-                    Accessible.description: Global.i18nContext.i18nc("@info:whatsthis", "Choose an icon for Application Launcher")
+                    Accessible.description: i18nc("@info:whatsthis", "Choose an icon for Application Launcher")
                     onClicked: iconDialog.open()
                 }
                 QQC.MenuItem {
-                    text: Global.i18nContext.i18nc("@item:inmenu Reset icon to default", "Reset to default icon")
+                    text: i18nc("@item:inmenu Reset icon to default", "Reset to default icon")
                     icon.name: "edit-clear"
                     enabled: root.cfg_launcherIcon !== Tools.defaultIconName
                     onClicked: root.cfg_launcherIcon = Tools.defaultIconName
                 }
                 QQC.MenuItem {
-                    text: Global.i18nContext.i18nc("@action:inmenu", "Remove icon")
+                    text: i18nc("@action:inmenu", "Remove icon")
                     icon.name: "delete"
                     enabled: root.cfg_launcherIcon !== "" && launcherIconText.text && Plasmoid.formFactor !== PCore.Types.Vertical // qmllint disable unqualified
                     onClicked: root.cfg_launcherIcon = ""
@@ -155,9 +155,9 @@ KCM {
         Kirigami.ActionTextField { // launcherIconText
             id: launcherIconText
             enabled: Plasmoid.formFactor !== PCore.Types.Vertical // qmllint disable unqualified
-            Kirigami.FormData.label: Global.i18nContext.i18nc("@label:textbox", "Launcher icon text:")
+            Kirigami.FormData.label: i18nc("@label:textbox", "Launcher icon text:")
             text: root.cfg_launcherIconTextDefault
-            placeholderText: Global.i18nContext.i18nc("@info:placeholder", "Type here to add a text label next to the launcher icon...")
+            placeholderText: i18nc("@info:placeholder", "Type here to add a text label next to the launcher icon...")
             onTextEdited: {
                 root.cfg_launcherIconText = launcherIconText.text
                 // This is to make sure that we always have a icon if there is no text.
@@ -170,7 +170,7 @@ KCM {
             rightActions: QQC.Action {
                 icon.name: "edit-clear"
                 enabled: launcherIconText.text !== ""
-                text: Global.i18nContext.i18nc("@action:button", "Remove launcher icon text")
+                text: i18nc("@action:button", "Remove launcher icon text")
                 onTriggered: {
                     launcherIconText.clear()
                     root.cfg_launcherIconText = ""
@@ -183,7 +183,7 @@ KCM {
             Layout.fillWidth: true
             Layout.maximumWidth: Kirigami.Units.gridUnit * 25
             visible: Plasmoid.formFactor === PCore.Types.Vertical // qmllint disable unqualified
-            text: Global.i18nContext.i18nc("@info", "An icon text cannot be set when the launcher's container is vertical.")
+            text: i18nc("@info", "An icon text cannot be set when the launcher's container is vertical.")
             wrapMode: Text.Wrap
             font: Kirigami.Theme.smallFont
         }
@@ -193,40 +193,40 @@ KCM {
         }
 
         RowLayout { // userIconSize
-            Kirigami.FormData.label: Global.i18nContext.i18n("User avatar size:")
+            Kirigami.FormData.label: i18n("User avatar size:")
             QQC.ComboBox {
                 id: userIconSize
                 model: Global.iconSizes
             }
             QQC.Label {
-                text: Global.i18nContext.i18n("px")
+                text: i18n("px")
             }
         }
 
         RowLayout { // gridIconSize
-            Kirigami.FormData.label: Global.i18nContext.i18n("Grid icons size:")
+            Kirigami.FormData.label: i18n("Grid icons size:")
             QQC.ComboBox {
                 id: gridIconSize
                 model: Global.iconSizes
             }
             QQC.Label {
-                text: Global.i18nContext.i18n("px")
+                text: i18n("px")
             }
         }
 
         RowLayout { // listIconSize
-            Kirigami.FormData.label: Global.i18nContext.i18n("List icons size:")
+            Kirigami.FormData.label: i18n("List icons size:")
             QQC.ComboBox {
                 id: listIconSize
                 model: Global.iconSizes
             }
             QQC.Label {
-                text: Global.i18nContext.i18n("px")
+                text: i18n("px")
             }
         }
 
         KCMNote {
-            text: Global.i18nContext.i18nc("@info:userIconSize", "The size of the user avatar located in the launcher header.")
+            text: i18nc("@info:userIconSize", "The size of the user avatar located in the launcher header.")
         }
 
         Item {
@@ -234,32 +234,32 @@ KCM {
         }
 
         RowLayout {
-            Kirigami.FormData.label: Global.i18nContext.i18n("Favorites layout:")
+            Kirigami.FormData.label: i18n("Favorites layout:")
             QQC.RadioButton {
                 id: favoritesLayoutGrid
-                text: Global.i18nContext.i18n("Grid")
+                text: i18n("Grid")
                 checked: root.cfg_favoritesLayout === 0
                 onToggled: root.cfg_favoritesLayout = 0
             }
             QQC.RadioButton {
                 id: favoritesLayoutList
-                text: Global.i18nContext.i18n("List")
+                text: i18n("List")
                 checked: root.cfg_favoritesLayout === 1
                 onToggled: root.cfg_favoritesLayout = 1
             }
         }
 
         RowLayout { // appsLayout
-            Kirigami.FormData.label: Global.i18nContext.i18n("Applications layout:")
+            Kirigami.FormData.label: i18n("Applications layout:")
             QQC.RadioButton {
                 id: appsLayoutGrid
-                text: Global.i18nContext.i18n("Grid")
+                text: i18n("Grid")
                 checked: root.cfg_appsLayout === 0
                 onToggled: root.cfg_appsLayout = 0
             }
             QQC.RadioButton {
                 id: appsLayoutList
-                text: Global.i18nContext.i18n("List")
+                text: i18n("List")
                 checked: root.cfg_appsLayout === 1
                 onToggled: root.cfg_appsLayout = 1
             }
@@ -270,7 +270,7 @@ KCM {
         }
 
         RowLayout { // separatorLineWidth
-            Kirigami.FormData.label: Global.i18nContext.i18n("Separator lines width:")
+            Kirigami.FormData.label: i18n("Separator lines width:")
             QQC.SpinBox {
                 id: separatorLineWidth
                 from: 0
@@ -279,7 +279,7 @@ KCM {
                 // TODO get min and max from main.xml
             }
             QQC.Label {
-                text: Global.i18nContext.i18n("px")
+                text: i18n("px")
             }
             KSvg.FrameSvgItem {
                 imagePath: "widgets/background"
@@ -298,10 +298,10 @@ KCM {
         }
 
         RowLayout { // separatorLineColor
-            Kirigami.FormData.label: Global.i18nContext.i18n("Separator lines color:")
+            Kirigami.FormData.label: i18n("Separator lines color:")
             KQC.ColorButton {
                 id: separatorLineColor
-                dialogTitle: Global.i18nContext.i18n("Separator lines color")
+                dialogTitle: i18n("Separator lines color")
                 color: root.cfg_separatorLineColorDefault
                 showAlphaChannel: true
                 onAccepted: root.separatorLineColor = color

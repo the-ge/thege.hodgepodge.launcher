@@ -11,7 +11,6 @@ import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 import org.kde.plasma.plasma5support as P5Support
 import org.kde.plasma.private.kicker as Kicker // qmllint disable unused-imports
-import org.kde.private.kquickcontrols as PKQC
 
 import "../View"
 
@@ -36,14 +35,10 @@ Item {
     //END
 
     //BEGIN Reusable Objects
-    readonly property PKQC.TranslationContext i18nContext: PKQC.TranslationContext{
-        domain: "thege.hodpodge.launcher"
-    }
-
-    readonly property string favoritesLabel: i18nContext.i18n("Favorites")
-    readonly property string appsLabel: i18nContext.i18n("Apps")
-    readonly property string allAppsLabel: i18nContext.i18n("All Apps")
-    readonly property string placesLabel: i18nContext.i18n("Places")
+    readonly property string favoritesLabel: i18n("Favorites")
+    readonly property string appsLabel: i18n("Apps")
+    readonly property string allAppsLabel: i18n("All Apps")
+    readonly property string placesLabel: i18n("Places")
     property list<string> categories: [
         favoritesLabel, // index (cfg_startWith) 0
         allAppsLabel,   // index (cfg_startWith) 1

@@ -353,7 +353,7 @@ PlasmoidItem { // qmllint disable import
 
     Plasmoid.contextualActions: [
         PCore.Action {
-            text: Global.i18nContext.i18n("Edit Applications…")
+            text: i18n("Edit Applications…")
             icon.name: "kmenuedit"
             visible: Plasmoid.immutability !== PCore.Types.SystemImmutable
             onTriggered: processRunner.runMenuEditor()

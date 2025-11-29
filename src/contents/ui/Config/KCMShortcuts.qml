@@ -15,7 +15,7 @@ import org.kde.plasma.plasmoid // qmllint disable import
 KCM {
     id: root
 
-    title: i18nContext.i18n("Shortcuts")
+    title: i18n("Shortcuts")
 
     //signal configurationChanged
     //function saveConfig() {

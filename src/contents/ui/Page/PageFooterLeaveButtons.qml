@@ -23,8 +23,6 @@ import org.kde.kirigami as Kirigami
 import org.kde.kitemmodels as KItemModels
 import org.kde.plasma.plasmoid // qmllint disable import
 
-import "../Helper"
-
 RowLayout {
     id: root
 
@@ -182,10 +180,10 @@ RowLayout {
         icon.width: Kirigami.Units.iconSizes.smallMedium
         icon.height: Kirigami.Units.iconSizes.smallMedium
         property var overflowButtonData: [
-            {text: Global.i18nContext.i18n("Power/Session") , icon: "view-more-symbolic"},
-            {text: Global.i18nContext.i18n("Session"), icon: "system-log-out"},
-            {text: Global.i18nContext.i18n("Power"), icon: "system-shutdown"},
-            {text: Global.i18nContext.i18n("More") , icon: "view-more-symbolic"},
+            {text: i18n("Power/Session") , icon: "view-more-symbolic"},
+            {text: i18n("Session"), icon: "system-log-out"},
+            {text: i18n("Power"), icon: "system-shutdown"},
+            {text: i18n("More") , icon: "view-more-symbolic"},
         ][Plasmoid.configuration.isPowerVisible * 1 + Plasmoid.configuration.isSessionVisible * 2] // qmllint disable unqualified
         icon.name: overflowButtonData.icon
         text: root.view.hasToolbarCaptions ? overflowButtonData.text : ''

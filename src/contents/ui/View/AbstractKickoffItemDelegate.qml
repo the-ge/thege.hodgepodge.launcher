@@ -63,7 +63,7 @@ T.ItemDelegate {
 
         let actions = Array.from(model.actionList);
         const favoriteActions = Tools.createFavoriteActions(
-            Global.i18nContext.i18n, //i18n() function callback
+            i18n, //i18n() function callback
             view.model.favoritesModel,
             model.favoriteId,
         );

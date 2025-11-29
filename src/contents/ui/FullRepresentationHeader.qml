@@ -26,8 +26,6 @@ import org.kde.kcmutils as KCMU
 import org.kde.config as KConfig
 import org.kde.plasma.plasmoid // qmllint disable import
 
-import "Helper"
-
 PExtras.PlasmoidHeading {
     id: root
 
@@ -90,7 +88,7 @@ PExtras.PlasmoidHeading {
                     Layout.minimumWidth: height
                     Layout.maximumWidth: height
 
-                    text: Global.i18nContext.i18n("Open user settings")
+                    text: i18n("Open user settings")
                     name: kuser.fullName
 
                     // The icon property emits two signals in a row during which it
@@ -279,7 +277,7 @@ PExtras.PlasmoidHeading {
                     checkable: true
                     checked: Plasmoid.configuration.isAppletPinned // qmllint disable unqualified
                     icon.name: "window-pin"
-                    text: Global.i18nContext.i18n("Keep Open")
+                    text: i18n("Keep Open")
                     display: PComponents.ToolButton.IconOnly
                     PComponents.ToolTip.text: text
                     PComponents.ToolTip.delay: Kirigami.Units.toolTipDelay

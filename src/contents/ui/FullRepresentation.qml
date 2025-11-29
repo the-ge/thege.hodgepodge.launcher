@@ -24,7 +24,6 @@ import org.kde.plasma.plasmoid // qmllint disable import
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.extras as PExtras
 
-import "Helper"
 import "Page"
 import "View"
 
@@ -160,7 +159,7 @@ EmptyPage {
 
                         iconName: "edit-none"
                         opacity: 0
-                        text: Global.i18nContext.i18nc("@info:status", "No matches")
+                        text: i18nc("@info:status", "No matches")
 
                         Connections {
                             target: kickoff.runnerModel

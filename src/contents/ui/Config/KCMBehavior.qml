@@ -43,24 +43,24 @@ KCM {
     Kirigami.FormLayout {
         QQC.CheckBox { // isAlphaSorted
             id: isAlphaSorted
-            text: Global.i18nContext.i18n("Always sort applications alphabetically")
+            text: i18n("Always sort applications alphabetically")
         }
 
         QQC.CheckBox { // isNewHighlighted
             id: isNewHighlighted
             enabled: false
-            text: Global.i18nContext.i18n("Highlight new apps")
+            text: i18n("Highlight new apps")
         }
 
         RowLayout {
             QQC.CheckBox { // isUpdateOnHover
                 id: isUpdateOnHover
-                text: Global.i18nContext.i18n("Update main panel when hovering over sidebar categories")
+                text: i18n("Update main panel when hovering over sidebar categories")
             }
         }
 
         KCMNote {
-            text: Global.i18nContext.i18nc("@info:isUpdateOnHover", "If unchecked, the apps in the main panel will be updated when clicking (instead of hovering) on a sidebar category.")
+            text: i18nc("@info:isUpdateOnHover", "If unchecked, the apps in the main panel will be updated when clicking (instead of hovering) on a sidebar category.")
         }
 
         Item {
@@ -70,7 +70,7 @@ KCM {
         QQC.Button { // Configure Search Plugins
             enabled: KConfig.KAuthorized.authorizeControlModule("kcm_plasmasearch")
             icon.name: "settings-configure"
-            text: Global.i18nContext.i18nc("@action:button opens plasmasearch kcm", "Configure Search Plugins…")
+            text: i18nc("@action:button opens plasmasearch kcm", "Configure Search Plugins…")
             onClicked: KCMU.KCMLauncher.openSystemSettings("kcm_plasmasearch")
         }
 
@@ -79,23 +79,23 @@ KCM {
         }
 
         QQC.ComboBox { // startWith
-            Kirigami.FormData.label: Global.i18nContext.i18n("Open launcher in:")
+            Kirigami.FormData.label: i18n("Open launcher in:")
             id: startWith
             model: Global.categories
         }
 
         KCMNote {
-            text: Global.i18nContext.i18nc("@info:startWith", "Select what is first visible when the launcher is opened.")
+            text: i18nc("@info:startWith", "Select what is first visible when the launcher is opened.")
         }
 
         QQC.ComboBox { // appNameFormat
-            Kirigami.FormData.label: Global.i18nContext.i18n("Show applications as:")
+            Kirigami.FormData.label: i18n("Show applications as:")
             id: appNameFormat
             model: [
-                Global.i18nContext.i18n("Name only"),
-                Global.i18nContext.i18n("Description only"),
-                Global.i18nContext.i18n("Name (Description)"),
-                Global.i18nContext.i18n("Description (Name)")
+                i18n("Name only"),
+                i18n("Description only"),
+                i18n("Name (Description)"),
+                i18n("Description (Name)")
             ]
         }
 
@@ -104,26 +104,26 @@ KCM {
         }
 
         RowLayout { // Show buttons for Power/Session
-            Kirigami.FormData.label: Global.i18nContext.i18n("Show buttons for:")
+            Kirigami.FormData.label: i18n("Show buttons for:")
             QQC.CheckBox {
                 id: isPowerVisible
-                text: Global.i18nContext.i18n("Power actions")
+                text: i18n("Power actions")
                 onToggled: root.visibleActions()
             }
             QQC.CheckBox {
                 id: isSessionVisible
-                text: Global.i18nContext.i18n("Session actions")
+                text: i18n("Session actions")
                 onToggled: root.visibleActions()
             }
         }
 
         KCMNote {
-            text: Global.i18nContext.i18nc("@info:isPowerVisible,isSessionVisible", "If unchecked or not enough space, buttons will move to the 'Power/Session' menu.")
+            text: i18nc("@info:isPowerVisible,isSessionVisible", "If unchecked or not enough space, buttons will move to the 'Power/Session' menu.")
         }
 
         QQC.CheckBox { // hasToolbarCaptions
             id: hasToolbarCaptions
-            text: Global.i18nContext.i18n("Show button captions in the Power/Session toolbar")
+            text: i18n("Show button captions in the Power/Session toolbar")
         }
 
         KCMSeparator {
@@ -133,7 +133,7 @@ KCM {
         RowLayout {
             QQC.Button { // Reset configuration
                 id: configReset
-                text: Global.i18nContext.i18n("Reset configuration")
+                text: i18n("Reset configuration")
                 onClicked: {
                     root.restoreDefaults()
                     configResetWarning.visible = true
@@ -147,7 +147,7 @@ KCM {
                     source: 'dialog-warning'
                 }
                 QQC.Label {
-                    text: Global.i18nContext.i18n("Clicking 'OK' will reset the launcher settings.")
+                    text: i18n("Clicking 'OK' will reset the launcher settings.")
                     font.bold: true
                     wrapMode: Text.WordWrap
                 }
