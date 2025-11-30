@@ -123,3 +123,15 @@ May take quite a while.
     - left column with buttons
     - middle pane with application list group either alphabetically or by categories
     - right pane with tiles
+
+## CONTRIBUTORS
+
+- Heimen Stoffels (https://github.com/Vistaus): NL translation
+
+## CREDITS
+
+TODO: add
+- KDE team (Plasma Framework, Kickoff, what else?)
+- Chris Holland (Tiled Menu, tutorials)
+- Jin Liu (Kickon, i18n)
+- Claudio Catterina (PlasMusic Toolbar, i18n, repository presentation)
