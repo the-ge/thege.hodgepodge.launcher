@@ -5,7 +5,7 @@
 
 **ID**: thege.hodgepodge.launcher
 
-**Date**: 2025-11-30 05:13:01
+**Date**: 2025-11-30 07:43:02
 
 **Internationalisation template file name**: template.pot
 
@@ -16,6 +16,7 @@
 
 | Locale | ¹Translatable | Translated | ²Translated Ratio |
 | :---   |          ---: |       ---: |              ---: |
+| nl     | ✅         78 |         78 | ✅        100.00% |
 | ro     | ✅         78 |         78 | ✅        100.00% |
 
 *¹ The language file translatable string count is checked to be the same as in the template.*
@@ -27,16 +28,9 @@
 *For now, only checks for the same punctuation character at the end.*
 
 ```
-/src/translate/ro.po:270
-msgid  "Name and description"
-msgstr "Nume și descriere"
-
-```
-
-```
-/src/translate/ro.po:275
-msgid  "Description and name"
-msgstr "Descriere și nume"
+/src/translate/nl.po:98
+msgid  "Icon name is \"%1\""
+msgstr "De pictogramnaam is ‘%1’"
 
 ```
 
