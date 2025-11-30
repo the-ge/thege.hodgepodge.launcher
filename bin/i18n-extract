@@ -22,7 +22,8 @@ extract-strings()
 
     hint 0 "Extracting translation strings..." $LINENO
     mkdir -p "$tmpPath"
-    find "${data['path']}" -name '*.cpp' -o -name '*.h' -o -name '*.c' -o -name '*.qml' -o -name '*.js' | sort > "$listFile"
+    cd "${data['path']}" || panic 0 "Failed to go into '${data['path']}' directory" $LINENO
+    find ../src -name '*.cpp' -o -name '*.h' -o -name '*.c' -o -name '*.qml' -o -name '*.js' | sort > "$listFile"
 
     # See Ki18n's extract-messages.sh for a full example:
     # https://invent.kde.org/sysadmin/l10n-scripty/-/blob/master/extract-messages.sh#L25
