@@ -6,24 +6,26 @@
 
 Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 
-### 2. Manually, using the zip from the KDE Store (https://store.kde.org/p/2330881)
+### 2. Manually, using the plasmoid from the KDE Store (https://store.kde.org/p/2330881)
 
 1. Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Download`.
-2. Extract the archive content.
-3. Drag and drop the archive on the desktop and choose `Install` from the menu that appeared.
+2. Right-click on the taskbar and choose `Add or Manage Widgets`.
+3. Click on the `Get New` button and choose 'Install Widget From Local File'
+4. Navigate to the folder where is the plasmoid and choose it.
+5. You may need to exit the KDE widget interface and re-enter to be able to see the new plasmoid. If so, right-click again on the taskbar and choose `Add or Manage Widgets`.
+5. Click on the plasmoid in the widget list, then drag and drop this widget to the taskbar.
 
 ### 3. Manually, cloning the GitHub repository
 
 1. Get the files from the GitHub repository page (https://github.com/the-ge/thege.hodgepodge.launcher):
     - Go to the GitHub repository page and click `Code` > `Download ZIP`, then extract it to your system.
     - or clone the repository.
-
 2. Go to the extracted files root (where README.md is) and open a terminal, then run the plasmoid install utility:
 ```sh
 ./bin/plasmoid-install
 ```
-
-3. Right-click on the taskbar and choose 'Add or Manage Widgets', then drag and drop this widget to the taskbar.
+3. Right-click on the taskbar and choose `Add or Manage Widgets`.
+4. Click on the plasmoid in the widget list, then drag and drop this widget to the taskbar.
 
 ## FEATURES
 
