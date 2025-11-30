@@ -106,6 +106,7 @@ May take quite a while.
 - [x] Add separator between Power and Session buttons.
 - [x] Fix compactRepresentation height when placed on vertical panel.
 - [x] Add configuration for the user avatar size.
+- [x] Add 'Start in:' setting (Favorites/All Applications/Deveopment/Education/...)
 - [ ] Test if adding (again) the i18nContext to the singleton helps with the 'Applications' and 'Places' translations. If not, get them from KDE Kicker.
 - [ ] Add utility to pack the plasmoid for KDE Store
     - check if KDE Store accepts .plasmoid files
@@ -115,7 +116,6 @@ May take quite a while.
     - zip the plasmoid - name uses version from metadata.json
 - [ ] Add `--check-punctuation` option for `i18n-status`, to make the punctuation check opt-in.
 - [ ] Remove the caret-down from the launcher icon configuration control.
-- [x] Add 'Start in:' setting (Favorites/All Applications/Deveopment/Education/...)
 - [ ] Add UI and row count configuration for recent apps
 - [ ] Add `highlightNewlyInstalledApps` setting (see [rootmodel.h](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/kicker/rootmodel.h))
 - [ ] Place and order individually footer buttons in or out of overflow (drag-and-drop).
