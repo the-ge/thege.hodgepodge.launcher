@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thege.hodgepodge.launcher\n"
 "Report-Msgid-Bugs-To: https://github.com/the-ge/thege.hodgepodge.launcher/issues\n"
-"POT-Creation-Date: 2025-11-29 16:56+0200\n"
+"POT-Creation-Date: 2025-11-30 07:02+0200\n"
 "PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Gabriel Tenita <g1704578400@tenita.eu>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,414 +17,414 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/config/config.qml
+#: ../src/contents/config/config.qml
 #, kde-format
 msgid "Behavior"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/config/config.qml
+#: ../src/contents/config/config.qml
 #, kde-format
 msgid "Appearance"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAbout.qml
+#: ../src/contents/ui/Config/KCMAbout.qml
 #, kde-format
 msgid "Report a Bug…"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Sidebar position:"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Left"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Right"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "List style:"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Normal"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Compact"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Disabled in Touch Mode"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info:isListCompact"
 msgid "Normal: two rows, compact: one row."
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Launcher icon:"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Current icon is %1. Click to open menu to change the current icon or reset to the default icon."
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Launcher icon text:"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label next to the launcher icon..."
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove launcher icon text"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info"
 msgid "An icon text cannot be set when the launcher's container is vertical."
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "User avatar size:"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "px"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Grid icons size:"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "List icons size:"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info:userIconSize"
 msgid "The size of the user avatar located in the launcher header."
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Favorites layout:"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Grid"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "List"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Applications layout:"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Separator lines:"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Width:"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Color:"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Separator lines color"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Highlight new apps"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Update main panel when hovering over sidebar categories"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgctxt "@info:isUpdateOnHover"
 msgid "If unchecked, the apps in the main panel will be updated when clicking (instead of hovering) on a sidebar category."
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Open launcher in:"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgctxt "@info:startWith"
 msgid "Select what is first visible when the launcher is opened."
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Show applications as:"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Name only"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Description only"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Name (Description)"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Description (Name)"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Show buttons for:"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Power actions"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Session actions"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgctxt "@info:isPowerVisible,isSessionVisible"
 msgid "If unchecked or not enough space, buttons will move to the 'Power/Session' menu."
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Show button captions in the Power/Session toolbar"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Reset configuration"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Clicking 'OK' will reset the launcher settings."
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMShortcuts.qml
+#: ../src/contents/ui/Config/KCMShortcuts.qml
 #, kde-format
 msgid "Shortcuts"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMShortcuts.qml
+#: ../src/contents/ui/Config/KCMShortcuts.qml
 #, kde-format
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/FullRepresentationHeader.qml
+#: ../src/contents/ui/FullRepresentationHeader.qml
 #, kde-format
 msgid "Open user settings"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/FullRepresentationHeader.qml
+#: ../src/contents/ui/FullRepresentationHeader.qml
 #, kde-format
 msgid "Keep Open"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/FullRepresentation.qml
+#: ../src/contents/ui/FullRepresentation.qml
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Global.qml
+#: ../src/contents/ui/Helper/Global.qml
 #, kde-format
 msgid "Favorites"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Global.qml
+#: ../src/contents/ui/Helper/Global.qml
 #, kde-format
 msgid "Apps"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Global.qml
+#: ../src/contents/ui/Helper/Global.qml
 #, kde-format
 msgid "All Apps"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Global.qml
+#: ../src/contents/ui/Helper/Global.qml
 #, kde-format
 msgid "Places"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Tools.js
+#: ../src/contents/ui/Helper/Tools.js
 #, kde-format
 msgid "Remove from Favorites"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Tools.js
+#: ../src/contents/ui/Helper/Tools.js
 #, kde-format
 msgid "Add to Favorites"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Tools.js
+#: ../src/contents/ui/Helper/Tools.js
 #, kde-format
 msgid "On All Activities"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Tools.js
+#: ../src/contents/ui/Helper/Tools.js
 #, kde-format
 msgid "On the Current Activity"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Tools.js
+#: ../src/contents/ui/Helper/Tools.js
 #, kde-format
 msgid "Show in Favorites"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/main.qml
+#: ../src/contents/ui/main.qml
 #, kde-format
 msgid "Edit Applications…"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Page/PageFooterLeaveButtons.qml
+#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml
 #, kde-format
 msgid "Power/Session"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Page/PageFooterLeaveButtons.qml
+#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml
 #, kde-format
 msgid "Session"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Page/PageFooterLeaveButtons.qml
+#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml
 #, kde-format
 msgid "Power"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Page/PageFooterLeaveButtons.qml
+#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml
 #, kde-format
 msgid "More"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Page/PlacesPage.qml
+#: ../src/contents/ui/Page/PlacesPage.qml
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Computer"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Page/PlacesPage.qml
+#: ../src/contents/ui/Page/PlacesPage.qml
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "History"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Page/PlacesPage.qml
+#: ../src/contents/ui/Page/PlacesPage.qml
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr ""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/View/KickoffGridView.qml
+#: ../src/contents/ui/View/KickoffGridView.qml
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thege.hodgepodge.launcher\n"
 "Report-Msgid-Bugs-To: https://github.com/the-ge/thege.hodgepodge.launcher/issues\n"
-"POT-Creation-Date: 2025-11-29 16:56+0200\n"
+"POT-Creation-Date: 2025-11-30 07:02+0200\n"
 "PO-Revision-Date: 2025-11-28 16:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,414 +17,414 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/config/config.qml
+#: ../src/contents/config/config.qml
 #, kde-format
 msgid "Behavior"
 msgstr "Comportament"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/config/config.qml
+#: ../src/contents/config/config.qml
 #, kde-format
 msgid "Appearance"
 msgstr "Aspect"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAbout.qml
+#: ../src/contents/ui/Config/KCMAbout.qml
 #, kde-format
 msgid "Report a Bug…"
 msgstr "Raportează o problemă"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Sidebar position:"
 msgstr "Poziția barei laterale:"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Left"
 msgstr "Stânga"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Right"
 msgstr "Dreapta"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "List style:"
 msgstr "Stilul listelor:"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Normal"
 msgstr "Normal"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Compact"
 msgstr "Compact"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Disabled in Touch Mode"
 msgstr "Inactiv în modul touch"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info:isListCompact"
 msgid "Normal: two rows, compact: one row."
 msgstr "Normal: două rânduri, compact: un singur rând."
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Launcher icon:"
 msgstr "Pictograma lansatorului:"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Schimbă pictograma lansatorului de aplicații"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Current icon is %1. Click to open menu to change the current icon or reset to the default icon."
 msgstr "Pictograma curentă este %1. Fă clic pentru a deschide meniul ce dă posibilitatea de a schimba pictograma curentă sau a o reseta la valoarea inițială."
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "Numele pictogramei este \"%1\""
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Alege…"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Alege o pictogramă pentru lansatorul de aplicații"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Resetează la pictograma inițială"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Șterge pictograma"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Launcher icon text:"
 msgstr "Textul pictogramei lansatorului:"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label next to the launcher icon..."
 msgstr "Scrie aici pentru a adăuga text lângă pictograma lansatorului..."
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove launcher icon text"
 msgstr "Șterge textul pictogramei"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info"
 msgid "An icon text cannot be set when the launcher's container is vertical."
 msgstr "Nu poate fi adăugat text la pictogramă când containerul lansatorului este vertical."
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "User avatar size:"
 msgstr "Mărimea avatarului utilizatorului:"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "px"
 msgstr "px"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Grid icons size:"
 msgstr "Mărimea pictogramei în grile:"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "List icons size:"
 msgstr "Mărimea pictogramei în liste:"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info:userIconSize"
 msgid "The size of the user avatar located in the launcher header."
 msgstr "Mărimea avatarului utilizatorului (în antetul lansatorului)."
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Favorites layout:"
 msgstr "Aspectul favoritelor:"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Grid"
 msgstr "Grilă"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "List"
 msgstr "Listă"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Applications layout:"
 msgstr "Aspectul aplicațiilor:"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Separator lines:"
 msgstr "Linii de separare:"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Width:"
 msgstr "Grosime:"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Color:"
 msgstr "Culoare:"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgid "Separator lines color"
 msgstr "Culoarea liniilor separatoare:"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Ordonează alfabetic aplicațiile"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Highlight new apps"
 msgstr "Evidențiază aplicațiile noi"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Update main panel when hovering over sidebar categories"
 msgstr "Actualizează panoul principal când cursorul ajunge deasupra unei categorii din bara laterală"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgctxt "@info:isUpdateOnHover"
 msgid "If unchecked, the apps in the main panel will be updated when clicking (instead of hovering) on a sidebar category."
 msgstr "Dacă nu este bifată, pentru actualizarea aplicațiilor din panoul principal va fi necesar un clic pe o categorie din bara laterală."
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Configurează extensiile pentru căutare..."
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Open launcher in:"
 msgstr "Deschide lansatorul în:"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgctxt "@info:startWith"
 msgid "Select what is first visible when the launcher is opened."
 msgstr "Alege ce se vede inițial la deschiderea lansatorului."
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Show applications as:"
 msgstr "Afișeaza aplicațiile ca:"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Name only"
 msgstr "Nume"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Description only"
 msgstr "Descriere"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Name (Description)"
 msgstr "Nume și descriere"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Description (Name)"
 msgstr "Descriere și nume"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Afișează butoane pentru:"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Power actions"
 msgstr "Oprirea sistemului"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Session actions"
 msgstr "Sesiunea de lucru"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgctxt "@info:isPowerVisible,isSessionVisible"
 msgid "If unchecked or not enough space, buttons will move to the 'Power/Session' menu."
 msgstr "Dacă opțiunea nu este bifată sau butoanele nu au suficient loc, butoanele se vor muta în meniul Sistem/Sesiune."
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Show button captions in the Power/Session toolbar"
 msgstr "Afișează textul butoanelor în bara de unelte Sistem/Sesiune"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Reset configuration"
 msgstr "Resetează configurația"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
 msgid "Clicking 'OK' will reset the launcher settings."
 msgstr "Confirmând cu butonul 'OK' va reseta configurarea lansatorului."
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMShortcuts.qml
+#: ../src/contents/ui/Config/KCMShortcuts.qml
 #, kde-format
 msgid "Shortcuts"
 msgstr "Scurtături"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Config/KCMShortcuts.qml
+#: ../src/contents/ui/Config/KCMShortcuts.qml
 #, kde-format
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr "Această scurtătură va activa lansatorul ca și cum ar fi fost făcut un clic pe el."
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/FullRepresentationHeader.qml
+#: ../src/contents/ui/FullRepresentationHeader.qml
 #, kde-format
 msgid "Open user settings"
 msgstr "Deschide configurarea"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/FullRepresentationHeader.qml
+#: ../src/contents/ui/FullRepresentationHeader.qml
 #, kde-format
 msgid "Keep Open"
 msgstr "Menține-l deschis"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/FullRepresentation.qml
+#: ../src/contents/ui/FullRepresentation.qml
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
 msgstr "Nicio potrivire"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Global.qml
+#: ../src/contents/ui/Helper/Global.qml
 #, kde-format
 msgid "Favorites"
 msgstr "Favorite"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Global.qml
+#: ../src/contents/ui/Helper/Global.qml
 #, kde-format
 msgid "Apps"
 msgstr "Applicații"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Global.qml
+#: ../src/contents/ui/Helper/Global.qml
 #, kde-format
 msgid "All Apps"
 msgstr "Toate aplicațiile"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Global.qml
+#: ../src/contents/ui/Helper/Global.qml
 #, kde-format
 msgid "Places"
 msgstr "Locuri"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Tools.js
+#: ../src/contents/ui/Helper/Tools.js
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Scoate dintre favorite"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Tools.js
+#: ../src/contents/ui/Helper/Tools.js
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Adaugă la favorite"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Tools.js
+#: ../src/contents/ui/Helper/Tools.js
 #, kde-format
 msgid "On All Activities"
 msgstr "În toate activitățile"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Tools.js
+#: ../src/contents/ui/Helper/Tools.js
 #, kde-format
 msgid "On the Current Activity"
 msgstr "În activitatea curentă"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Helper/Tools.js
+#: ../src/contents/ui/Helper/Tools.js
 #, kde-format
 msgid "Show in Favorites"
 msgstr "Afișează în favorite"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/main.qml
+#: ../src/contents/ui/main.qml
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Editează aplicațiile.."
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Page/PageFooterLeaveButtons.qml
+#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml
 #, kde-format
 msgid "Power/Session"
 msgstr "Sistem/Sesiune"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Page/PageFooterLeaveButtons.qml
+#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml
 #, kde-format
 msgid "Session"
 msgstr "Sesiune"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Page/PageFooterLeaveButtons.qml
+#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml
 #, kde-format
 msgid "Power"
 msgstr "Sistem"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Page/PageFooterLeaveButtons.qml
+#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml
 #, kde-format
 msgid "More"
 msgstr "Mai multe"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Page/PlacesPage.qml
+#: ../src/contents/ui/Page/PlacesPage.qml
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Computer"
 msgstr "Sistem"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Page/PlacesPage.qml
+#: ../src/contents/ui/Page/PlacesPage.qml
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "History"
 msgstr "Istorie"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/Page/PlacesPage.qml
+#: ../src/contents/ui/Page/PlacesPage.qml
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Folosite frecvent"
 
-#: /media/dev/lab/coding/QT/kde-launcher/work/thege.hodgepodge.launcher/src/contents/ui/View/KickoffGridView.qml
+#: ../src/contents/ui/View/KickoffGridView.qml
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Grilă cu %1 rânduri și %2 coloane"
