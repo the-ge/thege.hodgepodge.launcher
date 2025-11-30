@@ -94,8 +94,8 @@ KCM {
             model: [
                 i18n("Name only"),
                 i18n("Description only"),
-                i18n("Name (Description)"),
-                i18n("Description (Name)")
+                i18n("Name and description"),
+                i18n("Description and name")
             ]
         }
 

@@ -157,7 +157,7 @@ KCM {
             enabled: Plasmoid.formFactor !== PCore.Types.Vertical // qmllint disable unqualified
             Kirigami.FormData.label: i18nc("@label:textbox", "Launcher icon text:")
             text: root.cfg_launcherIconTextDefault
-            placeholderText: i18nc("@info:placeholder", "Type here to add a text label next to the launcher icon...")
+            placeholderText: i18nc("@info:placeholder", "Type here to add a text label next to the launcher icon…")
             onTextEdited: {
                 root.cfg_launcherIconText = launcherIconText.text
                 // This is to make sure that we always have a icon if there is no text.
