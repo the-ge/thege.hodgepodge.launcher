@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thege.hodgepodge.launcher\n"
 "Report-Msgid-Bugs-To: https://github.com/the-ge/thege.hodgepodge.launcher/issues\n"
-"POT-Creation-Date: 2025-11-30 07:02+0200\n"
+"POT-Creation-Date: 2025-11-30 07:21+0200\n"
 "PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Gabriel Tenita <g1704578400@tenita.eu>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -130,7 +130,7 @@ msgstr ""
 #: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info:placeholder"
-msgid "Type here to add a text label next to the launcher icon..."
+msgid "Type here to add a text label next to the launcher icon…"
 msgstr ""
 
 #: ../src/contents/ui/Config/KCMAppearance.qml
@@ -266,12 +266,12 @@ msgstr ""
 
 #: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
-msgid "Name (Description)"
+msgid "Name and description"
 msgstr ""
 
 #: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
-msgid "Description (Name)"
+msgid "Description and name"
 msgstr ""
 
 #: ../src/contents/ui/Config/KCMBehavior.qml

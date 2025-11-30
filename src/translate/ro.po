@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thege.hodgepodge.launcher\n"
 "Report-Msgid-Bugs-To: https://github.com/the-ge/thege.hodgepodge.launcher/issues\n"
-"POT-Creation-Date: 2025-11-30 07:02+0200\n"
+"POT-Creation-Date: 2025-11-30 07:21+0200\n"
 "PO-Revision-Date: 2025-11-28 16:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -130,8 +130,8 @@ msgstr "Textul pictogramei lansatorului:"
 #: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
 msgctxt "@info:placeholder"
-msgid "Type here to add a text label next to the launcher icon..."
-msgstr "Scrie aici pentru a adăuga text lângă pictograma lansatorului..."
+msgid "Type here to add a text label next to the launcher icon…"
+msgstr "Scrie aici pentru a adăuga text lângă pictograma lansatorului…"
 
 #: ../src/contents/ui/Config/KCMAppearance.qml
 #, kde-format
@@ -266,12 +266,12 @@ msgstr "Descriere"
 
 #: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
-msgid "Name (Description)"
+msgid "Name and description"
 msgstr "Nume și descriere"
 
 #: ../src/contents/ui/Config/KCMBehavior.qml
 #, kde-format
-msgid "Description (Name)"
+msgid "Description and name"
 msgstr "Descriere și nume"
 
 #: ../src/contents/ui/Config/KCMBehavior.qml
