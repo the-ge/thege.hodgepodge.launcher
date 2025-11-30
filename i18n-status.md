@@ -28,14 +28,14 @@
 
 ```
 /src/translate/ro.po:270
-msgid  "Name (Description)"
+msgid  "Name and description"
 msgstr "Nume și descriere"
 
 ```
 
 ```
 /src/translate/ro.po:275
-msgid  "Description (Name)"
+msgid  "Description and name"
 msgstr "Descriere și nume"
 
 ```
