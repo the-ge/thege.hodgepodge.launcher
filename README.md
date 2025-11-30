@@ -108,6 +108,7 @@ May take quite a while.
 - [x] Add configuration for the user avatar size.
 - [x] Add 'Start in:' setting (Favorites/All Applications/Deveopment/Education/...)
 - [ ] Test if adding (again) the i18nContext to the singleton helps with the 'Applications' and 'Places' translations. If not, get them from KDE Kicker.
+- [ ] Add contributor column to the translations table.
 - [ ] Add utility to pack the plasmoid for KDE Store
     - check if KDE Store accepts .plasmoid files
     - compile translations
