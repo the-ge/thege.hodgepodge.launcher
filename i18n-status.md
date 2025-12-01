@@ -1,16 +1,14 @@
 # Hodgepodge Application Launcher
 
-
 ## PACKAGE
 
 **ID**: thege.hodgepodge.launcher
 
-**Date**: 2025-11-30 07:43:02
+**Date**: 2025-12-01 17:31:06
 
 **Internationalisation template file name**: template.pot
 
 **Internationalisation template translatable string count**: 78
-
 
 ## TRANSLATION STATUS
 
@@ -23,12 +21,12 @@
 
 *² The language file translated string ratio is checked to be 100%.*
 
-
 ## TRANSLATION MISMATCHES
+
 *For now, only checks for the same punctuation character at the end.*
 
 ```
-/src/translate/nl.po:98
+# /src/translate/nl.po:98
 msgid  "Icon name is \"%1\""
 msgstr "De pictogramnaam is ‘%1’"
 
