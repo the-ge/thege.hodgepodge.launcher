@@ -6,7 +6,7 @@
 
 Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 
-### 2. Manually, using the plasmoid from the KDE Store (https://store.kde.org/p/2330881)
+### 2. Manually, using the plasmoid from the KDE Store
 
 1. Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Download`.
 2. Right-click on the taskbar and choose `Add or Manage Widgets`.
