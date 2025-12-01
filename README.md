@@ -1,5 +1,17 @@
 # Hodpodge Application Launcher for KDE6
 
+## SCREENSHOTS
+
+![Default settings (48px grid) vs my settings(64px grid)](https://github.com/user-attachments/assets/4a1e6913-1194-4729-85bb-c65d87e95603)
+
+![Default settings (32px list)](https://github.com/user-attachments/assets/4c8e714d-3c95-42e2-9c6b-20c4524c07fb)
+
+![Grid variants: 128px vs 16px](https://github.com/user-attachments/assets/0671809d-6073-4be9-8870-692c9e0b51c1)
+
+![List variants: 1280px vs 16px](https://github.com/user-attachments/assets/332121f6-9b7b-4b93-b687-4b7fdd0282a9)
+
+![Configuration options](https://github.com/user-attachments/assets/b0b7d127-5288-4701-af9c-708ac8bb2105)
+
 ## INSTALLATION
 
 ### 1. Using [pling-store](https://www.opendesktop.org/p/1175480/) or [ocs-url](https://www.opendesktop.org/p/1136805/)
