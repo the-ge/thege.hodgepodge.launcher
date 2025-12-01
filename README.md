@@ -51,7 +51,7 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 - separator lines color
 - toolbar action buttons can be all moved to the overflow menu, in addition to the former power/session/power+session options
 
-## TRANSLATE
+## TRANSLATION STATUS
 
 {I18N_STATUS}
 
