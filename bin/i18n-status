@@ -92,40 +92,59 @@ main ()
     local h1Status='TRANSLATION STATUS' h1Alerts='TRANSLATION MISMATCHES' h1Missing='NOT TRANSLATED YET'
     case "$output" in
         '--md') # GitHub Markdown
-            local file
+            local file report status
             file="$devRoot/i18n-status.md"
-            {
-                echo -e "# ${data['name']}\n"
-                echo -e "\n## PACKAGE\n"
-                echo -e "**ID**: ${data['id']}\n"
-                echo -e "**Date**: $( date +'%Y-%m-%d %H:%M:%S' )\n"
-                echo -e "**Internationalisation template file name**: $potFile\n"
-                echo -e "**Internationalisation template translatable string count**: $translatableCount\n"
 
-                echo -e "\n## $h1Status\n"
-                echo -e "$statusHeader"
-                # shellcheck disable=2059
-                printf "$headFormat\n" "${align[0]}" "${align[1]}" "${align[2]}" "${align[3]}"
-                echo -e "$statusBody"
-                echo -e "*¹ The language file translatable string count is checked to be the same as in the template.*\n"
-                echo -e "*² The language file translated string ratio is checked to be 100%.*\n"
+            report+="# ${data['name']}\n"
+            report+="\n## PACKAGE\n"
+            report+="\n**ID**: ${data['id']}\n"
+            report+="\n**Date**: $( date +'%Y-%m-%d %H:%M:%S' )\n"
+            report+="\n**Internationalisation template file name**: $potFile\n"
+            report+="\n**Internationalisation template translatable string count**: $translatableCount\n"
 
-                if [ "${#totalMissing[@]}" -gt 0 ]; then
-                    echo -e "## $h1Missing\n"
-                    echo -e '| File:Line                 | String |'
-                    echo -e '| ------------------------- | ------ |'
-                    local prefix
-                    prefix="${poPath//$devRoot}"
-                    for lang in "${!totalMissing[@]}"; do
-                        # shellcheck disable=2001
-                        echo "${totalMissing["$lang"]}" | sed "s|^\([0-9]*\):\(.*\)|\| \`$prefix:\1\` \| \"\2\"\||"
-                    done
-                    echo
-                fi
+            report+="\n## $h1Status\n"
+            status+="\n$statusHeader\n"
+            # shellcheck disable=2059
+            status+="$( printf "$headFormat\n" "${align[0]}" "${align[1]}" "${align[2]}" "${align[3]}" )\n"
+            status+="$statusBody\n"
+            status+="*¹ The language file translatable string count is checked to be the same as in the template.*\n\n"
+            status+="*² The language file translated string ratio is checked to be 100%.*\n"
+            report+="$status"
 
-                tips="${tips//$devRoot/\`\`\`$'\n\n'\`\`\`$'\n'}\`\`\`"
-                [ -n "$tips" ] && echo -e "\n## $h1Alerts\n*For now, only checks for the same punctuation character at the end.*\n${tips:4}\n"
-            } > "$file"
+            if [ "${#totalMissing[@]}" -gt 0 ]; then
+                report+="## $h1Missing\n"
+                report+='| File:Line                 | String |'
+                report+='| ------------------------- | ------ |'
+                local prefix
+                prefix="${poPath//$devRoot}"
+                for lang in "${!totalMissing[@]}"; do
+                    # shellcheck disable=2001
+                    report+="$( echo "${totalMissing["$lang"]}" | sed "s|^\([0-9]*\):\(.*\)|\| \`$prefix:\1\` \| \"\2\"\||" )"
+                done
+                echo
+            fi
+
+            tips="${tips//$devRoot/\`\`\`$'\n\n'\`\`\`$'\n'# }\`\`\`"
+            [ -n "$tips" ] && report+="\n## $h1Alerts\n\n*For now, only checks for the same punctuation character at the end.*\n${tips:4}\n"
+
+            echo "${report//\\n/$'\n'}" > "$file"
+
+            status+="\nSee more details at [i18n-status.md](i18n-status.md).\n"
+            status="${status//\\n/$'\n'}"
+            status="${status//\\/\\\\}"       # Escape backslashes
+            status="${status//&/\\&}"         # Escape ampersands
+            status="${status//\//\\/}"        # Escape forward slashes
+            status="${status//$'\n'/\\$'\n'}" # Convert newlines to sed's line continuation format
+
+            # Replace content between delimiters
+            sed -i '/## TRANSLATION STATUS/,/## HOW TO TRANSLATE/{
+                /## TRANSLATION STATUS/!{
+                    /## HOW TO TRANSLATE/!d
+                }
+                /## TRANSLATION STATUS/a\
+            '"\n$status"'
+            }' README.md
+
             ;;
         *) # Bash shell
             echo "PACKAGE NAME      ${data['name']}"
