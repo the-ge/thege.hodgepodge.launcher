@@ -53,6 +53,10 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 
 ## TRANSLATE
 
+{I18N_STATUS}
+
+## TRANSLATE
+
 1. Extraxt translatable strings from the plasmoid code:
 ```sh
 ./bin/i18n-extract
