@@ -52,8 +52,18 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 - toolbar action buttons can be all moved to the overflow menu, in addition to the former power/session/power+session options
 
 ## TRANSLATION STATUS
+            
 
-{I18N_STATUS}
+| Locale | ¹Translatable | Translated | ²Translated Ratio |
+| :---   |          ---: |       ---: |              ---: |
+| nl     | ✅         78 |         78 | ✅        100.00% |
+| ro     | ✅         78 |         78 | ✅        100.00% |
+
+*¹ The language file translatable string count is checked to be the same as in the template.*
+
+*² The language file translated string ratio is checked to be 100%.*
+
+See more details at [i18n-status.md](i18n-status.md).
 
 ## HOW TO TRANSLATE
 
