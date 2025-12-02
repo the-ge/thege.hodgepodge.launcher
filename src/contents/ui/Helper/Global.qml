@@ -36,8 +36,8 @@ Item {
 
     //BEGIN Reusable Objects
     readonly property string favoritesLabel: i18n("Favorites")
-    readonly property string appsLabel: i18n("Apps")
-    readonly property string allAppsLabel: i18n("All Apps")
+    readonly property string appsLabel: i18n("Applications")
+    readonly property string allAppsLabel: i18n("All Applications")
     readonly property string placesLabel: i18n("Places")
     property list<string> categories: [
         favoritesLabel, // index (cfg_startWith) 0

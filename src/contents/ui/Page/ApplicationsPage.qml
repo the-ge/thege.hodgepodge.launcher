@@ -25,7 +25,7 @@ import "../View"
 BasePage {
     id: root
 
-    required property int defaultIndex // Favorites, Places, All Apps, then app categories start at 3
+    required property int defaultIndex // Favorites, Places, All Applications, then app categories start at 3
     property bool hasFavsGrid: Plasmoid.configuration.favoritesLayout === 0 // qmllint disable unqualified
     property bool hasAppsGrid: Plasmoid.configuration.appsLayout === 0 // qmllint disable unqualified
 
