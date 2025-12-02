@@ -161,7 +161,7 @@ PExtras.PlasmoidHeading {
         }
 
         // available width for leaveButtons
-        maximumWidth: root.availableWidth - firstTab.width - nextTab.width - root.spacing
+        maximumWidth: root.availableWidth - tabBar.width
 
         Keys.onUpPressed: event => {
             kickoff.lastCentralPane.forceActiveFocus(Qt.BacktabFocusReason);
