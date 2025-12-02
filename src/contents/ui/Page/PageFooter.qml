@@ -44,6 +44,11 @@ PExtras.PlasmoidHeading {
     position: PComponents.ToolBar.Footer
     enabledBorders: Qt.BottomEdge | Qt.LeftEdge | Qt.RightEdge // disable top border
 
+    FontMetrics {
+        id: fontMetrics
+        font.family: Kirigami.Theme.defaultFont.family
+    }
+
     PComponents.TabBar {
         id: tabBar
         focus: true
@@ -94,7 +99,7 @@ PExtras.PlasmoidHeading {
 
         component BaseButton: PComponents.TabButton {
             opacity: focus || area.hovered ? 1 : 0.5
-            //width: tabBar.tabWidth
+            width: fontMetrics.averageCharacterWidth * text.length + root.iconSize + leftPadding + rightPadding
             anchors {
                 top: tabBarListView.contentItem.top
                 topMargin: -root.topPadding
