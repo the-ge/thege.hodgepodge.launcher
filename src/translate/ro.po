@@ -328,7 +328,7 @@ msgstr "Deschide configurarea"
 #: ../src/contents/ui/FullRepresentationHeader.qml
 #, kde-format
 msgid "Keep Open"
-msgstr "Menține-l deschis"
+msgstr "Menține deschis"
 
 #: ../src/contents/ui/FullRepresentation.qml
 #, kde-format
