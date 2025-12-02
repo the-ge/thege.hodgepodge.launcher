@@ -159,10 +159,6 @@ May take quite a while.
     - middle pane with application list group either alphabetically or by categories
     - right pane with tiles
 
-## CONTRIBUTORS
-
-- Heimen Stoffels (https://github.com/Vistaus): NL translation
-
 ## CREDITS
 
 - KDE team (Plasma Framework, Kickoff, what else?)
