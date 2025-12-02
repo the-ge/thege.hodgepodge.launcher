@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thege.hodgepodge.launcher\n"
 "Report-Msgid-Bugs-To: https://github.com/the-ge/thege.hodgepodge.launcher/issues\n"
-"POT-Creation-Date: 2025-11-30 07:21+0200\n"
+"POT-Creation-Date: 2025-12-02 13:46+0200\n"
 "PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Gabriel Tenita <g1704578400@tenita.eu>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -343,12 +343,12 @@ msgstr ""
 
 #: ../src/contents/ui/Helper/Global.qml
 #, kde-format
-msgid "Apps"
+msgid "Applications"
 msgstr ""
 
 #: ../src/contents/ui/Helper/Global.qml
 #, kde-format
-msgid "All Apps"
+msgid "All Applications"
 msgstr ""
 
 #: ../src/contents/ui/Helper/Global.qml
