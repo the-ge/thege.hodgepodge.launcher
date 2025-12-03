@@ -1,0 +1,42 @@
+#!/bin/bash
+
+
+set -eEu
+. "$( dirname "$0" )/.i18n"
+
+
+main()
+{
+    local poPath potFile 
+    local -A data=()
+    store-metadata-in 'data'
+    poPath="${data['poPath']}"
+    potFile="${data['potFile']}"
+
+    [ -f "$potFile" ] || panic 0 "template.pot not found. Run ./bin/i18n-extract first." $LINENO
+
+    pot-test 'data'
+
+    local result=0
+    for po in "$poPath"/*.po; do
+        [ -f "$po" ] || continue
+        
+        local lang stats missing fuzzy
+        lang="$( basename "$po" .po )"
+        stats="$( LC_ALL='C' msgfmt --statistics --verbose --output-file=/dev/null "$po" 2>&1 )"
+        done="$(echo "$stats" | grep --only-matching '[0-9]* translated' | cut -d' ' -f1)"
+        missing="$(echo "$stats" | grep --only-matching '[0-9]* missing' | cut -d' ' -f1)"
+        fuzzy="$(echo "$stats" | grep --only-matching '[0-9]* fuzzy' | cut -d' ' -f1)"
+
+        if [ "${missing:-0}" != '0' ] || [ "${fuzzy:-0}" != '0' ]; then
+            warn 0 "${lang^^} translations: $done done, $missing missing, $fuzzy fuzzy" $LINENO
+            result=1
+        else
+            confirm 0 "${lang^^} translations: complete ($done/$done)" $LINENO
+        fi
+    done
+
+    exit "$result"
+}
+
+main "$@"

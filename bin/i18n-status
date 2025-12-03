@@ -5,14 +5,14 @@ set -eEu
 . "$( dirname "$0" )/.i18n"
 
 
-main ()
+main()
 {
     local translatableCount potFile output="${1:-}"
     local -A data=() totalMissing=()
     store-metadata-in 'data'
 
-    translatableCount="$(grep -Pzo 'msgstr ""\n(\n|$)' "${data['pot']}" | grep -c 'msgstr ""')"
-    potFile="$( basename "${data['pot']}" )"
+    translatableCount="$(grep -Pzo 'msgstr ""\n(\n|$)' "${data['potFile']}" | grep -c 'msgstr ""')"
+    potFile="$( basename "${data['potFile']}" )"
 
     local -A th=(
         ['locale']='Locale'         # locale
@@ -52,7 +52,7 @@ main ()
             totalMissing["$poFile:${missing%%:*}"]="${missing#*.}"
         fi
         translatedCount=$(( translatableCount - missingCount ))
-        translatedRatio="$( LC_NUMERIC='en_US.UTF-8' printf '%5.2f%%' "$( bc <<< "scale=4; 100 * $translatedCount / $translatableCount" )" )"
+        translatedRatio="$( LC_NUMERIC='C' printf '%5.2f%%' "$( bc <<< "scale=4; 100 * $translatedCount / $translatableCount" )" )"
 
         locales["$i"]="$locale"
         totals["$i"]="$translatableCount"

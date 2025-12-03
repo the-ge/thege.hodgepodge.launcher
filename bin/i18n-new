@@ -29,7 +29,7 @@ main()
     local -A data=()
     store-metadata-in 'data'
     data['year']="$(date +%Y)"
-    potFile="${data['pot']}"
+    potFile="${data['potFile']}"
     poPath="${data['poPath']}"
     poFile="$poPath/$lang.po"
 
@@ -41,7 +41,7 @@ main()
 
     result=$( msginit --no-translator --no-wrap --input="$potFile" --locale="$lang" --output-file="$poFile" 2>&1 ) || panic 0 "$result" $LINENO
 
-    shout 0 "...done initializing new language '$lang' ($poFile)." $LINENO
+    confirm 0 "...done initializing new language '$lang' ($poFile)." $LINENO
 }
 
 main "$@"

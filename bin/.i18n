@@ -87,11 +87,11 @@ say()
 # args: 1 - indent level, 2 - text, 3 - prefix
 hint()  { say "$1" "$2" 'info' "${3:-}"; } # light gray
 
-warn()  { say "$1" "$2" 'warning' "${3:-}"; } # orange
+warn()  { say "$1" "⚠️ $2" 'warning' "${3:-}"; } # orange
 
 panic() { say "$1" "❌ $2. Aborting..." 'error' "${3:-}"; exit 1; } # red
 
-shout() { say "$1" "$2" 'success' "${3:-}"; } # light green
+confirm() { say "$1" "✅ $2" 'success' "${3:-}"; } # light green
 
 check-gettext-command()
 {
@@ -101,7 +101,7 @@ check-gettext-command()
         warn 0 "$command command not found. Need to install gettext." $LINENO
         hint 0 "Running $( bold 'sudo apt install gettext' )..." $LINENO
         sudo apt install gettext
-        shout 0 "...done installing gettext." $LINENO
+        confirm 0 "...done installing gettext." $LINENO
     else
         hint 0 "gettext is installed." $LINENO
     fi
@@ -113,7 +113,7 @@ update-i18n-metadata()
     local -n actual="$2"
 
     sed -i 's/# SOME DESCRIPTIVE TITLE./'"# Translation of ${actual['name']} (${actual['id']}) in $language"'/' "$file"
-    sed -i 's/YEAR/'"${actual['year']}"'/' "$file"
+    sed -i 's/YEAR/'"$( date +%Y )"'/' "$file"
     sed -i 's/\(FIRST AUTHOR\|FULL NAME\)/'"${actual['author']}"'/' "$file"
     sed -i 's/EMAIL@ADDRESS/'"${actual['email']}"'/' "$file"
     #sed -i 's/# SOME DESCRIPTIVE TITLE./'"# Translation of ${actual['name']} (${actual['id']}) in $language"'/' "$file"
@@ -126,9 +126,9 @@ store-metadata-in()
     plasmoidPath="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../src" && pwd )"
 
     local -n metadata
-    metadata['path']="$plasmoidPath"
+    metadata['plasmoidRoot']="$plasmoidPath"
     metadata['poPath']="$plasmoidPath/translate"
-    metadata['pot']="${metadata['poPath']}/template.pot"
+    metadata['potFile']="${metadata['poPath']}/template.pot"
     {
         read -r metadata['id']
         read -r metadata['name']
@@ -140,4 +140,62 @@ store-metadata-in()
 
     [ "${metadata['id']+1}" ] || panic 0 "Couldn't read plasmoid ID" $LINENO
     [ "${metadata['issuesUrl']+1}" ] || metadata['issuesUrl']="${metadata['url']}"
+}
+
+extract-strings-into()
+{
+    local potFile="$1" listFile
+    local -n data3="$2"
+    listFile="$( mktemp )"
+
+    cd "${data3['plasmoidRoot']}" || panic 0 "Failed to go into '${data3['plasmoidRoot']}' directory" $LINENO
+    find ../src -name '*.cpp' -o -name '*.h' -o -name '*.c' -o -name '*.qml' -o -name '*.js' | sort > "$listFile"
+
+    # See Ki18n's extract-messages.sh for a full example:
+    # https://invent.kde.org/sysadmin/l10n-scripty/-/blob/master/extract-messages.sh#L25
+    # The -kN_ and -kaliasLocale keywords are mentioned in the Outside_KDE_repositories wiki.
+    # We don't need -kN_ since we don't use intltool-extract but might as well keep it.
+    # I have no idea what -kaliasLocale is used for. Googling aliasLocale found only listed kde1 code.
+    # We don't need to parse -ki18nd since that'll extract messages from other domains.
+    result=$( xgettext \
+        --package-name="${data3['id']}" \
+        --msgid-bugs-address="${data3['issuesUrl']}" \
+        --directory="${data3['plasmoidRoot']}" \
+        --directory="${data3['poPath']}" \
+        --files-from="$listFile" \
+        --copyright-holder="${data3['author']} <${data3['email']}>" \
+        --from-code=UTF-8 \
+        --width=400 \
+        --add-location=file \
+        --c++ \
+        --kde \
+        -ci18n \
+        -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 \
+        -kki18n:1 -kki18nc:1c,2 -kki18np:1,2 -kki18ncp:1c,2,3 \
+        -ktr2i18n:1 -kI18N_NOOP:1  -kI18N_NOOP2:1c,2 \
+        -kN_:1 \
+        -kaliasLocale \
+        --output="$potFile" 2>&1 )\
+    || panic 0 "$result" $LINENO
+}
+
+pot-test()
+{
+    local tmpPot
+    tmpPot="$( mktemp )"
+    local -n data2="$1"
+    workPot="${data2['potFile']}"
+
+    extract-strings-into "$tmpPot" 'data2'
+    update-i18n-metadata "$tmpPot" 'data2'
+
+    if result="$( diff <(grep -v '^"POT-Creation-Date' "$workPot") <(grep -v '^"POT-Creation-Date' "$tmpPot") )"; then
+        rm "$tmpPot"
+        confirm 0 "template.pot is up to date with the source files." $LINENO
+    else
+        rm "$tmpPot"
+        echo -e "\n$result\n"
+        panic 0 "template.pot is not up to date with the source files. Run ./bin/i18n-extract" $LINENO
+    fi
+
 }

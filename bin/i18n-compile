@@ -20,29 +20,24 @@ main()
     store-metadata-in 'modata'
 
     hint 0 "Compiling translations..." $LINENO
+
     cd "${modata['poPath']}" || panic 0 "Could not enter '${modata['poPath']}'" $LINENO
+
+    local localePath
+    localePath="${modata['plasmoidRoot']}/contents/locale"
     for poFile in $( find . -name '*.po' | sort ); do
-        local untranslated locale
-
-        # HACK pcregrep returns exit code 1 if no match found. The ` || true` part mitigates that.
-        untranslated="$( pcregrep -Mno1 'msgid "(.+?)".*\nmsgstr ""' "$poFile" )" || true
-        if [ -n "$untranslated" ]; then
-            warn 1 "$poFile - strings not translated:" $LINENO
-            warn 2 "$untranslated"
-        else
-            hint 1 "$poFile - all translations done. Good job!"
-        fi
-
+        local locale
         locale="$( basename "${poFile%.*}" )"
 
         msgfmt --output-file="${locale}.mo" "$poFile"
 
         # https://techbase.kde.org/Development/Tutorials/Localization/i18n_Build_Systems#Declarative_plasmoids
-        moFile="${modata['path']}/contents/locale/$locale/LC_MESSAGES/plasma_applet_${modata['id']}.mo"
+        moFile="$localePath/$locale/LC_MESSAGES/plasma_applet_${modata['id']}.mo"
         mkdir -p "$(dirname "$moFile")"
         mv "$locale.mo" "${moFile}"
     done
-    shout 0 '...done compiling translations.' $LINENO
+
+    confirm 0 '...done compiling translations.' $LINENO
 }
 
 main
