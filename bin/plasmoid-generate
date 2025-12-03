@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+set -eEu
+. "$( dirname "$0" )/.plasmoid"
+
+
+main()
+{
+    local poPath potFile 
+    local -A data=()
+    store-metadata-in 'data'
+
+    cd "${data['plasmoidRoot']}" && zip -r "../${data['id']}-${data['version']}.plasmoid" .
+}
+
+main

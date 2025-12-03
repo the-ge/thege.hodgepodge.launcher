@@ -1,26 +1,83 @@
 #!/bin/bash
+#
+# --- i18n ---
+# https://techbase.kde.org/Development/Tutorials/Localization/i18n_Build_Systems
+# https://techbase.kde.org/Development/Tutorials/Localization/i18n_Build_Systems/Outside_KDE_repositories
+# https://invent.kde.org/sysadmin/l10n-scripty/-/blob/master/extract-messages.sh
+#
+# Step 1: `./bin/i18n-status`  to view the translations status
+# Step 2: `./bin/i18n-extract` to build the i18n template (template.pot)
+# Step 3: `./bin/i18n-new ro`  to generate the ro.po i18n catalog file
+# Step 4: Translate the strings in the newly generated catalog
+# Step 5: `./bin/i18n compile` to compile the i18n catalogs (i.e. ro.po, de.po, etc.) into machine object files (ro.mo, de.mo, etc.)
 
 
-help()
+show-as()
 {
-    cat << HELP
+    # https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
+    # https://stackoverflow.com/questions/911168/how-can-i-detect-if-my-shell-script-is-running-through-a-pipe
+    # \033[1m   bold
+    # \033[94m  lightblue
+    # \033[90m  lightgray
+    # \033[92m  lightgreen
+    # \033[91m  lightred
+    # \033[33m  orange
+    # \033[31m  red
+    # \033[93m  yellow
+    local text type modifier reset
+    type="$1"
+    text="$2"
+    if [ -t 1 ]; then # check if output is not a TTY (https://unix.stackexchange.com/questions/401934/how-do-i-check-whether-my-shell-is-running-in-a-terminal#answer-401938)
+        case "$type" in
+            'info')    modifier='\033[90m';; # light gray
+            'warning') modifier='\033[33m';; # orange
+            'error')   modifier='\033[31m';; # red
+            'success') modifier='\033[92m';; # light green
+            'bold')    modifier='\033[1m' ;; # bold
+        esac
+        [ -n "$modifier" ] && reset='\033[0m'
+    fi
 
-Plasmoid utilities  --  install/upgrade/uninstall
-
-USAGE:
-    plasmoid --install
-    plasmoid --upgrade
-    plasmoid --uninstall
-
-HELP
+    printf "${modifier:-}%s${reset:-}" "${text}"
 }
+
+# args: 1 - text
+info()    { show-as 'info'    "$1"; }
+warning() { show-as 'warning' "$1"; }
+error()   { show-as 'error'   "$1"; }
+success() { show-as 'success' "$1"; }
+bold()    { show-as 'bold'    "$1"; }
+
+say()
+{
+    local level="$1" text="$2" type="$3" prefix="${4:-}" indent=' '
+
+    for (( i = 0; i < level; i++ )); do indent+='    '; done
+
+    [ -n "$prefix" ] && prefix="[$prefix]"
+    prefix="$( printf '%-8s' "$prefix" )"
+    text="${text//$'\n'/$'\n'$prefix$indent}"
+
+    info "$prefix"
+    printf '%s' "${indent}"
+    show-as "$type" "$text"
+    echo
+}
+
+# args: 1 - indent level, 2 - text, 3 - prefix
+hint()  { say "$1" "$2" 'info' "${3:-}"; } # light gray
+
+warn()  { say "$1" "⚠️ $2" 'warning' "${3:-}"; } # orange
+
+panic() { say "$1" "❌ $2. Aborting..." 'error' "${3:-}"; exit 1; } # red
+
+confirm() { say "$1" "✅ $2" 'success' "${3:-}"; } # light green
 
 plasmoid()
 {
     cd "$( dirname "$0" )/../src" || { echo 'ERROR: /src/ directory not found!'; exit 1; } # go to the metadata.json location
 
     case "$1" in
-        -h|--help)     help ;;
         '--install')   kpackagetool6 --type Plasma/Applet --install . ;;
         '--upgrade')   kpackagetool6 --type Plasma/Applet --upgrade . ;;
         '--uninstall') kpackagetool6 --type Plasma/Applet --remove 'thege.hodgepodge.launcher' ;;
@@ -28,4 +85,133 @@ plasmoid()
     esac
 
     systemctl --user restart plasma-plasmashell.service
+}
+
+i18n-help()
+{
+    cat << HELP
+
+i18n  --  process translations for this plasmoid
+
+USAGE:
+    i18n ACTION [--restart]
+
+ARGUMENTS
+    ACTION      Allowed actions are 'extract' or 'compile'
+    --restart   Restarts plasmashell (only with 'mo' argument)
+
+EXAMPLES:
+    i18n extract                Extract translatable strings from the source code
+    i18n compile                Compile .po translations files into .mo catalog files
+    i18n compile --restart      Compile .po translations files into .mo catalog files, then restart plasmashell
+
+HELP
+}
+
+check-gettext-command()
+{
+    local command="$1"
+
+    if [ -z "$( which "$command" )" ]; then
+        warn 0 "$command command not found. Need to install gettext." $LINENO
+        hint 0 "Running $( bold 'sudo apt install gettext' )..." $LINENO
+        sudo apt install gettext
+        confirm 0 "...done installing gettext." $LINENO
+    else
+        hint 0 "gettext is installed." $LINENO
+    fi
+}
+
+update-i18n-metadata()
+{
+    local file="$1" language="${3:-LANGUAGE}"
+    local -n actual="$2"
+
+    sed -i 's/# SOME DESCRIPTIVE TITLE./'"# Translation of ${actual['name']} (${actual['id']}) in $language"'/' "$file"
+    sed -i 's/YEAR/'"$( date +%Y )"'/' "$file"
+    sed -i 's/\(FIRST AUTHOR\|FULL NAME\)/'"${actual['author']}"'/' "$file"
+    sed -i 's/EMAIL@ADDRESS/'"${actual['email']}"'/' "$file"
+    #sed -i 's/# SOME DESCRIPTIVE TITLE./'"# Translation of ${actual['name']} (${actual['id']}) in $language"'/' "$file"
+    #sed -i 's/"Content-Type: text\/plain; charset=CHARSET\\n"/"Content-Type: text\/plain; charset=UTF-8\\n"/' "$file"
+}
+
+store-metadata-in()
+{
+    local plasmoidPath metadata="$1"
+    plasmoidPath="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../src" && pwd )"
+
+    local -n metadata
+    metadata['plasmoidRoot']="$plasmoidPath"
+    metadata['poPath']="$plasmoidPath/translate"
+    metadata['potFile']="${metadata['poPath']}/template.pot"
+    {
+        read -r metadata['id']
+        read -r metadata['version']
+        read -r metadata['name']
+        read -r metadata['url']
+        read -r metadata['issuesUrl']
+        read -r metadata['author']
+        read -r metadata['email']
+    } < <( jq -r '.KPlugin.Id, .KPlugin.Version, .KPlugin.Name, .KPlugin.Website, .KPlugin.BugReportUrl, .KPlugin.Authors[0].Name, .KPlugin.Authors[0].Email' "$plasmoidPath/metadata.json" )
+
+    [ "${metadata['id']+1}" ] || panic 0 "Couldn't read plasmoid ID" $LINENO
+    [ "${metadata['issuesUrl']+1}" ] || metadata['issuesUrl']="${metadata['url']}"
+}
+
+extract-strings-into()
+{
+    local potFile="$1" listFile
+    local -n data3="$2"
+    listFile="$( mktemp )"
+
+    cd "${data3['plasmoidRoot']}" || panic 0 "Failed to go into '${data3['plasmoidRoot']}' directory" $LINENO
+    find ../src -name '*.cpp' -o -name '*.h' -o -name '*.c' -o -name '*.qml' -o -name '*.js' | sort > "$listFile"
+
+    # See Ki18n's extract-messages.sh for a full example:
+    # https://invent.kde.org/sysadmin/l10n-scripty/-/blob/master/extract-messages.sh#L25
+    # The -kN_ and -kaliasLocale keywords are mentioned in the Outside_KDE_repositories wiki.
+    # We don't need -kN_ since we don't use intltool-extract but might as well keep it.
+    # I have no idea what -kaliasLocale is used for. Googling aliasLocale found only listed kde1 code.
+    # We don't need to parse -ki18nd since that'll extract messages from other domains.
+    result=$( xgettext \
+        --package-name="${data3['id']}" \
+        --msgid-bugs-address="${data3['issuesUrl']}" \
+        --directory="${data3['plasmoidRoot']}" \
+        --directory="${data3['poPath']}" \
+        --files-from="$listFile" \
+        --copyright-holder="${data3['author']} <${data3['email']}>" \
+        --from-code=UTF-8 \
+        --width=400 \
+        --add-location=file \
+        --c++ \
+        --kde \
+        -ci18n \
+        -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 \
+        -kki18n:1 -kki18nc:1c,2 -kki18np:1,2 -kki18ncp:1c,2,3 \
+        -ktr2i18n:1 -kI18N_NOOP:1  -kI18N_NOOP2:1c,2 \
+        -kN_:1 \
+        -kaliasLocale \
+        --output="$potFile" 2>&1 )\
+    || panic 0 "$result" $LINENO
+}
+
+pot-test()
+{
+    local tmpPot
+    tmpPot="$( mktemp )"
+    local -n data2="$1"
+    workPot="${data2['potFile']}"
+
+    extract-strings-into "$tmpPot" 'data2'
+    update-i18n-metadata "$tmpPot" 'data2'
+
+    if result="$( diff <(grep -v '^"POT-Creation-Date' "$workPot") <(grep -v '^"POT-Creation-Date' "$tmpPot") )"; then
+        rm "$tmpPot"
+        confirm 0 "template.pot is up to date with the source files." $LINENO
+    else
+        rm "$tmpPot"
+        echo -e "\n$result\n"
+        panic 0 "template.pot is not up to date with the source files. Run ./bin/i18n-extract" $LINENO
+    fi
+
 }

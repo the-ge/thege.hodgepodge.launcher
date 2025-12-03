@@ -2,7 +2,7 @@
 
 
 set -eEu
-. "$( dirname "$0" )/.i18n"
+. "$( dirname "$0" )/.plasmoid"
 
 
 main()

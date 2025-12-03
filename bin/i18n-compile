@@ -1,15 +1,8 @@
 #!/bin/bash
-# Version: 23
-# https://techbase.kde.org/Development/Tutorials/Localization/i18n_Build_Systems
-# https://techbase.kde.org/Development/Tutorials/Localization/i18n_Build_Systems/Outside_KDE_repositories
-# https://invent.kde.org/sysadmin/l10n-scripty/-/blob/master/extract-messages.sh
-#
-# Step 1: `./bin/i18n extract` to build the i18n template (template.pot)
-# Step 2: `./bin/i18n compile` to compile the i18n catalog (i.e. ro.po, de.po, etc.)
 
 
 set -eEu
-. "$( dirname "$0" )/.i18n"
+. "$( dirname "$0" )/.plasmoid"
 
 
 main()
