@@ -8,6 +8,7 @@ on:
       - 'src/contents/**/*.qml'
       - 'src/contents/**/*.js'
       - 'src/translate/**'
+  workflow_dispatch:
 
 jobs:
   i18n-check:
