@@ -29,10 +29,10 @@ main()
         fuzzy="$(echo "$stats" | grep --only-matching '[0-9]* fuzzy' | cut -d' ' -f1)"
 
         if [ "${missing:-0}" != '0' ] || [ "${fuzzy:-0}" != '0' ]; then
-            warn 0 "${lang^^} translations: $done done, $missing missing, $fuzzy fuzzy" $LINENO
+            warn 0 "$lang translations: $done done, $missing missing, $fuzzy fuzzy" $LINENO
             result=1
         else
-            confirm 0 "${lang^^} translations: complete ($done/$done)" $LINENO
+            confirm 0 "Translations complete ($done/$done) for $lang." $LINENO
         fi
     done
 
