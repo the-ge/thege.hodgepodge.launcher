@@ -40,6 +40,7 @@ main()
     [ -f "$poFile" ] && { warn 0 "The '$poFile' file already exists"; exit 1; }
 
     result=$( msginit --no-translator --no-wrap --input="$potFile" --locale="$lang" --output-file="$poFile" 2>&1 ) || panic 0 "$result" $LINENO
+    update-i18n-metadata "$poFile" 'data' "$lang"
 
     confirm 0 "...done initializing new language '$lang' ($poFile)." $LINENO
 }
