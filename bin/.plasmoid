@@ -131,8 +131,6 @@ update-i18n-metadata()
     sed -i 's/YEAR/'"$( date +%Y )"'/' "$file"
     sed -i 's/\(FIRST AUTHOR\|FULL NAME\)/'"${actual['author']}"'/' "$file"
     sed -i 's/EMAIL@ADDRESS/'"${actual['email']}"'/' "$file"
-    #sed -i 's/# SOME DESCRIPTIVE TITLE./'"# Translation of ${actual['name']} (${actual['id']}) in $language"'/' "$file"
-    #sed -i 's/"Content-Type: text\/plain; charset=CHARSET\\n"/"Content-Type: text\/plain; charset=UTF-8\\n"/' "$file"
 }
 
 store-metadata-in()
