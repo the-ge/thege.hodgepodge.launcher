@@ -40,7 +40,7 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 4. Click on the plasmoid in the widget list, then drag and drop this widget to the taskbar.
 
 > [!NOTE]
-> Note: only the KDE Store package contains compiled translations, so it should be a bit faster, at least in theory. Of course, one could compile the translations (see step 4 in [HOW TO TRANSLATE](#how-to-translate)) before installing from GitHub.*
+> Only the KDE Store package contains compiled translations, so it should be a bit faster, at least in theory. Of course, one could compile the translations (see step 4 in [HOW TO TRANSLATE](#how-to-translate)) before installing from GitHub.*
 
 ## FEATURES
 
@@ -98,6 +98,8 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
         ```sh
         LC_ALL=ro_RO.utf8 plasmoidviewer --applet .
         ```
+> [!NOTE]
+> The configuration translations will not available when using this testing method.
 
     - Installing on your system (having set the right locale) from the cloned repository (see INSTALLATION, [method #3](#3-manually-cloning-the-github-repository)).
 
