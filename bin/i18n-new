@@ -15,7 +15,7 @@ set -eEu
 
 main()
 {
-    local lang="${1:-}" pot poFile result
+    local lang="${1:-}" potFile poFile result
 
     [ -n "$lang" ] || {
         hint 0 'Usage:' $LINENO
