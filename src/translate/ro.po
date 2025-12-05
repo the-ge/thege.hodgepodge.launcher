@@ -1,4 +1,4 @@
-# Translation of Hodgepodge Application Launcher (thege.hodgepodge.launcher) in LANGUAGE
+# ro translation of Hodgepodge Application Launcher (thege.hodgepodge.launcher)
 # Copyright (C) 2025 Gabriel Tenita <g1704578400@tenita.eu>
 # This file is distributed under the same license as the thege.hodgepodge.launcher package.
 # Gabriel Tenita <g1704578400@tenita.eu>, 2025.
@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thege.hodgepodge.launcher\n"
 "Report-Msgid-Bugs-To: https://github.com/the-ge/thege.hodgepodge.launcher/issues\n"
-"POT-Creation-Date: 2025-12-02 13:46+0200\n"
+"POT-Creation-Date: 2025-12-05 18:09+0200\n"
 "PO-Revision-Date: 2025-11-28 16:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,414 +17,419 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
 
-#: ../src/contents/config/config.qml
+#: ../src/contents/config/config.qml:17
 #, kde-format
 msgid "Behavior"
 msgstr "Comportament"
 
-#: ../src/contents/config/config.qml
+#: ../src/contents/config/config.qml:23
 #, kde-format
 msgid "Appearance"
 msgstr "Aspect"
 
-#: ../src/contents/ui/Config/KCMAbout.qml
+#: ../src/contents/ui/Config/KCMAbout.qml:32
 #, kde-format
 msgid "Report a Bug…"
 msgstr "Raportează o problemă"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:46
 #, kde-format
 msgid "Sidebar position:"
 msgstr "Poziția barei laterale:"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:49
 #, kde-format
 msgid "Left"
 msgstr "Stânga"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:54
 #, kde-format
 msgid "Right"
 msgstr "Dreapta"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:61
 #, kde-format
 msgid "List style:"
 msgstr "Stilul listelor:"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:64
 #, kde-format
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:71
 #, kde-format
 msgid "Compact"
 msgstr "Compact"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:77
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Disabled in Touch Mode"
 msgstr "Inactiv în modul touch"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:83
 #, kde-format
 msgctxt "@info:isListCompact"
 msgid "Normal: two rows, compact: one row."
 msgstr "Normal: două rânduri, compact: un singur rând."
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:91
 #, kde-format
 msgid "Launcher icon:"
 msgstr "Pictograma lansatorului:"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:96
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Schimbă pictograma lansatorului de aplicații"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:97
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Current icon is %1. Click to open menu to change the current icon or reset to the default icon."
 msgstr "Pictograma curentă este %1. Fă clic pentru a deschide meniul ce dă posibilitatea de a schimba pictograma curentă sau a o reseta la valoarea inițială."
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:100
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "Numele pictogramei este \"%1\""
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:133
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Alege…"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:135
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Alege o pictogramă pentru lansatorul de aplicații"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:139
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Resetează la pictograma inițială"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:145
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Șterge pictograma"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:158
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Launcher icon text:"
 msgstr "Textul pictogramei lansatorului:"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:160
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label next to the launcher icon…"
 msgstr "Scrie aici pentru a adăuga text lângă pictograma lansatorului…"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:173
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove launcher icon text"
 msgstr "Șterge textul pictogramei"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:186
 #, kde-format
 msgctxt "@info"
 msgid "An icon text cannot be set when the launcher's container is vertical."
 msgstr "Nu poate fi adăugat text la pictogramă când containerul lansatorului este vertical."
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:196
 #, kde-format
 msgid "User avatar size:"
 msgstr "Mărimea avatarului utilizatorului:"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:202
+#: ../src/contents/ui/Config/KCMAppearance.qml:213
+#: ../src/contents/ui/Config/KCMAppearance.qml:224
+#: ../src/contents/ui/Config/KCMAppearance.qml:287
 #, kde-format
 msgid "px"
 msgstr "px"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:207
 #, kde-format
 msgid "Grid icons size:"
 msgstr "Mărimea pictogramei în grile:"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:218
 #, kde-format
 msgid "List icons size:"
 msgstr "Mărimea pictogramei în liste:"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:229
 #, kde-format
 msgctxt "@info:userIconSize"
 msgid "The size of the user avatar located in the launcher header."
 msgstr "Mărimea avatarului utilizatorului (în antetul lansatorului)."
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:237
 #, kde-format
 msgid "Favorites layout:"
 msgstr "Aspectul favoritelor:"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:240
+#: ../src/contents/ui/Config/KCMAppearance.qml:256
 #, kde-format
 msgid "Grid"
 msgstr "Grilă"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:246
+#: ../src/contents/ui/Config/KCMAppearance.qml:262
 #, kde-format
 msgid "List"
 msgstr "Listă"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:253
 #, kde-format
 msgid "Applications layout:"
 msgstr "Aspectul aplicațiilor:"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:273
 #, kde-format
 msgid "Separator lines:"
 msgstr "Linii de separare:"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:277
 #, kde-format
 msgid "Width:"
 msgstr "Grosime:"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:292
 #, kde-format
 msgid "Color:"
 msgstr "Culoare:"
 
-#: ../src/contents/ui/Config/KCMAppearance.qml
+#: ../src/contents/ui/Config/KCMAppearance.qml:296
 #, kde-format
 msgid "Separator lines color"
 msgstr "Culoarea liniilor separatoare:"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:46
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Ordonează alfabetic aplicațiile"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:52
 #, kde-format
 msgid "Highlight new apps"
 msgstr "Evidențiază aplicațiile noi"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:58
 #, kde-format
 msgid "Update main panel when hovering over sidebar categories"
 msgstr "Actualizează panoul principal când cursorul ajunge deasupra unei categorii din bara laterală"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:63
 #, kde-format
 msgctxt "@info:isUpdateOnHover"
 msgid "If unchecked, the apps in the main panel will be updated when clicking (instead of hovering) on a sidebar category."
 msgstr "Dacă nu este bifată, pentru actualizarea aplicațiilor din panoul principal va fi necesar un clic pe o categorie din bara laterală."
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:73
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Configurează extensiile pentru căutare..."
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:82
 #, kde-format
 msgid "Open launcher in:"
 msgstr "Deschide lansatorul în:"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:88
 #, kde-format
 msgctxt "@info:startWith"
 msgid "Select what is first visible when the launcher is opened."
 msgstr "Alege ce se vede inițial la deschiderea lansatorului."
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:92
 #, kde-format
 msgid "Show applications as:"
 msgstr "Afișeaza aplicațiile ca:"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:95
 #, kde-format
 msgid "Name only"
 msgstr "Nume"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:96
 #, kde-format
 msgid "Description only"
 msgstr "Descriere"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:97
 #, kde-format
 msgid "Name and description"
 msgstr "Nume și descriere"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:98
 #, kde-format
 msgid "Description and name"
 msgstr "Descriere și nume"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:107
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Afișează butoane pentru:"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:110
 #, kde-format
 msgid "Power actions"
 msgstr "Oprirea sistemului"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:115
 #, kde-format
 msgid "Session actions"
 msgstr "Sesiunea de lucru"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:121
 #, kde-format
 msgctxt "@info:isPowerVisible,isSessionVisible"
 msgid "If unchecked or not enough space, buttons will move to the 'Power/Session' menu."
 msgstr "Dacă opțiunea nu este bifată sau butoanele nu au suficient loc, butoanele se vor muta în meniul Sistem/Sesiune."
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:126
 #, kde-format
 msgid "Show button captions in the Power/Session toolbar"
 msgstr "Afișează textul butoanelor în bara de unelte Sistem/Sesiune"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:136
 #, kde-format
 msgid "Reset configuration"
 msgstr "Resetează configurația"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml
+#: ../src/contents/ui/Config/KCMBehavior.qml:150
 #, kde-format
 msgid "Clicking 'OK' will reset the launcher settings."
 msgstr "Confirmând cu butonul 'OK' va reseta configurarea lansatorului."
 
-#: ../src/contents/ui/Config/KCMShortcuts.qml
+#: ../src/contents/ui/Config/KCMShortcuts.qml:18
 #, kde-format
 msgid "Shortcuts"
 msgstr "Scurtături"
 
-#: ../src/contents/ui/Config/KCMShortcuts.qml
+#: ../src/contents/ui/Config/KCMShortcuts.qml:30
 #, kde-format
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr "Această scurtătură va activa lansatorul ca și cum ar fi fost făcut un clic pe el."
 
-#: ../src/contents/ui/FullRepresentationHeader.qml
+#: ../src/contents/ui/FullRepresentationHeader.qml:91
 #, kde-format
 msgid "Open user settings"
 msgstr "Deschide configurarea"
 
-#: ../src/contents/ui/FullRepresentationHeader.qml
+#: ../src/contents/ui/FullRepresentationHeader.qml:280
 #, kde-format
 msgid "Keep Open"
 msgstr "Menține deschis"
 
-#: ../src/contents/ui/FullRepresentation.qml
+#: ../src/contents/ui/FullRepresentation.qml:162
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
 msgstr "Nicio potrivire"
 
-#: ../src/contents/ui/Helper/Global.qml
+#: ../src/contents/ui/Helper/Global.qml:38
 #, kde-format
 msgid "Favorites"
 msgstr "Favorite"
 
-#: ../src/contents/ui/Helper/Global.qml
+#: ../src/contents/ui/Helper/Global.qml:39
 #, kde-format
 msgid "Applications"
 msgstr "Aplicații"
 
-#: ../src/contents/ui/Helper/Global.qml
+#: ../src/contents/ui/Helper/Global.qml:40
 #, kde-format
 msgid "All Applications"
 msgstr "Toate aplicațiile"
 
-#: ../src/contents/ui/Helper/Global.qml
+#: ../src/contents/ui/Helper/Global.qml:41
 #, kde-format
 msgid "Places"
 msgstr "Locuri"
 
-#: ../src/contents/ui/Helper/Tools.js
+#: ../src/contents/ui/Helper/Tools.js:32
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Scoate dintre favorite"
 
-#: ../src/contents/ui/Helper/Tools.js
+#: ../src/contents/ui/Helper/Tools.js:36
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Adaugă la favorite"
 
-#: ../src/contents/ui/Helper/Tools.js
+#: ../src/contents/ui/Helper/Tools.js:60
 #, kde-format
 msgid "On All Activities"
 msgstr "În toate activitățile"
 
-#: ../src/contents/ui/Helper/Tools.js
+#: ../src/contents/ui/Helper/Tools.js:110
 #, kde-format
 msgid "On the Current Activity"
 msgstr "În activitatea curentă"
 
-#: ../src/contents/ui/Helper/Tools.js
+#: ../src/contents/ui/Helper/Tools.js:124
 #, kde-format
 msgid "Show in Favorites"
 msgstr "Afișează în favorite"
 
-#: ../src/contents/ui/main.qml
+#: ../src/contents/ui/main.qml:356
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Editează aplicațiile.."
 
-#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml
+#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml:183
 #, kde-format
 msgid "Power/Session"
 msgstr "Sistem/Sesiune"
 
-#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml
+#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml:184
 #, kde-format
 msgid "Session"
 msgstr "Sesiune"
 
-#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml
+#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml:185
 #, kde-format
 msgid "Power"
 msgstr "Sistem"
 
-#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml
+#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml:186
 #, kde-format
 msgid "More"
 msgstr "Mai multe"
 
-#: ../src/contents/ui/Page/PlacesPage.qml
+#: ../src/contents/ui/Page/PlacesPage.qml:66
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Computer"
 msgstr "Sistem"
 
-#: ../src/contents/ui/Page/PlacesPage.qml
+#: ../src/contents/ui/Page/PlacesPage.qml:67
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "History"
 msgstr "Istorie"
 
-#: ../src/contents/ui/Page/PlacesPage.qml
+#: ../src/contents/ui/Page/PlacesPage.qml:68
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Folosite frecvent"
 
-#: ../src/contents/ui/View/KickoffGridView.qml
+#: ../src/contents/ui/View/KickoffGridView.qml:99
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Grilă cu %1 rânduri și %2 coloane"
