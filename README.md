@@ -40,7 +40,7 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 4. Click on the plasmoid in the widget list, then drag and drop this widget to the taskbar.
 
 > [!NOTE]
-> Only the KDE Store package contains compiled translations, so it should be a bit faster, at least in theory. Of course, one could compile the translations (see step 4 in [HOW TO TRANSLATE](#how-to-translate)) before installing from GitHub.*
+> Only the KDE Store package contains compiled translations, so it should be a bit faster, at least in theory. Of course, one could compile the translations (see step 4 in [HOW TO TRANSLATE](#how-to-translate)) before installing from GitHub).
 
 ## FEATURES
 
@@ -71,39 +71,43 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 
 ## HOW TO TRANSLATE
 
-1. Extraxt translatable strings from the plasmoid code:
+### 1. Extract translatable strings from the plasmoid code:
+
 ```sh
 ./bin/i18n-extract
 ```
-    Note: the utility will attempt to install gettext if not already installed.
 
-2. Create your language catalog file, if it does not already exist:
+> [!NOTE]
+> Note: the utility will attempt to install gettext if not already installed.
+
+### 2. Create your language catalog file, if it does not already exist:
 ```sh
 ./bin/i18n-new <LANGUAGE_CODE> # <LANGUAGE_CODE> i.e. de, en_UK
 ```
 
-3. Translate the strings in the `/src/translate/<LANGUAGE_CODE>.po` file.
+### 3. Translate the strings in the `/src/translate/<LANGUAGE_CODE>.po` file.
 
-4. Compile the translation:
+### 4. Compile the translation:
 ```sh
 ./bin/i18n-compile
 ```
 
-5. Test your translation:
+### 5. Test your translation
 
-    5.1 Using `plasmoidviewer` in your translation's locale, i.e.
-
-        ```sh
-        LC_ALL=en_UK.utf8 plasmoidviewer --applet .
-        ```
-
-        ```sh
-        LC_ALL=ro_RO.utf8 plasmoidviewer --applet .
-        ```
-    5.2 Installing on your system (having set the right locale) from the cloned repository (see INSTALLATION, [method #3](#3-manually-cloning-the-github-repository)).
+#### 5.1 Test your translation using `plasmoidviewer` in your translation's locale, i.e.
 
 > [!NOTE]
-> The configuration translations will not available when testing using `plasmoidviewer` (method 5.2).
+> The configuration translations will not available when testing using this method.
+
+```sh
+LC_ALL=en_UK.utf8 plasmoidviewer --applet .
+```
+
+```sh
+LC_ALL=ro_RO.utf8 plasmoidviewer --applet .
+```
+
+#### 5.2 Test your translation by installing on your system (having set the right locale) from the cloned repository (see INSTALLATION, [method #3](#3-manually-cloning-the-github-repository)).
 
 ## TEST
 
