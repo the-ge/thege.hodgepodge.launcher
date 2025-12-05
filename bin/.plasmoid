@@ -165,30 +165,32 @@ extract-strings-into()
     cd "${data3['plasmoidRoot']}" || panic 0 "Failed to go into '${data3['plasmoidRoot']}' directory" $LINENO
     find ../src -name '*.cpp' -o -name '*.h' -o -name '*.c' -o -name '*.qml' -o -name '*.js' | sort > "$listFile"
 
-    # See Ki18n's extract-messages.sh for a full example:
-    # https://invent.kde.org/sysadmin/l10n-scripty/-/blob/master/extract-messages.sh#L25
-    # The -kN_ and -kaliasLocale keywords are mentioned in the Outside_KDE_repositories wiki.
-    # We don't need -kN_ since we don't use intltool-extract but might as well keep it.
-    # I have no idea what -kaliasLocale is used for. Googling aliasLocale found only listed kde1 code.
-    # We don't need to parse -ki18nd since that'll extract messages from other domains.
+    # @see https://invent.kde.org/frameworks/ki18n/-/blob/master/docs/programmers-guide.md#user-content-extracting-templates
+    # -f     / --files-from=FILE        get list of input files from FILE
+    # -D     / --directory=SOME_PATH    add SOME_PATH to the list for input files search
+    #          --add-location=full      generate '#: filename:line' comments; valid options: full, file, never (same as the --no-location option)
+    #          --from-code=UTF-8        encoding of source files must be UTF-8 for ki18n
+    # --c++  | --language=C++           recognise the C++ language
+    #          --kde                    recognize KDE 4 format strings (only language C++)
+    # -ci18n | --add-comments=i18n      place comment blocks starting with 'i18n' and preceding keyword lines in output file
+    # -kWORD | --keyword=WORD           look for WORD as an additional keyword; informs xgettext of all possible translation call names and which of their arguments to extract
     result=$( xgettext \
         --package-name="${data3['id']}" \
         --msgid-bugs-address="${data3['issuesUrl']}" \
+        --copyright-holder="${data3['author']} <${data3['email']}>" \
+        --files-from="$listFile" \
         --directory="${data3['plasmoidRoot']}" \
         --directory="${data3['poPath']}" \
-        --files-from="$listFile" \
-        --copyright-holder="${data3['author']} <${data3['email']}>" \
+        --no-wrap \
+        --add-location=full \
         --from-code=UTF-8 \
-        --width=400 \
-        --add-location=file \
-        --c++ \
+        --language=C++ \
         --kde \
-        -ci18n \
+        --add-comments='i18n' \
         -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 \
         -kki18n:1 -kki18nc:1c,2 -kki18np:1,2 -kki18ncp:1c,2,3 \
-        -ktr2i18n:1 -kI18N_NOOP:1  -kI18N_NOOP2:1c,2 \
-        -kN_:1 \
-        -kaliasLocale \
+        -kkli18n:1 -kkli18nc:1c,2 -kkli18np:1,2 -kkli18ncp:1c,2,3 \
+        -kI18N_NOOP:1 -kI18N_NOOP2:1c,2 \
         --output="$potFile" 2>&1 )\
     || panic 0 "$result" $LINENO
 }
