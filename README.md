@@ -89,7 +89,17 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 ./bin/i18n-compile
 ```
 
-5. Test your translation using the methods in the next chapter.
+5. Test your translation:
+    - Using `plasmoidviewer` in your translation's locale, i.e.
+        ```sh
+        LC_ALL=en_UK.utf8 plasmoidviewer --applet .
+        ```
+
+        ```sh
+        LC_ALL=ro_RO.utf8 plasmoidviewer --applet .
+        ```
+
+    - Installing on your system (having set the right locale) from the cloned repository (see INSTALLATION, [method #3](#3-manually-cloning-the-github-repository)).
 
 ## TEST
 
@@ -100,7 +110,13 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
     plasmoidviewer --help
     ```
 
-2. Installing on your system (see INSTALLATION, [method #3](#3-manually-cloning-the-github-repository)).
+    If you are testing translations, add the locale of your translation, i.e.
+
+    ```sh
+    LC_ALL=ro_RO.utf8 plasmoidviewer --size 960x720 --applet .
+    ```
+
+2. Installing on your system from the cloned repository (see INSTALLATION, [method #3](#3-manually-cloning-the-github-repository)).
 
 ## UTILITIES
 
