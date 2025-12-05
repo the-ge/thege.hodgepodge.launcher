@@ -90,7 +90,9 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 ```
 
 5. Test your translation:
-    - Using `plasmoidviewer` in your translation's locale, i.e.
+
+    5.1 Using `plasmoidviewer` in your translation's locale, i.e.
+
         ```sh
         LC_ALL=en_UK.utf8 plasmoidviewer --applet .
         ```
@@ -98,10 +100,10 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
         ```sh
         LC_ALL=ro_RO.utf8 plasmoidviewer --applet .
         ```
-> [!NOTE]
-> The configuration translations will not available when using this testing method.
+    5.2 Installing on your system (having set the right locale) from the cloned repository (see INSTALLATION, [method #3](#3-manually-cloning-the-github-repository)).
 
-    - Installing on your system (having set the right locale) from the cloned repository (see INSTALLATION, [method #3](#3-manually-cloning-the-github-repository)).
+> [!NOTE]
+> The configuration translations will not available when testing using `plasmoidviewer` (method 5.2).
 
 ## TEST
 
