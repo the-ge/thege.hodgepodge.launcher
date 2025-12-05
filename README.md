@@ -2,15 +2,15 @@
 
 ## SCREENSHOTS
 
+![Default settings (48px grid) vs my settings(64px grid)](https://github.com/user-attachments/assets/de2351db-83d2-4f83-921d-cc540fe5149e)
+
+![Default settings (32px list)](https://github.com/user-attachments/assets/e502e142-23f6-47ef-a158-93ac6c0da52f)
+
+![Grid variants: 128px vs 16px](https://github.com/user-attachments/assets/ba353256-bd98-44ca-91b1-b64f9a899515)
+
+![List variants: 1280px vs 16px](https://github.com/user-attachments/assets/862ebf2d-f8b2-4728-a8b3-7e5df32d8471)
+
 ![Configuration options](https://github.com/user-attachments/assets/b0b7d127-5288-4701-af9c-708ac8bb2105)
-
-![Default settings (48px grid) vs my settings(64px grid)](https://github.com/user-attachments/assets/4a1e6913-1194-4729-85bb-c65d87e95603)
-
-![Default settings (32px list)](https://github.com/user-attachments/assets/4c8e714d-3c95-42e2-9c6b-20c4524c07fb)
-
-![Grid variants: 128px vs 16px](https://github.com/user-attachments/assets/0671809d-6073-4be9-8870-692c9e0b51c1)
-
-![List variants: 1280px vs 16px](https://github.com/user-attachments/assets/332121f6-9b7b-4b93-b687-4b7fdd0282a9)
 
 ## INSTALLATION
 
