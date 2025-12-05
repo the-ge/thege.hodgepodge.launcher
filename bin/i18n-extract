@@ -32,11 +32,11 @@ update-pot()
             removedKeys="$( echo "$changes" | grep "< msgid" | cut -c 9- | sort )"
             if [ -n "$addedKeys" ]; then
                 confirm 1 "Translation strings newly added to code:" $LINENO
-                confirm 2 "$addedKeys"
+                hint 2 "$addedKeys"
             fi
             if [ -n "$removedKeys" ]; then
                 warn 1 "Translation strings removed from code:" $LINENO
-                warn 2 "$removedKeys"
+                hint 2 "$removedKeys"
                 warn 1 "Check at the end of .po files for obsolete strings." $LINENO
             fi
         else
