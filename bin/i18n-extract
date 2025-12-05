@@ -76,7 +76,7 @@ main()
 
         cp "$poFile" "$tmpPoFile"
         msgmerge \
-           --add-location=file \
+           --add-location=full \
            --no-fuzzy-matching \
            --no-wrap \
            --quiet \
