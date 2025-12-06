@@ -180,7 +180,7 @@ killall plasmashell && kstart plasmashell
 
 ## :construction: TODO
 
-May take quite a while.
+May take quite a while. Also some todos may not make it to code.
 
 - [x] Fix 'All Applications' binding loop bug (grid icon size seems undefined).
 - [x] Make horizontal line separator in the sidebar use settings.
@@ -188,16 +188,16 @@ May take quite a while.
 - [x] Fix compactRepresentation height when placed on vertical panel.
 - [x] Add configuration for the user avatar size.
 - [x] Add 'Start in:' setting (Favorites/All Applications/Deveopment/Education/...)
-- [ ] Test if adding (again) the i18nContext to the singleton helps with the 'Applications' and 'Places' translations. If not, get them from KDE Kicker.
+- [X] ~~Test if adding (again) the i18nContext to the singleton helps with the 'Applications' and 'Places' translations. If not, get them from KDE Kicker.~~ - Nope, not working.
 - [ ] Add contributor column to the translations table.
 - [ ] Add proper credits.
-- [ ] Add explanations to the README utilities section.
-- [ ] Add utility to pack the plasmoid for KDE Store
-    - check if KDE Store accepts .plasmoid files
-    - compile translations
-    - zip: cd src; zip contents/, translate/, metadata.json
-    - change extension to plasmoid
-    - zip the plasmoid - name uses version from metadata.json
+- [x] Add explanations to the README utilities section.
+- [x] Add utility to pack the plasmoid for KDE Store
+    - [x] check if KDE Store accepts .plasmoid files - it does.
+    - [x] ~~compile translations~~ - this step will remain outside ot this utility.
+    - [x] zip: cd src; zip contents/, translate/, metadata.json
+    - [x] change extension to plasmoid -  uses version from metadata.json.
+    - [x] ~~zip the plasmoid - name uses version from metadata.json~~ - KDE Store accepts .plasmoid uploads, so no need to zip it again.
 - [ ] Add `--check-punctuation` option for `i18n-status`, to make the punctuation check opt-in.
 - [ ] Remove the caret-down from the launcher icon configuration control.
 - [ ] Add UI and row count configuration for recent apps
