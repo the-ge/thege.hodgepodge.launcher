@@ -133,20 +133,38 @@ locale --all
 
 2. Installing on your system from the cloned repository (see INSTALLATION, [method #3](#3-manually-cloning-the-github-repository)).
 
-## UTILITIES
+## UTILITIES (in the `/bin/` folder)
 
 ### Plasmoid
 
 - `plasmoid-install`
-- `plasmoid-upgrade`
+
+- `plasmoid-upgrade` (also restarts `plasmashell`)
+
 - `plasmoid-uninstall`
+
+- `plasmoid-generate` (generates a .plasmoid package versioned by `/src/metadata.json`)
 
 ### Internationalisation
 
-- `i18n-extract`
-- `i18n-new`
-- `i18n-compile`
-- `i18n-status`
+- `i18n-test`: displays a concise translations status (it is meant for use in a GitHub action, though it only works locally for now).
+
+- `i18n-status`: displays translations status, alog with some tests' results.
+
+- `i18n-extract`: extracts translatable strings from code and existing i18n catalogs into a new `template.pot` i18n template file.
+
+- `i18n-new`: generates a new i18n catalog (.po) file; takes a language code argument, i.e.
+    ```sh
+    ./bin/i18n-new de
+    ```
+
+    or
+
+    ```sh
+    ./bin/i18n-new en_UK
+    ```
+
+- `i18n-compile`: compiles existing i18n catalog (.po) files to machine object (.mo) files, i.e. `/src/translate/nl.po` to `/src/contents/locale/nl/LC_MESSAGES/plasma_applet_thege.hodgepodge.launcher.mo`.
 
 ### Restart plasmashell
 
