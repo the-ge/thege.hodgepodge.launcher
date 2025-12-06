@@ -78,7 +78,7 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 ```
 
 > [!NOTE]
-> Note: the utility will attempt to install gettext if not already installed.
+> `./bin/i18n-extract` will attempt to install gettext if not already installed.
 
 ### 2. Create your language catalog file, if it does not already exist:
 ```sh
@@ -94,20 +94,27 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 
 ### 5. Test your translation
 
-#### 5.1 Test your translation using `plasmoidviewer` in your translation's locale, i.e.
+#### 5.1 Check that your system has the locale for the language you're translating:
+
+```sh
+locale --all
+```
+
+#### 5.2 Rebuild translations and install/upgrade the plasmoid:
+
+```sh
+
+# if this plasmoid is not already installed
+./bin/i18n-extract && ./bin/i18n-compile && ./bin/plasmoid-install
+
+# if this plasmoid is already installed
+# ./bin/plasmoid-upgrade will also restart plasmashell
+./bin/i18n-extract && ./bin/i18n-compile && ./bin/plasmoid-upgrade
+ 
+```
 
 > [!NOTE]
-> The configuration translations will not available when testing using this method.
-
-```sh
-LC_ALL=en_UK.utf8 plasmoidviewer --applet .
-```
-
-```sh
-LC_ALL=ro_RO.utf8 plasmoidviewer --applet .
-```
-
-#### 5.2 Test your translation by installing on your system (having set the right locale) from the cloned repository (see INSTALLATION, [method #3](#3-manually-cloning-the-github-repository)).
+> `./bin/plasmoid-upgrade` will also restart plasmashell
 
 ## TEST
 
