@@ -193,11 +193,11 @@ May take quite a while. Also some todos may not make it to code.
 - [x] Add proper credits.
 - [x] Add explanations to the README utilities section.
 - [x] Add utility to pack the plasmoid for KDE Store
-    - [x] check if KDE Store accepts .plasmoid files **it does**
-    - [x] ~~compile translations~~ **this step will remain outside ot this utility**
+    - [x] check if KDE Store accepts .plasmoid files **- it does**
+    - [x] ~~compile translations~~ **- this step will remain outside ot this utility**
     - [x] zip: cd src; zip `contents/`, `translate/`, `metadata.json`
-    - [x] change extension to plasmoid **uses version from metadata.json**
-    - [x] ~~zip the plasmoid - name uses version from metadata.json~~ **KDE Store accepts .plasmoid uploads, so no need to zip it again**
+    - [x] change extension to plasmoid **- uses version from metadata.json**
+    - [x] ~~zip the plasmoid - name uses version from metadata.json~~ **- KDE Store accepts .plasmoid uploads, so no need to zip it again**
 - [ ] Add `--check-punctuation` option for `i18n-status`, to make the punctuation check opt-in.
 - [ ] Remove the caret-down from the launcher icon configuration control.
 - [ ] Add UI and row count configuration for recent apps
