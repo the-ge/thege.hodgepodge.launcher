@@ -35,18 +35,11 @@ Item {
     //END
 
     //BEGIN Reusable Objects
-    readonly property string favoritesLabel: i18n("Favorites")
-    readonly property string appsLabel: i18n("Applications")
-    readonly property string allAppsLabel: i18n("All Applications")
-    readonly property string placesLabel: i18n("Places")
-    property list<string> categories: [
-        favoritesLabel, // index (cfg_startWith) 0
-        allAppsLabel,   // index (cfg_startWith) 1
-        placesLabel,    // index (cfg_startWith) 2
-    ]
-    readonly property int favoritesIndex: categories.indexOf(favoritesLabel)
-    readonly property int allAppsIndex: categories.indexOf(allAppsLabel)
-    readonly property int placesIndex: categories.indexOf(placesLabel)
+    property list<string> categories: []
+    // ⚠️ Sync to KCMBehavior.qml:87 (ComboBox#startWith.model)
+    readonly property int favoritesIndex: 0
+    readonly property int allAppsIndex: 1
+    readonly property int placesIndex: 2
     readonly property Kicker.RootModel slimModel: Kicker.RootModel {
         // qmllint disable missing-property
         autoPopulate: true
