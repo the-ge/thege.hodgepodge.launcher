@@ -182,6 +182,8 @@ killall plasmashell && kstart plasmashell
 
 May take quite a while. Also some todos may not make it to code.
 
+*Some of the following items are bugfixes for issues solved before creating this repository.*
+
 - [x] Fix 'All Applications' binding loop bug (grid icon size seems undefined).
 - [x] Make horizontal line separator in the sidebar use settings.
 - [x] Add separator between Power and Session buttons.
