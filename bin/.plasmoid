@@ -18,7 +18,7 @@ plasmoid()
 
     case "$1" in
         '--install')   kpackagetool6 --type Plasma/Applet --install . ;;
-        '--upgrade')   kpackagetool6 --type Plasma/Applet --upgrade . && systemctl --user restart plasma-plasmashell.service ;;
+        '--upgrade')   kpackagetool6 --type Plasma/Applet --upgrade . && systemctl --user restart plasma-plasmashell.service && echo 'Restarted plasmashell.' ;;
         '--uninstall') kpackagetool6 --type Plasma/Applet --remove 'thege.hodgepodge.launcher' ;;
          *)            help; kpackagetool6 --type Plasma/Applet --show 'thege.hodgepodge.launcher'; exit 0 ;;
     esac
