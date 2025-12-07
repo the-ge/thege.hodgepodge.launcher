@@ -188,8 +188,8 @@ May take quite a while. Also some todos may not make it to code.
 - [x] Fix compactRepresentation height when placed on vertical panel.
 - [x] Add configuration for the user avatar size.
 - [x] Add 'Start in:' setting (Favorites/All Applications/Deveopment/Education/...)
-- [x] Test if adding (again) the i18nContext to the singleton helps with the 'Applications' and 'Places' translations. If not, get them from KDE Kicker. - **Nope, not working.**
-- [ ] ~~Add contributor column to the translations table.~~ If translations are added by PRs, their authors become contributors automatically. Put on hold until a need appears.
+- [x] Test if adding (again) the i18nContext to the singleton helps with the 'Applications' and 'Places' translations. **Nope, not working.** ~~If not, get them from KDE Kicker.~~ **On second thought, I don't like the idea.**
+- [ ] ~~Add contributor column to the translations table.~~ **If translations are added by PRs, their authors become contributors automatically. Put on hold until a need appears.**
 - [x] Add proper credits.
 - [x] Add explanations to the README utilities section.
 - [x] Add utility to pack the plasmoid for KDE Store
