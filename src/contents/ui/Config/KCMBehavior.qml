@@ -14,7 +14,7 @@
 
 pragma ComponentBehavior: Bound
 
-import QtQuick
+import QtQuick as QQ
 import QtQuick.Layouts
 import QtQuick.Controls as QQC
 
@@ -64,7 +64,7 @@ KCM {
             text: i18nc("@info:isUpdateOnHover", "If unchecked, the apps in the main panel will be updated when clicking (instead of hovering) on a sidebar category.") // qmllint disable unqualified
         }
 
-        Item {
+        QQ.Item {
             Kirigami.FormData.isSection: true
         }
 
@@ -75,7 +75,7 @@ KCM {
             onClicked: KCMU.KCMLauncher.openSystemSettings("kcm_plasmasearch")
         }
 
-        Item {
+        QQ.Item {
             Kirigami.FormData.isSection: true
         }
 
@@ -100,7 +100,7 @@ KCM {
             ]
         }
 
-        Item {
+        QQ.Item {
             Kirigami.FormData.isSection: true
         }
 
@@ -150,7 +150,7 @@ KCM {
                 QQC.Label {
                     text: i18n("Clicking 'OK' will reset the launcher settings.") // qmllint disable unqualified
                     font.bold: true
-                    wrapMode: Text.WordWrap
+                    wrapMode: QQ.Text.WordWrap
                 }
             }
         }
