@@ -12,6 +12,20 @@
 # Step 5: `./bin/i18n compile` to compile the i18n catalogs (i.e. ro.po, de.po, etc.) into machine object files (ro.mo, de.mo, etc.)
 
 
+plasmoid()
+{
+    cd "$( dirname "$0" )/../src" || { echo 'ERROR: /src/ directory not found!'; exit 1; } # go to the metadata.json location
+
+    case "$1" in
+        '--install')   kpackagetool6 --type Plasma/Applet --install . ;;
+        '--upgrade')   kpackagetool6 --type Plasma/Applet --upgrade . && systemctl --user restart plasma-plasmashell.service ;;
+        '--uninstall') kpackagetool6 --type Plasma/Applet --remove 'thege.hodgepodge.launcher' ;;
+         *)            help; kpackagetool6 --type Plasma/Applet --show 'thege.hodgepodge.launcher'; exit 0 ;;
+    esac
+
+    systemctl --user restart plasma-plasmashell.service
+}
+
 show-as()
 {
     # https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
@@ -72,20 +86,6 @@ warn()  { say "$1" "⚠️ $2" 'warning' "${3:-}"; } # orange
 panic() { say "$1" "❌ $2. Aborting..." 'error' "${3:-}"; exit 1; } # red
 
 confirm() { say "$1" "✅ $2" 'success' "${3:-}"; } # light green
-
-plasmoid()
-{
-    cd "$( dirname "$0" )/../src" || { echo 'ERROR: /src/ directory not found!'; exit 1; } # go to the metadata.json location
-
-    case "$1" in
-        '--install')   kpackagetool6 --type Plasma/Applet --install . ;;
-        '--upgrade')   kpackagetool6 --type Plasma/Applet --upgrade . ;;
-        '--uninstall') kpackagetool6 --type Plasma/Applet --remove 'thege.hodgepodge.launcher' ;;
-         *)            help; kpackagetool6 --type Plasma/Applet --show 'thege.hodgepodge.launcher'; exit 0 ;;
-    esac
-
-    systemctl --user restart plasma-plasmashell.service
-}
 
 i18n-help()
 {
