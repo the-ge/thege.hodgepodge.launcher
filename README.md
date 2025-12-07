@@ -18,6 +18,9 @@
 
 Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 
+> [!NOTE]
+> Only the KDE Store package contains compiled translations, so it should be a bit faster, at least in theory. Of course, one could compile the translations (see step 4 in [HOW TO TRANSLATE](#how-to-translate)) before installing from GitHub).
+
 ### 2. Manually, using the plasmoid from the KDE Store
 
 1. Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Download`.
@@ -38,9 +41,6 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 ```
 3. Right-click on the taskbar and choose `Add or Manage Widgets`.
 4. Click on the plasmoid in the widget list, then drag and drop this widget to the taskbar.
-
-> [!NOTE]
-> Only the KDE Store package contains compiled translations, so it should be a bit faster, at least in theory. Of course, one could compile the translations (see step 4 in [HOW TO TRANSLATE](#how-to-translate)) before installing from GitHub).
 
 ## FEATURES
 
@@ -190,7 +190,7 @@ May take quite a while. Also some todos may not make it to code.
 - [x] Add 'Start in:' setting (Favorites/All Applications/Deveopment/Education/...)
 - [X] ~~Test if adding (again) the i18nContext to the singleton helps with the 'Applications' and 'Places' translations. If not, get them from KDE Kicker.~~ - Nope, not working.
 - [ ] Add contributor column to the translations table.
-- [ ] Add proper credits.
+- [x] Add proper credits.
 - [x] Add explanations to the README utilities section.
 - [x] Add utility to pack the plasmoid for KDE Store
     - [x] check if KDE Store accepts .plasmoid files - it does.
@@ -210,7 +210,30 @@ May take quite a while. Also some todos may not make it to code.
 
 ## CREDITS
 
-- KDE team (Plasma Framework, Kickoff, what else?)
-- Chris Holland (Tiled Menu, tutorials)
-- Jin Liu (Kickon, i18n)
-- Claudio Catterina (PlasMusic Toolbar, i18n, repository presentation)
+Thanks to the following individuals/teams for their work that helped me understand things related to this plasmoid or code things into this plasmoid.
+
+- [Chris Holland](https://github.com/Zren):
+    - [Tiled Menu](https://github.com/Zren/plasma-applet-tiledmenu) (or on [KDE Store](https://store.kde.org/p/2142716/)) - my favorite launcher, whose issues with KDE 6 prompted me to make my own.
+    - [Plasma Widget tutorial](https://develop.kde.org/docs/plasma/widget/) (and its [old version](https://zren.github.io/kde/docs/widget/))
+    - [Plasma Widget Library](https://github.com/Zren/plasma-applet-lib)
+    - [Zren's Plasma Widgets](https://github.com/Zren/plasma-applets)
+
+- [Jin Liu](https://github.com/jinliu):
+    - [Kickon](https://github.com/jinliu/plasma-applet-kickon) (or [on KDE Store](https://store.kde.org/p/2286877))
+
+- [Claudio Catterina](https://github.com/ccatterina):
+    - [PlasMusic Toolbar](https://github.com/ccatterina/plasmusic-toolbar): not directly related, but it gave me ideas about internationalization and GitHub repository presentation.
+
+- [KDE team](https://kde.org/):
+    - [Plasma Framework](https://invent.kde.org/plasma/libplasma)
+    - [Kickoff](https://invent.kde.org/plasma/plasma-desktop/-/tree/master/applets/kickoff)
+    - [Kicker](https://invent.kde.org/plasma/plasma-desktop/-/tree/master/applets/kickerf)
+    - [KDE Developer Documentation](https://develop.kde.org/docs/)
+    - [KDE API Reference](https://api.kde.org/index.html) (especially [Kirigami](https://api.kde.org/kirigami-index.html))
+    - [Plasma 6 Wiki](https://community.kde.org/Plasma/Plasma_6)
+
+- [Qt team](https://www.qt.io/)
+    - [Qt QML Documentation](https://doc.qt.io/qt-6/qtqml-index.html)
+    - [Qt Quick Controls Documentation](https://doc.qt.io/qt-6/qtquickcontrols-index.html)
+    - [Qt Learning Hub](https://www.qt.io/qt-learning-hub)
+    - [Qt Blog](https://www.qt.io/blog)
