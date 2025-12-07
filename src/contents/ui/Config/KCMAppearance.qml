@@ -9,6 +9,7 @@
  *
  * HACK: disabled useless warnings from qmllint for stuff related to:
  *     - org.kde.plasma.plasmoid
+ *     - i18n*()
 */
 
 pragma ComponentBehavior: Bound
@@ -43,44 +44,44 @@ KCM {
     Kirigami.FormLayout {
 
         RowLayout { // isPaneOrderReversed
-            Kirigami.FormData.label: i18n("Sidebar position:")
+            Kirigami.FormData.label: i18n("Sidebar position:") // qmllint disable unqualified
             QQC.RadioButton {
                 id: isPaneOrderReversedOff
-                text: i18n("Left")
+                text: i18n("Left") // qmllint disable unqualified
                 checked: root.cfg_isPaneOrderReversed === false
             }
             QQC.RadioButton {
                 id: isPaneOrderReversedOn
-                text: i18n("Right")
+                text: i18n("Right") // qmllint disable unqualified
                 checked: root.cfg_isPaneOrderReversed === true
             }
         }
 
         RowLayout { // isListCompact
             //Layout.columnSpan: 2
-            Kirigami.FormData.label: i18n("List style:")
+            Kirigami.FormData.label: i18n("List style:") // qmllint disable unqualified
             QQC.RadioButton {
                 id: isListNormal
-                text: i18n("Normal")
+                text: i18n("Normal") // qmllint disable unqualified
                 checked: !root.cfg_isListCompact
                 enabled: !Kirigami.Settings.tabletMode
                 onToggled: root.cfg_isListCompact = false
             }
             QQC.RadioButton {
                 id: isListCompact
-                text: i18n("Compact")
+                text: i18n("Compact") // qmllint disable unqualified
                 checked: root.cfg_isListCompact
                 enabled: !Kirigami.Settings.tabletMode
                 onToggled: root.cfg_isListCompact = true
             }
             KCMNote {
-                text: i18nc("@info:usagetip under a checkbox when Touch Mode is on", "Disabled in Touch Mode")
+                text: i18nc("@info:usagetip under a checkbox when Touch Mode is on", "Disabled in Touch Mode") // qmllint disable unqualified
                 visible: Kirigami.Settings.tabletMode
             }
         }
 
         KCMNote {
-            text: i18nc("@info:isListCompact", "Normal: two rows, compact: one row.")
+            text: i18nc("@info:isListCompact", "Normal: two rows, compact: one row.") // qmllint disable unqualified
         }
 
         Item {
@@ -88,16 +89,16 @@ KCM {
         }
 
         QQC.Button { // launcherIcon
-            Kirigami.FormData.label: i18n("Launcher icon:")
+            Kirigami.FormData.label: i18n("Launcher icon:") // qmllint disable unqualified
             id: launcherIcon
             implicitWidth: previewFrame.width
             implicitHeight: previewFrame.height
             hoverEnabled: true
-            Accessible.name: i18nc("@action:button", "Change Application Launcher's icon")
-            Accessible.description: i18nc("@info:whatsthis", "Current icon is %1. Click to open menu to change the current icon or reset to the default icon.", root.cfg_launcherIcon)
+            Accessible.name: i18nc("@action:button", "Change Application Launcher's icon") // qmllint disable unqualified
+            Accessible.description: i18nc("@info:whatsthis", "Current icon is %1. Click to open menu to change the current icon or reset to the default icon.", root.cfg_launcherIcon) // qmllint disable unqualified
             Accessible.role: Accessible.ButtonMenu
             QQC.ToolTip.delay: Kirigami.Units.toolTipDelay
-            QQC.ToolTip.text: i18nc("@info:tooltip", "Icon name is \"%1\"", root.cfg_launcherIcon)
+            QQC.ToolTip.text: i18nc("@info:tooltip", "Icon name is \"%1\"", root.cfg_launcherIcon) // qmllint disable unqualified
             QQC.ToolTip.visible: launcherIcon.hovered && root.cfg_launcherIcon.length > 0
 
             KIconThemes.IconDialog {
@@ -130,19 +131,19 @@ KCM {
                 y: parent.height
 
                 QQC.MenuItem {
-                    text: i18nc("@item:inmenu Open icon chooser dialog", "Choose…")
+                    text: i18nc("@item:inmenu Open icon chooser dialog", "Choose…") // qmllint disable unqualified
                     icon.name: "document-open-folder"
-                    Accessible.description: i18nc("@info:whatsthis", "Choose an icon for Application Launcher")
+                    Accessible.description: i18nc("@info:whatsthis", "Choose an icon for Application Launcher") // qmllint disable unqualified
                     onClicked: iconDialog.open()
                 }
                 QQC.MenuItem {
-                    text: i18nc("@item:inmenu Reset icon to default", "Reset to default icon")
+                    text: i18nc("@item:inmenu Reset icon to default", "Reset to default icon") // qmllint disable unqualified
                     icon.name: "edit-clear"
                     enabled: root.cfg_launcherIcon !== Tools.defaultIconName
                     onClicked: root.cfg_launcherIcon = Tools.defaultIconName
                 }
                 QQC.MenuItem {
-                    text: i18nc("@action:inmenu", "Remove icon")
+                    text: i18nc("@action:inmenu", "Remove icon") // qmllint disable unqualified
                     icon.name: "delete"
                     enabled: root.cfg_launcherIcon !== "" && launcherIconText.text && Plasmoid.formFactor !== PCore.Types.Vertical // qmllint disable unqualified
                     onClicked: root.cfg_launcherIcon = ""
@@ -155,9 +156,9 @@ KCM {
         Kirigami.ActionTextField { // launcherIconText
             id: launcherIconText
             enabled: Plasmoid.formFactor !== PCore.Types.Vertical // qmllint disable unqualified
-            Kirigami.FormData.label: i18nc("@label:textbox", "Launcher icon text:")
+            Kirigami.FormData.label: i18nc("@label:textbox", "Launcher icon text:") // qmllint disable unqualified
             text: root.cfg_launcherIconTextDefault
-            placeholderText: i18nc("@info:placeholder", "Type here to add a text label next to the launcher icon…")
+            placeholderText: i18nc("@info:placeholder", "Type here to add a text label next to the launcher icon…") // qmllint disable unqualified
             onTextEdited: {
                 root.cfg_launcherIconText = launcherIconText.text
                 // This is to make sure that we always have a icon if there is no text.
@@ -170,7 +171,7 @@ KCM {
             rightActions: QQC.Action {
                 icon.name: "edit-clear"
                 enabled: launcherIconText.text !== ""
-                text: i18nc("@action:button", "Remove launcher icon text")
+                text: i18nc("@action:button", "Remove launcher icon text") // qmllint disable unqualified
                 onTriggered: {
                     launcherIconText.clear()
                     root.cfg_launcherIconText = ""
@@ -183,7 +184,7 @@ KCM {
             Layout.fillWidth: true
             Layout.maximumWidth: Kirigami.Units.gridUnit * 25
             visible: Plasmoid.formFactor === PCore.Types.Vertical // qmllint disable unqualified
-            text: i18nc("@info", "An icon text cannot be set when the launcher's container is vertical.")
+            text: i18nc("@info", "An icon text cannot be set when the launcher's container is vertical.") // qmllint disable unqualified
             wrapMode: Text.Wrap
             font: Kirigami.Theme.smallFont
         }
@@ -193,40 +194,40 @@ KCM {
         }
 
         RowLayout { // userIconSize
-            Kirigami.FormData.label: i18n("User avatar size:")
+            Kirigami.FormData.label: i18n("User avatar size:") // qmllint disable unqualified
             QQC.ComboBox {
                 id: userIconSize
                 model: Global.iconSizes
             }
             QQC.Label {
-                text: i18n("px")
+                text: i18n("px") // qmllint disable unqualified
             }
         }
 
         RowLayout { // gridIconSize
-            Kirigami.FormData.label: i18n("Grid icons size:")
+            Kirigami.FormData.label: i18n("Grid icons size:") // qmllint disable unqualified
             QQC.ComboBox {
                 id: gridIconSize
                 model: Global.iconSizes
             }
             QQC.Label {
-                text: i18n("px")
+                text: i18n("px") // qmllint disable unqualified
             }
         }
 
         RowLayout { // listIconSize
-            Kirigami.FormData.label: i18n("List icons size:")
+            Kirigami.FormData.label: i18n("List icons size:") // qmllint disable unqualified
             QQC.ComboBox {
                 id: listIconSize
                 model: Global.iconSizes
             }
             QQC.Label {
-                text: i18n("px")
+                text: i18n("px") // qmllint disable unqualified
             }
         }
 
         KCMNote {
-            text: i18nc("@info:userIconSize", "The size of the user avatar located in the launcher header.")
+            text: i18nc("@info:userIconSize", "The size of the user avatar located in the launcher header.") // qmllint disable unqualified
         }
 
         Item {
@@ -234,32 +235,32 @@ KCM {
         }
 
         RowLayout {
-            Kirigami.FormData.label: i18n("Favorites layout:")
+            Kirigami.FormData.label: i18n("Favorites layout:") // qmllint disable unqualified
             QQC.RadioButton {
                 id: favoritesLayoutGrid
-                text: i18n("Grid")
+                text: i18n("Grid") // qmllint disable unqualified
                 checked: root.cfg_favoritesLayout === 0
                 onToggled: root.cfg_favoritesLayout = 0
             }
             QQC.RadioButton {
                 id: favoritesLayoutList
-                text: i18n("List")
+                text: i18n("List") // qmllint disable unqualified
                 checked: root.cfg_favoritesLayout === 1
                 onToggled: root.cfg_favoritesLayout = 1
             }
         }
 
         RowLayout { // appsLayout
-            Kirigami.FormData.label: i18n("Applications layout:")
+            Kirigami.FormData.label: i18n("Applications layout:") // qmllint disable unqualified
             QQC.RadioButton {
                 id: appsLayoutGrid
-                text: i18n("Grid")
+                text: i18n("Grid") // qmllint disable unqualified
                 checked: root.cfg_appsLayout === 0
                 onToggled: root.cfg_appsLayout = 0
             }
             QQC.RadioButton {
                 id: appsLayoutList
-                text: i18n("List")
+                text: i18n("List") // qmllint disable unqualified
                 checked: root.cfg_appsLayout === 1
                 onToggled: root.cfg_appsLayout = 1
             }
@@ -270,11 +271,11 @@ KCM {
         }
 
         RowLayout {
-            Kirigami.FormData.label: i18n("Separator lines:")
+            Kirigami.FormData.label: i18n("Separator lines:") // qmllint disable unqualified
             ColumnLayout {
                 RowLayout { // separatorLineWidth
                     QQC.Label {
-                        text: i18n("Width:")
+                        text: i18n("Width:") // qmllint disable unqualified
                     }
                     QQC.SpinBox {
                         id: separatorLineWidth
@@ -284,16 +285,16 @@ KCM {
                         // TODO get min and max from main.xml
                     }
                     QQC.Label {
-                        text: i18n("px")
+                        text: i18n("px") // qmllint disable unqualified
                     }
                 }
                 RowLayout { // separatorLineColor
                     QQC.Label {
-                        text: i18n("Color:")
+                        text: i18n("Color:") // qmllint disable unqualified
                     }
                     KQC.ColorButton {
                         id: separatorLineColor
-                        dialogTitle: i18n("Separator lines color")
+                        dialogTitle: i18n("Separator lines color") // qmllint disable unqualified
                         color: root.cfg_separatorLineColorDefault
                         showAlphaChannel: true
                         onAccepted: root.separatorLineColor = color

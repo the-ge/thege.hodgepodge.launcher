@@ -14,6 +14,7 @@
  *     - org.kde.plasma.plasmoid
  *     - org.kde.plasma.private.kicker
  *     - JavaScript Math
+ *     - i18n*()
 */
 
 pragma ComponentBehavior: Bound
@@ -353,7 +354,7 @@ PlasmoidItem { // qmllint disable import
 
     Plasmoid.contextualActions: [
         PCore.Action {
-            text: i18n("Edit Applications…")
+            text: i18n("Edit Applications…") // qmllint disable unqualified
             icon.name: "kmenuedit"
             visible: Plasmoid.immutability !== PCore.Types.SystemImmutable
             onTriggered: processRunner.runMenuEditor()

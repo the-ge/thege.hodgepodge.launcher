@@ -9,6 +9,7 @@
  *
  * HACK: disabled useless warnings from qmllint for stuff related to:
  *     - org.kde.plasma.plasmoid
+ *     - i18n*()
 */
 
 pragma ComponentBehavior: Bound
@@ -43,24 +44,24 @@ KCM {
     Kirigami.FormLayout {
         QQC.CheckBox { // isAlphaSorted
             id: isAlphaSorted
-            text: i18n("Always sort applications alphabetically")
+            text: i18n("Always sort applications alphabetically") // qmllint disable unqualified
         }
 
         QQC.CheckBox { // isNewHighlighted
             id: isNewHighlighted
             enabled: false
-            text: i18n("Highlight new apps")
+            text: i18n("Highlight new apps") // qmllint disable unqualified
         }
 
         RowLayout {
             QQC.CheckBox { // isUpdateOnHover
                 id: isUpdateOnHover
-                text: i18n("Update main panel when hovering over sidebar categories")
+                text: i18n("Update main panel when hovering over sidebar categories") // qmllint disable unqualified
             }
         }
 
         KCMNote {
-            text: i18nc("@info:isUpdateOnHover", "If unchecked, the apps in the main panel will be updated when clicking (instead of hovering) on a sidebar category.")
+            text: i18nc("@info:isUpdateOnHover", "If unchecked, the apps in the main panel will be updated when clicking (instead of hovering) on a sidebar category.") // qmllint disable unqualified
         }
 
         Item {
@@ -70,7 +71,7 @@ KCM {
         QQC.Button { // Configure Search Plugins
             enabled: KConfig.KAuthorized.authorizeControlModule("kcm_plasmasearch")
             icon.name: "settings-configure"
-            text: i18nc("@action:button opens plasmasearch kcm", "Configure Search Plugins…")
+            text: i18nc("@action:button opens plasmasearch kcm", "Configure Search Plugins…") // qmllint disable unqualified
             onClicked: KCMU.KCMLauncher.openSystemSettings("kcm_plasmasearch")
         }
 
@@ -79,23 +80,23 @@ KCM {
         }
 
         QQC.ComboBox { // startWith
-            Kirigami.FormData.label: i18n("Open launcher in:")
+            Kirigami.FormData.label: i18n("Open launcher in:") // qmllint disable unqualified
             id: startWith
             model: Global.categories
         }
 
         KCMNote {
-            text: i18nc("@info:startWith", "Select what is first visible when the launcher is opened.")
+            text: i18nc("@info:startWith", "Select what is first visible when the launcher is opened.") // qmllint disable unqualified
         }
 
         QQC.ComboBox { // appNameFormat
-            Kirigami.FormData.label: i18n("Show applications as:")
+            Kirigami.FormData.label: i18n("Show applications as:") // qmllint disable unqualified
             id: appNameFormat
             model: [
-                i18n("Name only"),
-                i18n("Description only"),
-                i18n("Name and description"),
-                i18n("Description and name")
+                i18n("Name only"), // qmllint disable unqualified
+                i18n("Description only"), // qmllint disable unqualified
+                i18n("Name and description"), // qmllint disable unqualified
+                i18n("Description and name") // qmllint disable unqualified
             ]
         }
 
@@ -104,26 +105,26 @@ KCM {
         }
 
         RowLayout { // Show buttons for Power/Session
-            Kirigami.FormData.label: i18n("Show buttons for:")
+            Kirigami.FormData.label: i18n("Show buttons for:") // qmllint disable unqualified
             QQC.CheckBox {
                 id: isPowerVisible
-                text: i18n("Power actions")
+                text: i18n("Power actions") // qmllint disable unqualified
                 onToggled: root.visibleActions()
             }
             QQC.CheckBox {
                 id: isSessionVisible
-                text: i18n("Session actions")
+                text: i18n("Session actions") // qmllint disable unqualified
                 onToggled: root.visibleActions()
             }
         }
 
         KCMNote {
-            text: i18nc("@info:isPowerVisible,isSessionVisible", "If unchecked or not enough space, buttons will move to the 'Power/Session' menu.")
+            text: i18nc("@info:isPowerVisible,isSessionVisible", "If unchecked or not enough space, buttons will move to the 'Power/Session' menu.") // qmllint disable unqualified
         }
 
         QQC.CheckBox { // hasToolbarCaptions
             id: hasToolbarCaptions
-            text: i18n("Show button captions in the Power/Session toolbar")
+            text: i18n("Show button captions in the Power/Session toolbar") // qmllint disable unqualified
         }
 
         KCMSeparator {
@@ -133,7 +134,7 @@ KCM {
         RowLayout {
             QQC.Button { // Reset configuration
                 id: configReset
-                text: i18n("Reset configuration")
+                text: i18n("Reset configuration") // qmllint disable unqualified
                 onClicked: {
                     root.restoreDefaults()
                     configResetWarning.visible = true
@@ -147,7 +148,7 @@ KCM {
                     source: 'dialog-warning'
                 }
                 QQC.Label {
-                    text: i18n("Clicking 'OK' will reset the launcher settings.")
+                    text: i18n("Clicking 'OK' will reset the launcher settings.") // qmllint disable unqualified
                     font.bold: true
                     wrapMode: Text.WordWrap
                 }
