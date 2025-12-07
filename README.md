@@ -188,8 +188,8 @@ May take quite a while. Also some todos may not make it to code.
 - [x] Fix compactRepresentation height when placed on vertical panel.
 - [x] Add configuration for the user avatar size.
 - [x] Add 'Start in:' setting (Favorites/All Applications/Deveopment/Education/...)
-- [X] ~~Test if adding (again) the i18nContext to the singleton helps with the 'Applications' and 'Places' translations. If not, get them from KDE Kicker.~~ - Nope, not working.
-- [ ] Add contributor column to the translations table.
+- [x] Test if adding (again) the i18nContext to the singleton helps with the 'Applications' and 'Places' translations. If not, get them from KDE Kicker. - **Nope, not working.**
+- [ ] ~~Add contributor column to the translations table.~~ If translations are added by PRs, their authors become contributors automatically. Put on hold until a need appears.
 - [x] Add proper credits.
 - [x] Add explanations to the README utilities section.
 - [x] Add utility to pack the plasmoid for KDE Store
@@ -213,7 +213,7 @@ May take quite a while. Also some todos may not make it to code.
 Thanks to the following individuals/teams for their work that helped me understand things related to this plasmoid or code things into this plasmoid.
 
 - [Chris Holland](https://github.com/Zren):
-    - [Tiled Menu](https://github.com/Zren/plasma-applet-tiledmenu) (or on [KDE Store](https://store.kde.org/p/2142716/)) - my favorite launcher, whose issues with KDE 6 prompted me to make my own.
+    - [Tiled Menu](https://github.com/Zren/plasma-applet-tiledmenu) (or [on KDE Store](https://store.kde.org/p/2142716/)) - my favorite launcher, whose issues with KDE 6 prompted me to make my own.
     - [Plasma Widget tutorial](https://develop.kde.org/docs/plasma/widget/) (and its [old version](https://zren.github.io/kde/docs/widget/))
     - [Plasma Widget Library](https://github.com/Zren/plasma-applet-lib)
     - [Zren's Plasma Widgets](https://github.com/Zren/plasma-applets)
