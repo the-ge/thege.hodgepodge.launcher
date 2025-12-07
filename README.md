@@ -116,7 +116,7 @@ locale --all
 > [!NOTE]
 > `./bin/plasmoid-upgrade` will also restart plasmashell
 
-## TEST
+## TESTING
 
 1. Using `plasmoidviewer`:
     ```sh
@@ -132,6 +132,11 @@ locale --all
     ```
 
 2. Installing on your system from the cloned repository (see INSTALLATION, [method #3](#3-manually-cloning-the-github-repository)).
+
+3. View the plasmashell system logs:
+    ```sh
+    journalctl -f /usr/bin/plasmashell
+    ```
 
 ## UTILITIES (in the `/bin/` folder)
 
