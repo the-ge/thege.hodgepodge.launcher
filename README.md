@@ -15,7 +15,7 @@
 ## INSTALLATION
 
 > [!NOTE]
-> Only the KDE Store package contains compiled translations, so it should be a bit faster, at least in theory. Of course, one could compile the translations (see step 4 in [HOW TO TRANSLATE](#how-to-translate)) before installing from GitHub).
+> Only the KDE Store package contains compiled translations, so it should be a bit faster, at least in theory. Of course, one could compile the translations (see step 4 in [HOW TO TRANSLATE](#how-to-translate)) before installing from GitHub.
 
 ### 1. Using [pling-store](https://www.opendesktop.org/p/1175480/) or [ocs-url](https://www.opendesktop.org/p/1136805/)
 
