@@ -71,7 +71,12 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 
 ## HOW TO TRANSLATE
 
-### 1. Extract translatable strings from the plasmoid code:
+### 1. Clone this repository or update it if already cloned, then go to your cloned repository local root (where this README is located).
+
+> [!NOTE]
+> I'm modifying the code quite often, be sure to update your cloned repository right before translating.
+
+### 2. Extract translatable strings from the plasmoid code:
 
 ```sh
 ./bin/i18n-extract
@@ -80,27 +85,27 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 > [!NOTE]
 > `./bin/i18n-extract` will attempt to install gettext if not already installed.
 
-### 2. Create your language catalog file, if it does not already exist:
+### 3. Create your language catalog file, if it does not already exist:
 ```sh
 ./bin/i18n-new <LANGUAGE_CODE> # <LANGUAGE_CODE> i.e. de, en_UK
 ```
 
-### 3. Translate the strings in the `/src/translate/<LANGUAGE_CODE>.po` file.
+### 4. Translate as many of the strings in the `/src/translate/<LANGUAGE_CODE>.po` file as you can. 
 
-### 4. Compile the translation:
+### 5. Compile the translations:
 ```sh
 ./bin/i18n-compile
 ```
 
-### 5. Test your translation
+### 6. Test your translation
 
-#### 5.1 Check that your system has the locale for the language you're translating:
+#### 6.1 Check that your system has the locale for the language you're translating:
 
 ```sh
 locale --all
 ```
 
-#### 5.2 Rebuild translations and install/upgrade the plasmoid:
+#### 6.2 Rebuild translations and install/upgrade the plasmoid:
 
 ```sh
 
