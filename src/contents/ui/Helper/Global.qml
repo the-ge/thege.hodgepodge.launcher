@@ -20,7 +20,6 @@ Item {
     id: root
     visible: false
 
-
     //BEGIN Models and Data Sources
     readonly property P5Support.DataSource powerManagement: P5Support.DataSource {
         engine: "powermanagement"
@@ -35,11 +34,15 @@ Item {
     //END
 
     //BEGIN Reusable Objects
-    property list<string> categories: []
-    // ⚠️ Sync to KCMBehavior.qml:87 (ComboBox#startWith.model)
-    readonly property int favoritesIndex: 0
-    readonly property int allAppsIndex: 1
-    readonly property int placesIndex: 2
+    readonly property list<string> topCategories: [
+        "Favorites",
+        "All Applications",
+        "Places",
+    ]
+    readonly property int favoritesIndex: topCategories.indexOf('Favorites')
+    readonly property int allApplicationsIndex: topCategories.indexOf('All Applications')
+    readonly property int placesIndex: topCategories.indexOf('Places')
+    property list<string> categories: topCategories
     readonly property Kicker.RootModel slimModel: Kicker.RootModel {
         // qmllint disable missing-property
         autoPopulate: true

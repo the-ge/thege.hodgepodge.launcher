@@ -18,7 +18,7 @@ import "../Helper"
 PExtras.PlasmoidHeading {
     id: root
 
-    required property bool isAtApps
+    required property bool isAtPlaces
  
     property int iconSize: Kirigami.Units.iconSizes.smallMedium
     property real preferredTabBarWidth: 0
@@ -113,14 +113,14 @@ PExtras.PlasmoidHeading {
         }
         BaseButton {
             id: firstTab
-            focus: root.isAtApps
+            focus: !root.isAtPlaces
             icon.name: "applications-all-symbolic"
             text: i18n("Favorites")
             Keys.onBacktabPressed: event => (kickoff.lastCentralPane || nextItemInFocusChain(false)).forceActiveFocus(Qt.BacktabFocusReason)
         }
         BaseButton {
             id: nextTab
-            focus: !root.isAtApps
+            focus: root.isAtPlaces
             icon.name: "compass"
             text: i18n("Applications")
         }
@@ -129,7 +129,7 @@ PExtras.PlasmoidHeading {
             target: kickoff
             function onExpandedChanged() {
                 if (kickoff.expanded) {
-                    tabBar.currentIndex = 1 * root.isAtApps
+                    tabBar.currentIndex = root.isAtPlaces ? 1 : 0
                 }
             }
         }
