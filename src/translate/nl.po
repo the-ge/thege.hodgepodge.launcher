@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thege.hodgepodge.launcher\n"
 "Report-Msgid-Bugs-To: https://github.com/the-ge/thege.hodgepodge.launcher/issues\n"
-"POT-Creation-Date: 2025-12-07 19:25+0200\n"
+"POT-Creation-Date: 2025-12-08 17:40+0200\n"
 "PO-Revision-Date: 2025-11-27 11:19+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: none\n"
@@ -254,79 +254,79 @@ msgstr "Weergeven na openen:"
 msgid "Favorites"
 msgstr "Favorieten"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:89
+#: ../src/contents/ui/Config/KCMBehavior.qml:90
 #, kde-format
 msgid "All Applications"
 msgstr "Alle programma's"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:90
+#: ../src/contents/ui/Config/KCMBehavior.qml:92
 #, kde-format
 msgid "Places"
 msgstr "Locaties"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:97
+#: ../src/contents/ui/Config/KCMBehavior.qml:100
 #, kde-format
 msgctxt "@info:startWith"
 msgid "Select what is first visible when the launcher is opened."
 msgstr "Geef aan welke sectie moet worden getoond na het openen van de starter."
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:101
+#: ../src/contents/ui/Config/KCMBehavior.qml:104
 #, kde-format
 msgid "Show applications as:"
 msgstr "Programma's tonen met:"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:104
+#: ../src/contents/ui/Config/KCMBehavior.qml:107
 #, kde-format
 msgid "Name only"
 msgstr "Naam"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:105
+#: ../src/contents/ui/Config/KCMBehavior.qml:108
 #, kde-format
 msgid "Description only"
 msgstr "Beschrijving"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:106
+#: ../src/contents/ui/Config/KCMBehavior.qml:109
 #, kde-format
 msgid "Name and description"
 msgstr "Naam en beschrijving"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:107
+#: ../src/contents/ui/Config/KCMBehavior.qml:110
 #, kde-format
 msgid "Description and name"
 msgstr "Beschrijving en naam"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:116
+#: ../src/contents/ui/Config/KCMBehavior.qml:119
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Knoppen tonen voor:"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:119
+#: ../src/contents/ui/Config/KCMBehavior.qml:122
 #, kde-format
 msgid "Power actions"
 msgstr "Energieacties"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:124
+#: ../src/contents/ui/Config/KCMBehavior.qml:127
 #, kde-format
 msgid "Session actions"
 msgstr "Sessieacties"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:130
+#: ../src/contents/ui/Config/KCMBehavior.qml:133
 #, kde-format
 msgctxt "@info:isPowerVisible,isSessionVisible"
 msgid "If unchecked or not enough space, buttons will move to the 'Power/Session' menu."
 msgstr "Als deze instelling wordt uitgeschakeld of indien er onvoldoende ruimte is, worden de knoppen tot één menu gecombineerd."
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:135
+#: ../src/contents/ui/Config/KCMBehavior.qml:138
 #, kde-format
 msgid "Show button captions in the Power/Session toolbar"
 msgstr "Knoplabels van energie- en sessieacties tonen"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:145
+#: ../src/contents/ui/Config/KCMBehavior.qml:148
 #, kde-format
 msgid "Reset configuration"
 msgstr "Standaardwaarden terugzetten"
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:159
+#: ../src/contents/ui/Config/KCMBehavior.qml:162
 #, kde-format
 msgid "Clicking 'OK' will reset the launcher settings."
 msgstr "Klik op oké om de standaard starterinstellingen terug te zetten."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thege.hodgepodge.launcher\n"
 "Report-Msgid-Bugs-To: https://github.com/the-ge/thege.hodgepodge.launcher/issues\n"
-"POT-Creation-Date: 2025-12-07 19:25+0200\n"
+"POT-Creation-Date: 2025-12-08 17:40+0200\n"
 "PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Gabriel Tenita <g1704578400@tenita.eu>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -254,79 +254,79 @@ msgstr ""
 msgid "Favorites"
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:89
+#: ../src/contents/ui/Config/KCMBehavior.qml:90
 #, kde-format
 msgid "All Applications"
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:90
+#: ../src/contents/ui/Config/KCMBehavior.qml:92
 #, kde-format
 msgid "Places"
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:97
+#: ../src/contents/ui/Config/KCMBehavior.qml:100
 #, kde-format
 msgctxt "@info:startWith"
 msgid "Select what is first visible when the launcher is opened."
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:101
+#: ../src/contents/ui/Config/KCMBehavior.qml:104
 #, kde-format
 msgid "Show applications as:"
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:104
+#: ../src/contents/ui/Config/KCMBehavior.qml:107
 #, kde-format
 msgid "Name only"
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:105
+#: ../src/contents/ui/Config/KCMBehavior.qml:108
 #, kde-format
 msgid "Description only"
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:106
+#: ../src/contents/ui/Config/KCMBehavior.qml:109
 #, kde-format
 msgid "Name and description"
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:107
+#: ../src/contents/ui/Config/KCMBehavior.qml:110
 #, kde-format
 msgid "Description and name"
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:116
+#: ../src/contents/ui/Config/KCMBehavior.qml:119
 #, kde-format
 msgid "Show buttons for:"
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:119
+#: ../src/contents/ui/Config/KCMBehavior.qml:122
 #, kde-format
 msgid "Power actions"
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:124
+#: ../src/contents/ui/Config/KCMBehavior.qml:127
 #, kde-format
 msgid "Session actions"
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:130
+#: ../src/contents/ui/Config/KCMBehavior.qml:133
 #, kde-format
 msgctxt "@info:isPowerVisible,isSessionVisible"
 msgid "If unchecked or not enough space, buttons will move to the 'Power/Session' menu."
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:135
+#: ../src/contents/ui/Config/KCMBehavior.qml:138
 #, kde-format
 msgid "Show button captions in the Power/Session toolbar"
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:145
+#: ../src/contents/ui/Config/KCMBehavior.qml:148
 #, kde-format
 msgid "Reset configuration"
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMBehavior.qml:159
+#: ../src/contents/ui/Config/KCMBehavior.qml:162
 #, kde-format
 msgid "Clicking 'OK' will reset the launcher settings."
 msgstr ""
