@@ -173,15 +173,15 @@ locale --all
 
 ### Restart plasmashell
 
-```sh
-systemctl --user restart plasma-plasmashell.service
-```
+1. Recommended method:
+    ```sh
+    systemctl --user restart plasma-plasmashell.service
+    ```
 
-or
-
-```sh
-killall plasmashell && kstart plasmashell
-```
+2. Brute force (do not use it possible):
+    ```sh
+    killall plasmashell && kstart plasmashell
+    ```
 
 ## :construction: TODO
 
