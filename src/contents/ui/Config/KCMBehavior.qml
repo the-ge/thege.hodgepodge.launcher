@@ -82,15 +82,18 @@ KCM {
         QQC.ComboBox { // startWith
             Kirigami.FormData.label: i18n("Open launcher in:") // qmllint disable unqualified
             id: startWith
-            model: [
-                ...[
-                    // ⚠️ Sync to Global.qml:38 (Global.favoritesIndex, Global.allAppsIndex, Global.placesIndex)
-                    i18n("Favorites"), // qmllint disable unqualified
-                    i18n("All Applications"), // qmllint disable unqualified
-                    i18n("Places"), // qmllint disable unqualified
-                ],
-                ...Global.categories,
-            ]
+            model: Global.categories.map(function(name) {
+                switch (name) {
+                    case "Favorites":
+                        return i18n("Favorites");
+                    case "All Applications":
+                        return i18n("All Applications");
+                    case "Places":
+                        return i18n("Places");
+                    default:
+                        return name;
+                }
+            })
         }
 
         KCMNote {

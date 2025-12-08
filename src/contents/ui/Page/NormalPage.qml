@@ -47,7 +47,7 @@ EmptyPage {
 
     footer: PageFooter {
         id: footer
-        isAtApps: root.defaultIndex === Global.placesIndex
+        isAtPlaces: root.defaultIndex === Global.placesIndex
         preferredTabBarWidth: root.preferredSidebarWidth
 
         Binding {

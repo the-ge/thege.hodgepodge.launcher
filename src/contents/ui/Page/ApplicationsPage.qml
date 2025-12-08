@@ -118,7 +118,7 @@ BasePage {
 
             if (index === Global.favoritesIndex && stackView.currentItem.objectName !== stackView.favoritesViewObjectName) {
                 stackView.replace(stackView.favoritesViewComponent)
-            } else if (index === Global.allAppsIndex && stackView.currentItem.objectName !== stackView.appsAllViewObjectName) {
+            } else if (index === Global.allApplicationsIndex && stackView.currentItem.objectName !== stackView.appsAllViewObjectName) {
                 stackView.replace(stackView.appsAllViewComponent)
             } else if (index > Global.placesIndex && stackView.currentItem.objectName !== stackView.appsCategoryViewObjectName) {
                 stackView.replace(stackView.appsCategoryViewComponent)
@@ -208,7 +208,7 @@ BasePage {
             }
         }
         onAppsAllViewComponentChanged: {
-            if (sidebar?.currentIndex === Global.allAppsIndex) {
+            if (sidebar?.currentIndex === Global.allApplicationsIndex) {
                 stackView.replace(stackView.appsAllViewComponent)
             }
         }
