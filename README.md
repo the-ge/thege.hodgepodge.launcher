@@ -138,9 +138,9 @@ locale --all
     journalctl -f /usr/bin/plasmashell
     ```
 
-## UTILITIES (in the `/bin/` folder)
+## UTILITIES
 
-### Plasmoid
+### Plasmoid (in the `/bin/` folder)
 
 - `plasmoid-install`
 
@@ -150,7 +150,7 @@ locale --all
 
 - `plasmoid-generate` (generates a .plasmoid package versioned by `/src/metadata.json`)
 
-### Internationalisation
+### Internationalisation (in the `/bin/` folder)
 
 - `i18n-test`: displays a concise translations status (it is meant for use in a GitHub action, though it only works locally for now).
 
