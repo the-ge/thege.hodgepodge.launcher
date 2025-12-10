@@ -15,9 +15,10 @@ body:
       value: |
         Thank you for taking the time to fill out this bug report!
         
-        Please, **read this before submitting** your bug report:
         - **Write in English.** Reports in any other language will be closed without any consideration.
         - **Provide as much detail as possible.** If the issue cannot be reproduced, it cannot be fixed.
+
+
   - type: textarea
     id: what-happened
     attributes:
