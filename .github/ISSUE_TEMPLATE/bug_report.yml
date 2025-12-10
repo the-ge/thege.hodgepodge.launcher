@@ -18,6 +18,7 @@ body:
         - **Write in English.** Reports in any other language will be closed without any consideration.
         - **Provide as much detail as possible.** If the issue cannot be reproduced, it cannot be fixed.
 
+        ---
 
   - type: textarea
     id: what-happened
