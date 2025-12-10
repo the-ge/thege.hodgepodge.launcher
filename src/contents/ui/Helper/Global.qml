@@ -60,7 +60,7 @@ Item {
         showFavoritesPlaceholder: false
         Component.onCompleted: {
             for (let i=0, max=rowCount(); i < max; i++) {
-                categories.push(labelForRow(i)); // categories already contain 3 items
+                root.categories.push(labelForRow(i)); // categories already contain 3 items
             }
         }
     }
