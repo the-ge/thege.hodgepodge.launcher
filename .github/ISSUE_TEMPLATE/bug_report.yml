@@ -48,7 +48,7 @@ body:
       required: false
   - type: textarea
     attributes:
-      label: Environment
+      label: Environment (versions)
       description: |
         You can find this information in System Configuration > About this system or `kinfo` in CLI.
         Examples:
