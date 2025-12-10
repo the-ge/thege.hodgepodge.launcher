@@ -102,12 +102,12 @@ PExtras.PlasmoidHeading {
                     }
                     Keys.onLeftPressed: event => {
                         if (kickoff.sidebarOnRight) {
-                            searchField.forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+                            searchField.forceActiveFocus(Application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
                         }
                     }
                     Keys.onRightPressed: event => {
                         if (!kickoff.sidebarOnRight) {
-                            searchField.forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+                            searchField.forceActiveFocus(Application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
                         }
                     }
                     Keys.onDownPressed: event => {
@@ -231,13 +231,13 @@ PExtras.PlasmoidHeading {
                     Keys.onLeftPressed: event => {
                         if (activeFocus) {
                             nextItemInFocusChain(kickoff.sidebarOnRight).forceActiveFocus(
-                                Qt.application.layoutDirection === Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+                                Application.layoutDirection === Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
                         }
                     }
                     Keys.onRightPressed: event => {
                         if (activeFocus) {
                             nextItemInFocusChain(!kickoff.sidebarOnRight).forceActiveFocus(
-                                Qt.application.layoutDirection === Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+                                Application.layoutDirection === Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
                         }
                     }
                 }
@@ -261,11 +261,11 @@ PExtras.PlasmoidHeading {
                     }
                     Keys.onLeftPressed: event => {
                         nextItemInFocusChain(kickoff.sidebarOnRight).forceActiveFocus(
-                            Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+                            Application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
                     }
                     Keys.onRightPressed: event => {
                         nextItemInFocusChain(!kickoff.sidebarOnRight).forceActiveFocus(
-                            Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+                            Application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
                     }
                     onClicked: plasmoid.internalAction("configure").trigger()
                 }
@@ -294,12 +294,12 @@ PExtras.PlasmoidHeading {
                     }
                     Keys.onLeftPressed: event => {
                         if (!kickoff.sidebarOnRight) {
-                            nextItemInFocusChain(false).forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+                            nextItemInFocusChain(false).forceActiveFocus(Application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
                         }
                     }
                     Keys.onRightPressed: event => {
                         if (kickoff.sidebarOnRight) {
-                            nextItemInFocusChain(false).forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+                            nextItemInFocusChain(false).forceActiveFocus(Application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
                         }
                     }
                     onToggled: Plasmoid.configuration.isAppletPinned = checked
