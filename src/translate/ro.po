@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thege.hodgepodge.launcher\n"
 "Report-Msgid-Bugs-To: https://github.com/the-ge/thege.hodgepodge.launcher/issues\n"
-"POT-Creation-Date: 2025-12-10 02:50+0200\n"
+"POT-Creation-Date: 2025-12-10 20:39+0200\n"
 "PO-Revision-Date: 2025-11-28 16:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -357,52 +357,52 @@ msgctxt "@info:status"
 msgid "No matches"
 msgstr "Nicio potrivire"
 
-#: ../src/contents/ui/Helper/Tools.js:32
+#: ../src/contents/ui/Helper/Tools.js:33
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Scoate dintre favorite"
 
-#: ../src/contents/ui/Helper/Tools.js:36
+#: ../src/contents/ui/Helper/Tools.js:37
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Adaugă la favorite"
 
-#: ../src/contents/ui/Helper/Tools.js:60
+#: ../src/contents/ui/Helper/Tools.js:62
 #, kde-format
 msgid "On All Activities"
 msgstr "În toate activitățile"
 
-#: ../src/contents/ui/Helper/Tools.js:110
+#: ../src/contents/ui/Helper/Tools.js:112
 #, kde-format
 msgid "On the Current Activity"
 msgstr "În activitatea curentă"
 
-#: ../src/contents/ui/Helper/Tools.js:124
+#: ../src/contents/ui/Helper/Tools.js:126
 #, kde-format
 msgid "Show in Favorites"
 msgstr "Afișează în favorite"
 
-#: ../src/contents/ui/main.qml:357
+#: ../src/contents/ui/main.qml:358
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Editează aplicațiile.."
 
-#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml:183
+#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml:185
 #, kde-format
 msgid "Power/Session"
 msgstr "Sistem/Sesiune"
 
-#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml:184
+#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml:186
 #, kde-format
 msgid "Session"
 msgstr "Sesiune"
 
-#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml:185
+#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml:187
 #, kde-format
 msgid "Power"
 msgstr "Sistem"
 
-#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml:186
+#: ../src/contents/ui/Page/PageFooterLeaveButtons.qml:188
 #, kde-format
 msgid "More"
 msgstr "Mai multe"
