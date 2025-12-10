@@ -122,7 +122,7 @@ PExtras.PlasmoidHeading {
             id: nextTab
             focus: root.isAtPlaces
             icon.name: "compass"
-            text: i18n("Applications")
+            text: i18n("Places")
         }
 
         Connections {
