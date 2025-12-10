@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thege.hodgepodge.launcher\n"
 "Report-Msgid-Bugs-To: https://github.com/the-ge/thege.hodgepodge.launcher/issues\n"
-"POT-Creation-Date: 2025-12-10 23:55+0200\n"
+"POT-Creation-Date: 2025-12-11 00:01+0200\n"
 "PO-Revision-Date: 2025-11-27 11:19+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: none\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/contents/config/config.qml:14
+#: ../src/contents/config/config.qml:17
 #, kde-format
 msgid "Behavior"
 msgstr "Gedrag"
 
-#: ../src/contents/config/config.qml:20
+#: ../src/contents/config/config.qml:23
 #, kde-format
 msgid "Appearance"
 msgstr "Vormgeving"
 
-#: ../src/contents/ui/Config/KCMAbout.qml:32
+#: ../src/contents/ui/Config/KCMAbout.qml:36
 #, kde-format
 msgid "Report a Bug…"
 msgstr "Bug melden…"
@@ -331,12 +331,12 @@ msgstr "Standaardwaarden terugzetten"
 msgid "Clicking 'OK' will reset the launcher settings."
 msgstr "Klik op oké om de standaard starterinstellingen terug te zetten."
 
-#: ../src/contents/ui/Config/KCMShortcuts.qml:18
+#: ../src/contents/ui/Config/KCMShortcuts.qml:21
 #, kde-format
 msgid "Shortcuts"
 msgstr "Sneltoetsen"
 
-#: ../src/contents/ui/Config/KCMShortcuts.qml:30
+#: ../src/contents/ui/Config/KCMShortcuts.qml:33
 #, kde-format
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr "Met behulp van deze sneltoets kan de starter worden geopend."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thege.hodgepodge.launcher\n"
 "Report-Msgid-Bugs-To: https://github.com/the-ge/thege.hodgepodge.launcher/issues\n"
-"POT-Creation-Date: 2025-12-10 23:55+0200\n"
+"POT-Creation-Date: 2025-12-11 00:01+0200\n"
 "PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Gabriel Tenita <g1704578400@tenita.eu>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/contents/config/config.qml:14
+#: ../src/contents/config/config.qml:17
 #, kde-format
 msgid "Behavior"
 msgstr ""
 
-#: ../src/contents/config/config.qml:20
+#: ../src/contents/config/config.qml:23
 #, kde-format
 msgid "Appearance"
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMAbout.qml:32
+#: ../src/contents/ui/Config/KCMAbout.qml:36
 #, kde-format
 msgid "Report a Bug…"
 msgstr ""
@@ -331,12 +331,12 @@ msgstr ""
 msgid "Clicking 'OK' will reset the launcher settings."
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMShortcuts.qml:18
+#: ../src/contents/ui/Config/KCMShortcuts.qml:21
 #, kde-format
 msgid "Shortcuts"
 msgstr ""
 
-#: ../src/contents/ui/Config/KCMShortcuts.qml:30
+#: ../src/contents/ui/Config/KCMShortcuts.qml:33
 #, kde-format
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr ""

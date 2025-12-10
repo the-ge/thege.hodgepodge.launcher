@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thege.hodgepodge.launcher\n"
 "Report-Msgid-Bugs-To: https://github.com/the-ge/thege.hodgepodge.launcher/issues\n"
-"POT-Creation-Date: 2025-12-10 23:55+0200\n"
+"POT-Creation-Date: 2025-12-11 00:01+0200\n"
 "PO-Revision-Date: 2025-11-28 16:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
 
-#: ../src/contents/config/config.qml:14
+#: ../src/contents/config/config.qml:17
 #, kde-format
 msgid "Behavior"
 msgstr "Comportament"
 
-#: ../src/contents/config/config.qml:20
+#: ../src/contents/config/config.qml:23
 #, kde-format
 msgid "Appearance"
 msgstr "Aspect"
 
-#: ../src/contents/ui/Config/KCMAbout.qml:32
+#: ../src/contents/ui/Config/KCMAbout.qml:36
 #, kde-format
 msgid "Report a Bug…"
 msgstr "Raportează o problemă"
@@ -331,12 +331,12 @@ msgstr "Resetează configurația"
 msgid "Clicking 'OK' will reset the launcher settings."
 msgstr "Confirmând cu butonul 'OK' va reseta configurarea lansatorului."
 
-#: ../src/contents/ui/Config/KCMShortcuts.qml:18
+#: ../src/contents/ui/Config/KCMShortcuts.qml:21
 #, kde-format
 msgid "Shortcuts"
 msgstr "Scurtături"
 
-#: ../src/contents/ui/Config/KCMShortcuts.qml:30
+#: ../src/contents/ui/Config/KCMShortcuts.qml:33
 #, kde-format
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr "Această scurtătură va activa lansatorul ca și cum ar fi fost făcut un clic pe el."
