@@ -7,7 +7,6 @@
 import QtQuick
 import org.kde.plasma.configuration // qmllint disable import
 
-// qmllint disable missing-property import unqualified
 ConfigModel {
     id: kcmRoot
     ConfigCategory {
@@ -34,5 +33,4 @@ ConfigModel {
     //    icon: "info-symbolic"
     //    source: "Config/KCMAbout.qml"
     //}
-// qmllint enable
 }
