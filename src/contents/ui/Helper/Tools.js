@@ -25,7 +25,8 @@ function createFavoriteActions(i18n, favoriteModel, favoriteId) {
 
 
     if (favoriteModel.activities === undefined ||
-        favoriteModel.activities.runningActivities.length <= 1) {
+        // Plasma 6.5+ runningActivities => activities
+        (favoriteModel.activities?.activities.length ?? favoriteModel.activities.runningActivities.length) <= 1) {
         const action = {};
 
         if (favoriteModel.isFavorite(favoriteId)) {
@@ -49,7 +50,8 @@ function createFavoriteActions(i18n, favoriteModel, favoriteId) {
 
         const linkedActivities = favoriteModel.linkedActivitiesFor(favoriteId);
 
-        const activities = favoriteModel.activities.runningActivities;
+        // Plasma 6.5+ runningActivities => activities
+        const activities = favoriteModel.activities?.activities ?? favoriteModel.activities.runningActivities;
 
         // Adding the item to link/unlink to all activities
 
