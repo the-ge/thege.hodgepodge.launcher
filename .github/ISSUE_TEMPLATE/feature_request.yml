@@ -1,0 +1,44 @@
+name: Feature request
+description: Suggest an idea for the HodgePodge application launcher.
+title: "feature: "
+labels: ["feature"]
+assignees:
+  - the-ge
+type: enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to fill out this bug report!
+        
+        ### Please, read this before submitting your bug report:
+        - **Write in English.** Reports in any other language will be closed without any consideration.
+        - **Provide as much detail as possible.** You may have a very clear idea, just make sure it reaches to me.
+  - type: checkboxes
+    attributes:
+      label: Prerequisites
+      options:
+        - label: I have already [searched in existing issues](https://github.com/the-ge/thege.hodgepodge.launcher/issues?q=is%3Aissue+label%3Aenhancement) and found no previous report of this feature.
+          required: true
+  - type: textarea
+    id: feature-issue
+    attributes:
+      label: If your feature request is related to a problem, please describe the problem
+      description: A clear and concise description of what the problem is.
+      placeholder: I'm always frustrated when [...]
+    validations:
+      required: false
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Describe the solution you'd like
+      description: A clear and concise description of what you want to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: feature-context
+    attributes:
+      label: Additional context
+      description: Add any other context (text, screenshots, video, etc.) for the feature request here.
+    validations:
+      required: false

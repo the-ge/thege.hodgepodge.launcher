@@ -1,0 +1,80 @@
+name: Bug Report
+description: Report a bug in HodgePodge application launcher.
+title: "bug: "
+labels: ["bug"]
+assignees:
+  - the-ge
+type: bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to fill out this bug report!
+        
+        ### Please, read this before submitting your bug report:
+        - **Write in English.** Reports in any other language will be closed without any consideration.
+        - **Provide as much detail as possible.** If the issue cannot be reproduced, it cannot be fixed.
+  - type: checkboxes
+    attributes:
+      label: Prerequisites
+      options:
+        - label: I have already [searched in existing issues](https://github.com/the-ge/thege.hodgepodge.launcher/issues?q=is%3Aissue+label%3ABug) and found no previous report of this bug.
+          required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Describe the bug and add attachments
+      description: What went wrong? If possible, add screenshots, error logs or screen recordings to help explain your problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: Explain what you expected to happen instead.
+    validations:
+      required: false
+  - type: textarea
+    id: steps-reproduce
+    attributes:
+      label: Steps to reproduce
+      description: List the exact steps to reproduce the issue.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: false
+  - type: input
+    id: hodgepodge-launcher-version
+    attributes:
+      label: Hodgepodge launcher version
+      description: Write the version of the plasmoid generating this issue
+      placeholder: "e.g., 2.0.5 or 3.1.6"
+    validations:
+      required: true
+  - type: input
+    id: kde-plasma-version
+    attributes:
+      label: KDE Plasma version
+      description: You can find this information in System Configuration > About this system or `kinfo` in CLI 
+      placeholder: "e.g., 6.4.0 or 6.5.3"
+    validations:
+      required: true
+  - type: input
+    id: kde-frameworks-version
+    attributes:
+      label: KDE Frameworks version
+      description: You can find this information in System Configuration > About this system or `kinfo` in CLI 
+      placeholder: "e.g., 6.1.0 or 6.2.0"
+    validations:
+      required: true
+  - type: input
+    id: qt-version
+    attributes:
+      label: Qt version
+      description: You can find this information in System Configuration > About this system or `kinfo` in CLI 
+      placeholder: "e.g., 6.9.0 or 6.10.1"
+    validations:
+      required: true
