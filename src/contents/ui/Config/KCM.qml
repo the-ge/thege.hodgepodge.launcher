@@ -12,6 +12,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import org.kde.kcmutils as KCMU
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.plasmoid
 
 KCMU.SimpleKCM {
     id: root
