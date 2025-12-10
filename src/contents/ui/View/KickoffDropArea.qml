@@ -7,7 +7,7 @@ pragma ComponentBehavior: Bound
 
 import QtQuick
 import org.kde.plasma.core as PCore
-import org.kde.plasma.plasmoid // qmllint disable import
+import org.kde.plasma.plasmoid
 
 DropArea {
     id: root
@@ -15,7 +15,7 @@ DropArea {
     readonly property bool enableAutoScroll: targetView.height < targetView.contentHeight
     property real scrollUpMargin: 0
     property real scrollDownMargin: 0
-    enabled: Plasmoid.immutability !== PCore.Types.SystemImmutable // qmllint disable unqualified
+    enabled: Plasmoid.immutability !== PCore.Types.SystemImmutable
 
     // We keep track of the index changes as we drag and drop an item
     // to be able to undo them if the drag and drop ends outside the

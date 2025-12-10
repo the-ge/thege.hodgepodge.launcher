@@ -10,7 +10,7 @@ import QtQuick.Controls as QQC
 import QtQuick.Layouts
 import org.kde.kquickcontrols as KQC
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.plasmoid // qmllint disable import
+import org.kde.plasma.plasmoid
 
 KCM {
     id: root

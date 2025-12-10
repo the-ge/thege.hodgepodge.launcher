@@ -11,9 +11,6 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
  * HACK: disabled useless warnings from qmllint for stuff related to:
- *     - org.kde.plasma.plasmoid
- *     - org.kde.plasma.private.kicker
- *     - JavaScript Math
  *     - i18n*()
 */
 
@@ -26,18 +23,18 @@ import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 import org.kde.plasma.components as PComponents
 import org.kde.plasma.core as PCore
-import org.kde.plasma.plasmoid // qmllint disable import
-import org.kde.plasma.private.kicker as Kicker // qmllint disable unused-imports
+import org.kde.plasma.plasmoid
+import org.kde.plasma.private.kicker as Kicker
 
 import "Helper"
 import "Helper/Tools.js" as Tools
 import "View"
 
-PlasmoidItem { // qmllint disable import
+PlasmoidItem {
     id: kickoff
 
-    width: Kirigami.Units.iconSizes.large // qmllint disable missing-property
-    height: Kirigami.Units.iconSizes.large // qmllint disable missing-property
+    width: Kirigami.Units.iconSizes.large
+    height: Kirigami.Units.iconSizes.large
 
     // The properties are defined here instead of the singleton because each
     // instance of Kickoff requires different instances of these properties
@@ -46,17 +43,16 @@ PlasmoidItem { // qmllint disable import
         PCore.Types.RightEdge,
         PCore.Types.BottomEdge,
         PCore.Types.LeftEdge,
-    ].includes(Plasmoid.location) // qmllint disable unqualified
-    readonly property bool isVertical: Plasmoid.formFactor === PCore.Types.Vertical // qmllint disable unqualified
+    ].includes(Plasmoid.location)
+    readonly property bool isVertical: Plasmoid.formFactor === PCore.Types.Vertical
 
     // Used to prevent the width from changing frequently when the scrollbar appears or disappears in the grid favorites layout
-    readonly property bool mayHaveGridWithScrollBar: Plasmoid.configuration.appsLayout === 0 || ( // qmllint disable unqualified
-        Plasmoid.configuration.favoritesLayout === 0 // qmllint disable unqualified
-        && kickoff.rootModel.favoritesModel.count > minGridRowCount * minGridRowCount // qmllint disable unresolved-type
+    readonly property bool mayHaveGridWithScrollBar: Plasmoid.configuration.appsLayout === 0 || (
+        Plasmoid.configuration.favoritesLayout === 0
+        && kickoff.rootModel.favoritesModel.count > minGridRowCount * minGridRowCount
     )
 
     //BEGIN Models
-    // qmllint disable import missing-property unqualified
     readonly property Kicker.RootModel rootModel: Kicker.RootModel {
         autoPopulate: false
 
@@ -120,7 +116,6 @@ PlasmoidItem { // qmllint disable import
         favoritesModel: rootModel.favoritesModel
         ordering: 1 // Popular / Frequently Used
     }
-    // qmllint enable
     //END
 
     //BEGIN UI elements
@@ -139,11 +134,11 @@ PlasmoidItem { // qmllint disable import
     // Set in Page/NormalPage.qml
     property QQ.Item footer: null
 
-    readonly property int startWith: Plasmoid.configuration.startWith // qmllint disable unqualified
+    readonly property int startWith: Plasmoid.configuration.startWith
 
     // True when the header and the content pane LayoutMirroring diverges from global LayoutMirroring,
     // in order to achieve the desired sidebar position
-    readonly property bool isPaneOrderReversed: Plasmoid.configuration.isPaneOrderReversed // qmllint disable unqualified
+    readonly property bool isPaneOrderReversed: Plasmoid.configuration.isPaneOrderReversed
     readonly property bool sidebarOnRight: (QQ.Application.layoutDirection == Qt.RightToLeft) != isPaneOrderReversed
     // References to items according to their focus chain order
     readonly property QQ.Item firstHeaderItem: header ? (isPaneOrderReversed ? header.pinButton : header.avatar) : null
@@ -162,25 +157,23 @@ PlasmoidItem { // qmllint disable import
     readonly property KSvg.FrameSvgItem backgroundMetrics: KSvg.FrameSvgItem {
         visible: false
         // Inset defaults to a negative value when not set by margin hints
-        // qmllint disable unqualified
         readonly property real leftPadding: Math.round(margins.left - Math.max(inset.left, 0))
         readonly property real rightPadding: Math.round(margins.right - Math.max(inset.right, 0))
         readonly property real topPadding: Math.round(margins.top - Math.max(inset.top, 0))
         readonly property real bottomPadding: Math.round(margins.bottom - Math.max(inset.bottom, 0))
         readonly property real spacing: Math.round(leftPadding)
         imagePath: Plasmoid.formFactor === PCore.Types.Planar ? "widgets/background" : "dialogs/background"
-        // qmllint enable
     }
 
     // Used to show smaller Kickoff on small screens
     readonly property real minScreenDimension: Math.min(QQ.Screen.desktopAvailableWidth, QQ.Screen.desktopAvailableHeight) * QQ.Screen.devicePixelRatio // size of the smallest side of the screen, in pixels
-    readonly property real minSidebarWidth: Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem?.normalPage?.preferredSidebarWidth : (gridIconSize + Global.gridCellSpacing) * 2 // qmllint disable unqualified
+    readonly property real minSidebarWidth: Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem?.normalPage?.preferredSidebarWidth : (gridIconSize + Global.gridCellSpacing) * 2
     // (4 grid rows if 4 grid cells fit on screen in any direction, else 2 grid rows)
     readonly property int minGridRowCount: minScreenDimension > (kickoff.gridIconSize + Global.gridCellSpacing) * 4 + minSidebarWidth ? 4 : 2
 
-    property int gridIconSize: Global.iconSizes[Plasmoid.configuration.gridIconSize] // qmllint disable unqualified
-    property int listIconSize: Global.iconSizes[Plasmoid.configuration.listIconSize] // qmllint disable unqualified
-    property int userIconSize: Global.iconSizes[Plasmoid.configuration.userIconSize] // qmllint disable unqualified
+    property int gridIconSize: Global.iconSizes[Plasmoid.configuration.gridIconSize]
+    property int listIconSize: Global.iconSizes[Plasmoid.configuration.listIconSize]
+    property int userIconSize: Global.iconSizes[Plasmoid.configuration.userIconSize]
 
     // This is here, not in the singleton with the other metrics items,
     // because the list delegates' height depends on a configuration setting
@@ -203,7 +196,7 @@ PlasmoidItem { // qmllint disable import
     }
     //END
 
-    Plasmoid.icon: Plasmoid.configuration.launcherIcon // qmllint disable unresolved-type missing-property unqualified
+    Plasmoid.icon: Plasmoid.configuration.launcherIcon
 
     switchWidth: fullRepresentationItem ? QQL.Layout.minimumWidth : -1
     switchHeight: fullRepresentationItem ? QQL.Layout.minimumHeight : -1
@@ -223,7 +216,7 @@ PlasmoidItem { // qmllint disable import
         id: compactRoot
 
         // Taken from DigitalClock to ensure uniform sizing when next to each other
-        readonly property bool isTooSmall: Plasmoid.formFactor === PCore.Types.Horizontal && Math.round(2 * (compactRoot.height / 5)) <= Kirigami.Theme.smallFont.pixelSize // qmllint disable unqualified
+        readonly property bool isTooSmall: Plasmoid.formFactor === PCore.Types.Horizontal && Math.round(2 * (compactRoot.height / 5)) <= Kirigami.Theme.smallFont.pixelSize
         readonly property bool hasIcon: kickoff.isVertical || Plasmoid.icon !== ""
         readonly property bool hasLabel: !kickoff.isVertical && Plasmoid.configuration.launcherIconText !== ""
         readonly property int iconSize: Kirigami.Units.iconSizes.large
@@ -336,7 +329,7 @@ PlasmoidItem { // qmllint disable import
                 QQL.Layout.leftMargin: Kirigami.Units.smallSpacing
                 QQL.Layout.rightMargin: Kirigami.Units.smallSpacing
 
-                text: Plasmoid.configuration.launcherIconText // qmllint disable unqualified
+                text: Plasmoid.configuration.launcherIconText
                 textFormat: QQ.Text.StyledText
                 horizontalAlignment: QQ.Text.AlignLeft
                 verticalAlignment: QQ.Text.AlignVCenter
@@ -349,7 +342,7 @@ PlasmoidItem { // qmllint disable import
         }
     }
 
-    Kicker.ProcessRunner { // qmllint disable import
+    Kicker.ProcessRunner {
         id: processRunner
     }
 

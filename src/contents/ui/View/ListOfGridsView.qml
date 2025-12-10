@@ -3,24 +3,21 @@
  * SPDX-FileCopyrightText: Gabriel Tenita <g1704578400@tenita.eu@tenita.eu>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
- *
- * HACK: disabled useless warnings from qmllint for stuff related to:
- *     - org.kde.plasma.private.kicker
 */
 
 pragma ComponentBehavior: Bound
 
 import QtQuick
 import org.kde.kitemmodels as KItemModels
-import org.kde.plasma.private.kicker as Kicker // qmllint disable unused-imports
+import org.kde.plasma.private.kicker as Kicker
 
 KickoffListView {
     id: root
 
-    required property Kicker.AppsModel gridModel // qmllint disable import
+    required property Kicker.AppsModel gridModel
 
     highlight: null // highlight off since it otherwise highlights a whole section
-    model: gridModel.sections // qmllint disable unresolved-type
+    model: gridModel.sections
     section.property: "section"
     delegate: ListOfGridsViewDelegate {
         id: delegate
@@ -38,7 +35,7 @@ KickoffListView {
         model: KItemModels.KSortFilterProxyModel {
             id: sectionModel
 
-            sourceModel: root.gridModel // qmllint disable unresolved-type
+            sourceModel: root.gridModel
             filterString: delegate.section
             filterRoleName: "group"
 

@@ -14,7 +14,7 @@ pragma Singleton // NOTE: Singletons are shared between all instances of a plasm
 import QtQuick
 
 import org.kde.plasma.extras as PExtras
-import org.kde.plasma.plasmoid // qmllint disable import
+import org.kde.plasma.plasmoid
 
 import "../Helper/Tools.js" as Tools
 
@@ -24,7 +24,7 @@ Item {
     property var actionList: null
 
     // Only one action menu can be open at a time, so this should be safe to use.
-    property PlasmoidItem plasmoid: null // qmllint disable import incompatible-type
+    property PlasmoidItem plasmoid: null
 
     readonly property PExtras.Menu menu: PExtras.Menu {
         id: menu

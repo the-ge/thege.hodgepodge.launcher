@@ -1,14 +1,15 @@
 /*
-    SPDX-FileCopyrightText: 2011 Martin *Gräßlin <mgraesslin@kde.org>
-    SPDX-FileCopyrightText: 2012 Gregor Taetzner <gregor@freenet.de>
-    SPDX-FileCopyrightText: 2014 Sebastian Kügler <sebas@kde.org>
-    SPDX-FileCopyrightText: 2015-2018 Eike Hein <hein@kde.org>
-    SPDX-FileCopyrightText: 2021 Mikel Johnson <mikel5764@gmail.com>
-    SPDX-FileCopyrightText: 2021 Noah Davis <noahadvs@gmail.com>
-    SPDX-FileCopyrightText: 2022 Nate Graham <nate@kde.org>
-
-    SPDX-License-Identifier: GPL-2.0-or-later
- */
+ * SPDX-FileCopyrightText: 2011 Martin *Gräßlin <mgraesslin@kde.org>
+ * SPDX-FileCopyrightText: 2012 Gregor Taetzner <gregor@freenet.de>
+ * SPDX-FileCopyrightText: 2014 Sebastian Kügler <sebas@kde.org>
+ * SPDX-FileCopyrightText: 2015-2018 Eike Hein <hein@kde.org>
+ * SPDX-FileCopyrightText: 2021 Mikel Johnson <mikel5764@gmail.com>
+ * SPDX-FileCopyrightText: 2021 Noah Davis <noahadvs@gmail.com>
+ * SPDX-FileCopyrightText: 2022 Nate Graham <nate@kde.org>
+ * SPDX-FileCopyrightText: Gabriel Tenita <g1704578400@tenita.eu@tenita.eu>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+*/
 
 pragma ComponentBehavior: Bound
 
@@ -17,7 +18,6 @@ import QtQuick.Layouts
 
 import org.kde.plasma.components as PComponents
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.plasmoid // qmllint disable import
 
 import "../Helper"
 

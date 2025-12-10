@@ -8,7 +8,6 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
  * HACK: disabled useless warnings from qmllint for stuff related to:
- *     - org.kde.plasma.plasmoid
  *     - i18n*()
 */
 
@@ -23,7 +22,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrols as KQC
 import org.kde.ksvg as KSvg
 import org.kde.plasma.core as PCore
-import org.kde.plasma.plasmoid // qmllint disable import
+import org.kde.plasma.plasmoid
 
 import "../Helper"
 import "../Helper/Tools.js" as Tools
@@ -111,7 +110,7 @@ KCM {
             KSvg.FrameSvgItem {
                 id: previewFrame
                 anchors.centerIn: parent
-                imagePath: Plasmoid.formFactor === PCore.Types.Vertical || Plasmoid.formFactor === PCore.Types.Horizontal // qmllint disable unqualified
+                imagePath: Plasmoid.formFactor === PCore.Types.Vertical || Plasmoid.formFactor === PCore.Types.Horizontal
                     ? "widgets/panel-background"
                     : "widgets/background"
                 width: Kirigami.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
@@ -120,7 +119,7 @@ KCM {
                     anchors.centerIn: parent
                     width: Kirigami.Units.iconSizes.large
                     height: width
-                    source: Tools.iconOrDefault(Plasmoid.formFactor, root.cfg_launcherIcon) // qmllint disable unqualified
+                    source: Tools.iconOrDefault(Plasmoid.formFactor, root.cfg_launcherIcon)
                 }
             }
 
@@ -145,7 +144,7 @@ KCM {
                 QQC.MenuItem {
                     text: i18nc("@action:inmenu", "Remove icon") // qmllint disable unqualified
                     icon.name: "delete"
-                    enabled: root.cfg_launcherIcon !== "" && launcherIconText.text && Plasmoid.formFactor !== PCore.Types.Vertical // qmllint disable unqualified
+                    enabled: root.cfg_launcherIcon !== "" && launcherIconText.text && Plasmoid.formFactor !== PCore.Types.Vertical
                     onClicked: root.cfg_launcherIcon = ""
                 }
             }
@@ -155,7 +154,7 @@ KCM {
 
         Kirigami.ActionTextField { // launcherIconText
             id: launcherIconText
-            enabled: Plasmoid.formFactor !== PCore.Types.Vertical // qmllint disable unqualified
+            enabled: Plasmoid.formFactor !== PCore.Types.Vertical
             Kirigami.FormData.label: i18nc("@label:textbox", "Launcher icon text:") // qmllint disable unqualified
             text: root.cfg_launcherIconTextDefault
             placeholderText: i18nc("@info:placeholder", "Type here to add a text label next to the launcher icon…") // qmllint disable unqualified
@@ -183,7 +182,7 @@ KCM {
         QQC.Label {
             Layout.fillWidth: true
             Layout.maximumWidth: Kirigami.Units.gridUnit * 25
-            visible: Plasmoid.formFactor === PCore.Types.Vertical // qmllint disable unqualified
+            visible: Plasmoid.formFactor === PCore.Types.Vertical
             text: i18nc("@info", "An icon text cannot be set when the launcher's container is vertical.") // qmllint disable unqualified
             wrapMode: Text.Wrap
             font: Kirigami.Theme.smallFont

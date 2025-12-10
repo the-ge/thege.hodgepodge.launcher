@@ -9,9 +9,6 @@
  * SPDX-FileCopyrightText: 2025 Gabriel Tenita <g1704578400@tenita.eu@tenita.eu>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
- *
- * HACK: disabled useless warnings from qmllint for stuff related to:
- *     - org.kde.plasma.plasmoid
 */
 
 pragma ComponentBehavior: Bound
@@ -20,7 +17,6 @@ import QtQuick
 import QtQuick.Templates as T
 import QtQuick.Layouts
 
-import org.kde.plasma.plasmoid // qmllint disable import
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.extras as PExtras
 

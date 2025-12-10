@@ -18,14 +18,14 @@ import QtQuick.Layouts
 
 import org.kde.plasma.components as PComponents
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.plasmoid // qmllint disable import
+import org.kde.plasma.plasmoid
 
 import "../Helper"
 
 AbstractKickoffItemDelegate {
     id: root
 
-    property bool compact: Kirigami.Settings.tabletMode ? false : Plasmoid.configuration.isListCompact // qmllint disable unqualified
+    property bool compact: Kirigami.Settings.tabletMode ? false : Plasmoid.configuration.isListCompact
 
     leftPadding: Global.listItemMetrics.margins.left + (mirrored ? Global.fontMetrics.descent : 0)
     rightPadding: Global.listItemMetrics.margins.right + (!mirrored ? Global.fontMetrics.descent : 0)
@@ -122,11 +122,11 @@ AbstractKickoffItemDelegate {
         // replace separator line with a more subdued one
         sourceComponent: Rectangle {
             id: separator
-            color: Plasmoid.configuration.separatorLineColor // qmllint disable unqualified
+            color: Plasmoid.configuration.separatorLineColor
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.verticalCenter: parent.verticalCenter
-            implicitHeight: Plasmoid.configuration.separatorLineWidth // qmllint disable unqualified
+            implicitHeight: Plasmoid.configuration.separatorLineWidth
         }
     }
 }

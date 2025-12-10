@@ -2,9 +2,6 @@
  * SPDX-FileCopyrightText: 2025 Gabriel Tenita <g1704578400@tenita.eu>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
- *
- * HACK: disabled useless warnings from qmllint for stuff related to:
- *     - org.kde.plasma.plasmoid
 */
 
 pragma ComponentBehavior: Bound
@@ -17,7 +14,6 @@ import org.kde.plasma.plasmoid
 KCMU.SimpleKCM {
     id: root
 
-    // qmllint disable unqualified
     property bool         cfg_isAlphaSortedDefault: Plasmoid.configuration.isAlphaSorted
     property bool         cfg_isNewHighlightedDefault: Plasmoid.configuration.isNewHighlighted
     property bool         cfg_isUpdateOnHoverDefault: Plasmoid.configuration.isUpdateOnHover
@@ -45,7 +41,6 @@ KCMU.SimpleKCM {
     property bool         cfg_favoritesPortedToKAstatsDefault: Plasmoid.configuration.favoritesPortedToKAstats
     property string       cfg_systemApplicationsDefault: String(Plasmoid.configuration.systemApplications)
     property string       cfg_sidebarActionsDefault: String(Plasmoid.configuration.sidebarActions)
-    // qmllint enable
 
     property bool         cfg_isAlphaSorted: cfg_isAlphaSortedDefault
     property bool         cfg_isNewHighlighted: cfg_isNewHighlightedDefault

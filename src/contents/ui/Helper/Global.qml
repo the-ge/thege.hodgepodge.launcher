@@ -1,4 +1,7 @@
-/* SPDX-FileCopyrightText: 2021 Noah Davis <noahadvs@gmail.com>
+/*
+ * SPDX-FileCopyrightText: 2021 Noah Davis <noahadvs@gmail.com>
+ * SPDX-FileCopyrightText: Gabriel Tenita <g1704578400@tenita.eu@tenita.eu>
+ * 
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
@@ -10,7 +13,7 @@ import QtQuick
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 import org.kde.plasma.plasma5support as P5Support
-import org.kde.plasma.private.kicker as Kicker // qmllint disable unused-imports
+import org.kde.plasma.private.kicker as Kicker
 
 import "../View"
 
@@ -44,7 +47,6 @@ Item {
     readonly property int placesIndex: topCategories.indexOf('Places')
     property list<string> categories: topCategories
     readonly property Kicker.RootModel slimModel: Kicker.RootModel {
-        // qmllint disable missing-property
         autoPopulate: true
         sorted: false // leave 'Lost & Found' last
         flat: true // have categories, but no subcategories
@@ -56,7 +58,6 @@ Item {
         showRecentDocs: false
         showPowerSession: false
         showFavoritesPlaceholder: false
-        // qmllint enable
         Component.onCompleted: {
             for (let i=0, max=rowCount(); i < max; i++) {
                 categories.push(labelForRow(i)); // categories already contain 3 items

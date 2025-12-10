@@ -12,7 +12,7 @@ import QtQuick.Controls as QQC
 
 import org.kde.kcmutils as KCMU
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.plasmoid // qmllint disable import
+import org.kde.plasma.plasmoid
 
 KCM {
     id: root
@@ -20,7 +20,7 @@ KCM {
     Kirigami.FormLayout {
         KCMU.AboutPlugin {
             id: aboutPlugin
-            metaData: Plasmoid.metaData // qmllint disable unqualified
+            metaData: Plasmoid.metaData
         }
 
         Item {

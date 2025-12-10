@@ -11,7 +11,7 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
-import org.kde.plasma.plasmoid // qmllint disable import
+import org.kde.plasma.plasmoid
 import org.kde.plasma.workspace.trianglemousefilter
 
 FocusScope {
@@ -33,7 +33,7 @@ FocusScope {
 
     TriangleMouseFilter {
         id: sidebarFilter
-        active: Plasmoid.configuration.isUpdateOnHover // qmllint disable unqualified
+        active: Plasmoid.configuration.isUpdateOnHover
         anchors {
             top: parent.top
             left: parent.left
@@ -83,8 +83,8 @@ FocusScope {
         anchors.left: sidebarFilter.right
         anchors.bottom: parent.bottom
         LayoutMirroring.enabled: kickoff.sidebarOnRight
-        implicitWidth: Plasmoid.configuration.separatorLineWidth // qmllint disable unqualified
-        color: Plasmoid.configuration.separatorLineColor // qmllint disable unqualified
+        implicitWidth: Plasmoid.configuration.separatorLineWidth
+        color: Plasmoid.configuration.separatorLineColor
     }
 
     Loader {

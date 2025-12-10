@@ -4,10 +4,6 @@
  * SPDX-FileCopyrightText: 2025 Gabriel Tenita <g1704578400@tenita.eu>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
- *
- * HACK: disabled useless warnings from qmllint for stuff related to:
- *     - org.kde.plasma.plasmoid
- *     - org.kde.plasma.private.kicker
 */
 
 pragma ComponentBehavior: Bound
@@ -15,13 +11,13 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Layouts
 
-import org.kde.plasma.private.kicker as Kicker // qmllint disable unused-imports
+import org.kde.plasma.private.kicker as Kicker
 import org.kde.plasma.extras as PExtras
 import org.kde.plasma.components as PComponents
 import org.kde.plasma.core as PCore
 import org.kde.kirigami as Kirigami
 import org.kde.kitemmodels as KItemModels
-import org.kde.plasma.plasmoid // qmllint disable import
+import org.kde.plasma.plasmoid
 
 RowLayout {
     id: root
@@ -33,9 +29,9 @@ RowLayout {
     // hidden into the overflow menu as long as the available space allows
     // it.
     readonly property var view: {
-        const isPowerVisible = Plasmoid.configuration.isPowerVisible // qmllint disable unqualified
-        const isSessionVisible = Plasmoid.configuration.isSessionVisible; // qmllint disable unqualified
-        const hasToolbarCaptions = Plasmoid.configuration.hasToolbarCaptions // qmllint disable unqualified
+        const isPowerVisible = Plasmoid.configuration.isPowerVisible;
+        const isSessionVisible = Plasmoid.configuration.isSessionVisible;
+        const hasToolbarCaptions = Plasmoid.configuration.hasToolbarCaptions;
 
         const rowImplicitWidth = buttonsRepeaterRow.implicitWidth;
         let rowImplicitWidthAsIcons = rowImplicitWidth;
@@ -67,14 +63,14 @@ RowLayout {
     component FilteredModel : KItemModels.KSortFilterProxyModel {
         property var visibleActions: getVisibleActions()
 
-        sourceModel: Kicker.SystemModel { // qmllint disable import
+        sourceModel: Kicker.SystemModel {
             id: systemModel
             favoritesModel: kickoff.rootModel.systemFavoritesModel
         }
 
         function getVisibleActions() {
-            return (Plasmoid.configuration.isPowerVisible ? Plasmoid.configuration.powerActionsDefault : []) // qmllint disable unqualified
-                .concat(Plasmoid.configuration.isSessionVisible ? Plasmoid.configuration.sessionActionsDefault : []); // qmllint disable unqualified
+            return (Plasmoid.configuration.isPowerVisible ? Plasmoid.configuration.powerActionsDefault : [])
+                .concat(Plasmoid.configuration.isSessionVisible ? Plasmoid.configuration.sessionActionsDefault : []);
         }
 
         function isValidVisibleAction(sourceRow, sourceParent) {
@@ -89,7 +85,7 @@ RowLayout {
         }
 
         Component.onCompleted: {
-            Plasmoid.configuration.valueChanged.connect((key, value) => { // qmllint disable unqualified
+            Plasmoid.configuration.valueChanged.connect((key, value) => {
                 if (key === "isPowerVisible" || key === "isSessionVisible") {
                     invalidateFilter();
                 }
@@ -186,7 +182,7 @@ RowLayout {
             {text: i18n("Session"), icon: "system-log-out"},
             {text: i18n("Power"), icon: "system-shutdown"},
             {text: i18n("More") , icon: "view-more-symbolic"},
-        ][Plasmoid.configuration.isPowerVisible * 1 + Plasmoid.configuration.isSessionVisible * 2] // qmllint disable unqualified
+        ][Plasmoid.configuration.isPowerVisible * 1 + Plasmoid.configuration.isSessionVisible * 2]
         icon.name: overflowButtonData.icon
         text: root.view.hasToolbarCaptions ? overflowButtonData.text : ''
         // Make it look pressed while the menu is open
@@ -242,7 +238,7 @@ RowLayout {
     PExtras.Menu {
         id: contextMenu
         placement: {
-            switch (Plasmoid.location) { // qmllint disable unqualified
+            switch (Plasmoid.location) {
                 case PCore.Types.LeftEdge:
                 case PCore.Types.RightEdge:
                 case PCore.Types.TopEdge:

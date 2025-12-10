@@ -1,6 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2021 Mikel Johnson <mikel5764@gmail.com>
  * SPDX-FileCopyrightText: 2021 Noah Davis <noahadvs@gmail.com>
+ *
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
@@ -10,7 +11,7 @@ import QtQuick
 import QtQuick.Templates as T
 
 import org.kde.plasma.extras as PExtras
-import org.kde.plasma.plasmoid // qmllint disable import
+import org.kde.plasma.plasmoid
 
 import "../Helper"
 import "../View"
@@ -33,7 +34,7 @@ BasePage {
                 anchors.fill: parent
                 active: false
                 hovered: parent.mouseArea.containsMouse
-                visible: !Plasmoid.configuration.isUpdateOnHover // qmllint disable unqualified
+                visible: !Plasmoid.configuration.isUpdateOnHover
                     && !parent.isSeparator && !parent.ListView.isCurrentItem
                     && hovered
             }
@@ -46,9 +47,9 @@ BasePage {
         focus: true
         objectName: "frequentlyUsedView"
         model: switch (root.sidebarItem.currentIndex) {
-            case 0: return kickoff.computerModel // qmllint disable unqualified
-            case 1: return kickoff.recentUsageModel // qmllint disable unqualified
-            case 2: return kickoff.frequentUsageModel // qmllint disable unqualified
+            case 0: return kickoff.computerModel
+            case 1: return kickoff.recentUsageModel
+            case 2: return kickoff.frequentUsageModel
         }
         onActiveFocusChanged: if (activeFocus && count < 1) {
             root.sidebarItem.forceActiveFocus()
@@ -76,14 +77,14 @@ BasePage {
     // StackView.status and visible. This way the bindings are reset when
     // NormalPage is Activated again.
     Binding {
-        target: kickoff // qmllint disable unqualified
+        target: kickoff
         property: "sidebar"
         value: root.sidebarItem
         when: root.T.StackView.status === T.StackView.Active && root.visible
         restoreMode: Binding.RestoreBinding
     }
     Binding {
-        target: kickoff // qmllint disable unqualified
+        target: kickoff
         property: "contentArea"
         value: root.contentAreaItem // NOT root.contentAreaItem.currentItem
         when: root.T.StackView.status === T.StackView.Active && root.visible

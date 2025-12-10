@@ -7,9 +7,6 @@
  * SPDX-FileCopyrightText: 2025 Gabriel Tenita <g1704578400@tenita.eu>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
- *
- * HACK: disabled useless warnings from qmllint for stuff related to:
- *     - org.kde.plasma.plasmoid
 */
 
 pragma ComponentBehavior: Bound
@@ -20,7 +17,7 @@ import QtQuick.Templates as T
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.components as PComponents
 import org.kde.plasma.extras as PExtras
-import org.kde.plasma.plasmoid // qmllint disable import
+import org.kde.plasma.plasmoid
 
 import "../Helper"
 import "../Page"
@@ -53,7 +50,7 @@ EmptyPage {
 
     header: MouseArea {
         implicitHeight: Global.listItemMetrics.margins.top
-        hoverEnabled: root.mainContentView || Plasmoid.configuration.isUpdateOnHover // qmllint disable unqualified
+        hoverEnabled: root.mainContentView || Plasmoid.configuration.isUpdateOnHover
         onEntered: {
             if (containsMouse) {
                 const targetIndex = view.indexAt(mouseX + view.contentX, view.contentY)
@@ -67,7 +64,7 @@ EmptyPage {
 
     footer: MouseArea {
         implicitHeight: Global.listItemMetrics.margins.bottom
-        hoverEnabled: root.mainContentView || Plasmoid.configuration.isUpdateOnHover // qmllint disable unqualified
+        hoverEnabled: root.mainContentView || Plasmoid.configuration.isUpdateOnHover
         onEntered: {
             if (containsMouse) {
                 const targetIndex = view.indexAt(mouseX + view.contentX, view.height + view.contentY - 1)
@@ -112,7 +109,7 @@ EmptyPage {
             // use grid cells to determine size
             let h = (kickoff.gridIconSize + Global.gridCellSpacing) * kickoff.minGridRowCount
             // If no grids are used, use the number of items that would fit in the grid height
-            if (Plasmoid.configuration.favoritesLayout !== 0 && Plasmoid.configuration.appsLayout !== 0) { // qmllint disable unqualified
+            if (Plasmoid.configuration.favoritesLayout !== 0 && Plasmoid.configuration.appsLayout !== 0) {
                 h = Math.floor(h / kickoff.listDelegateHeight) * kickoff.listDelegateHeight
             }
             return h + topMargin + bottomMargin

@@ -1,13 +1,13 @@
 /*
-    SPDX-FileCopyrightText: 2011 Martin Gräßlin <mgraesslin@kde.org>
-    SPDX-FileCopyrightText: 2012 Gregor Taetzner <gregor@freenet.de>
-    SPDX-FileCopyrightText: 2014 Sebastian Kügler <sebas@kde.org>
-    SPDX-FileCopyrightText: 2015-2018 Eike Hein <hein@kde.org>
-    SPDX-FileCopyrightText: 2021 Mikel Johnson <mikel5764@gmail.com>
-    SPDX-FileCopyrightText: 2021 Noah Davis <noahadvs@gmail.com>
-    SPDX-FileCopyrightText: 2022 Nate Graham <nate@kde.org>
-
-    SPDX-License-Identifier: GPL-2.0-or-later
+ * SPDX-FileCopyrightText: 2011 Martin Gräßlin <mgraesslin@kde.org>
+ * SPDX-FileCopyrightText: 2012 Gregor Taetzner <gregor@freenet.de>
+ * SPDX-FileCopyrightText: 2014 Sebastian Kügler <sebas@kde.org>
+ * SPDX-FileCopyrightText: 2015-2018 Eike Hein <hein@kde.org>
+ * SPDX-FileCopyrightText: 2021 Mikel Johnson <mikel5764@gmail.com>
+ * SPDX-FileCopyrightText: 2021 Noah Davis <noahadvs@gmail.com>
+ * SPDX-FileCopyrightText: 2022 Nate Graham <nate@kde.org>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 pragma ComponentBehavior: Bound
@@ -18,7 +18,7 @@ import QtQuick.Templates as T
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.components as PComponents
 import org.kde.plasma.core as PCore
-import org.kde.plasma.plasmoid // qmllint disable import
+import org.kde.plasma.plasmoid
 
 import "../Helper"
 import "../Helper/Tools.js" as Tools
@@ -44,7 +44,7 @@ T.ItemDelegate {
     property int itemHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset, implicitContentHeight + topPadding + bottomPadding)
 
     readonly property bool dragEnabled: enabled && !isCategoryListItem
-        && Plasmoid.immutability !== PCore.Types.SystemImmutable // qmllint disable unqualified
+        && Plasmoid.immutability !== PCore.Types.SystemImmutable
 
     readonly property alias mouseArea: mouseArea
 
@@ -76,7 +76,7 @@ T.ItemDelegate {
         }
 
         if (actions && actions.length > 0) {
-            ActionMenu.plasmoid = kickoff; // qmllint disable unqualified
+            ActionMenu.plasmoid = kickoff;
             ActionMenu.menu.visualParent = root;
             ActionMenu.actionList = actions;
             if (x !== undefined && y !== undefined) {
@@ -123,8 +123,8 @@ T.ItemDelegate {
             root.view.currentIndex = root.index
             // if successfully triggered, close popup
             if (root.view.model.trigger && root.view.model.trigger(root.index, "", null)) {
-                if (kickoff.hideOnWindowDeactivate) { // qmllint disable unqualified
-                    kickoff.expanded = false; // qmllint disable unqualified
+                if (kickoff.hideOnWindowDeactivate) {
+                    kickoff.expanded = false;
                 }
             }
         }
@@ -132,9 +132,9 @@ T.ItemDelegate {
 
     function performDrag(handler: DragHandler): void {
         if (!handler.active) {
-            kickoff.dragSource.Drag.active = false; // qmllint disable unqualified
-            kickoff.dragSource.Drag.imageSource = ""; // qmllint disable unqualified
-            kickoff.dragSource.sourceItem = null; // qmllint disable unqualified
+            kickoff.dragSource.Drag.active = false;
+            kickoff.dragSource.Drag.imageSource = "";
+            kickoff.dragSource.sourceItem = null;
             return;
         }
         root.dragIconItem.grabToImage(result => {
@@ -185,9 +185,9 @@ T.ItemDelegate {
             && !root.view.movedWithWheel
             // Fix VerticalStackView animation causing view currentIndex
             // to change while delegates are moving under the mouse cursor
-            && kickoff.fullRepresentationItem // qmllint disable unqualified
-            && !kickoff.fullRepresentationItem.contentItem.busy // qmllint disable unqualified
-            && !kickoff.fullRepresentationItem.blockingHoverFocus // qmllint disable unqualified
+            && kickoff.fullRepresentationItem
+            && !kickoff.fullRepresentationItem.contentItem.busy
+            && !kickoff.fullRepresentationItem.blockingHoverFocus
         acceptedButtons: Qt.LeftButton | Qt.RightButton
 
         onEntered: {
@@ -196,7 +196,7 @@ T.ItemDelegate {
             // - Don't highlight separators.
             // - Don't switch category items on hover if the setting isn't enabled
             if (root.view.movedWithKeyboard || root.isSeparator
-                || (root.isCategoryListItem && !Plasmoid.configuration.isUpdateOnHover)) { // qmllint disable unqualified
+                || (root.isCategoryListItem && !Plasmoid.configuration.isUpdateOnHover)) {
                 return
             }
 

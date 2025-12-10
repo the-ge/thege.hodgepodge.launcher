@@ -3,10 +3,6 @@
  * SPDX-FileCopyrightText: Gabriel Tenita <g1704578400@tenita.eu@tenita.eu>
  *
  * SPDX-License-Identifier: LGPL-2.0-or-later
- *
- * HACK: disabled useless warnings from qmllint for stuff related to:
- *     - org.kde.plasma.plasmoid
- *     - org.kde.plasma.private.kicker
 */
 
 pragma ComponentBehavior: Bound
@@ -16,8 +12,8 @@ import QtQuick.Templates as T
 
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.extras as PExtras
-import org.kde.plasma.plasmoid // qmllint disable import
-import org.kde.plasma.private.kicker as Kicker // qmllint disable unused-imports
+import org.kde.plasma.plasmoid
+import org.kde.plasma.private.kicker as Kicker
 
 import "../Helper"
 import "../View"
@@ -26,8 +22,8 @@ BasePage {
     id: root
 
     required property int defaultIndex // Favorites, All Applications, Places, then app categories start at 3
-    property bool hasFavsGrid: Plasmoid.configuration.favoritesLayout === 0 // qmllint disable unqualified
-    property bool hasAppsGrid: Plasmoid.configuration.appsLayout === 0 // qmllint disable unqualified
+    property bool hasFavsGrid: Plasmoid.configuration.favoritesLayout === 0
+    property bool hasAppsGrid: Plasmoid.configuration.appsLayout === 0
 
     sidebarComponent: KickoffListView {
         id: sidebar
@@ -45,7 +41,7 @@ BasePage {
                 anchors.fill: parent
                 active: false
                 hovered: listDelegate.mouseArea.containsMouse
-                visible: !Plasmoid.configuration.isUpdateOnHover // qmllint disable unqualified
+                visible: !Plasmoid.configuration.isUpdateOnHover
                     && !listDelegate.isSeparator && !parent.ListView.isCurrentItem
                     && hovered
             }

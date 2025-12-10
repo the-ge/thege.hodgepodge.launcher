@@ -8,7 +8,6 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
  * HACK: disabled useless warnings from qmllint for stuff related to:
- *     - org.kde.plasma.plasmoid
  *     - i18n*()
 */
 
@@ -21,7 +20,7 @@ import QtQuick.Controls as QQC
 import org.kde.config as KConfig
 import org.kde.kcmutils as KCMU
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.plasmoid // qmllint disable import
+import org.kde.plasma.plasmoid
 
 import "../Helper"
 

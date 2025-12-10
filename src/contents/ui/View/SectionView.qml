@@ -1,7 +1,7 @@
 /*
-    SPDX-FileCopyrightText: 2022 Fushan Wen <qydwhotmail@gmail.com>
-
-    SPDX-License-Identifier: GPL-2.0-or-later
+ * SPDX-FileCopyrightText: 2022 Fushan Wen <qydwhotmail@gmail.com>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 pragma ComponentBehavior: Bound
@@ -9,7 +9,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 
 import org.kde.plasma.components as PComponents
-import org.kde.plasma.plasmoid // qmllint disable import
+import org.kde.plasma.plasmoid
 
 KickoffGridView {
     id: root
@@ -65,7 +65,7 @@ KickoffGridView {
         }
 
         onClicked: {
-            const isGridView = Plasmoid.configuration.appsLayout === 0 // qmllint disable unqualified
+            const isGridView = Plasmoid.configuration.appsLayout === 0
             const destinationIndex = isGridView ? index : firstIndex
             root.hideSectionViewRequested(destinationIndex)
         }

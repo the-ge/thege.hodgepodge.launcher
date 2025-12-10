@@ -5,9 +5,6 @@
  * SPDX-FileCopyrightText: 2021 Noah Davis <noahadvs@gmail.com>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
- *
- * HACK: disabled useless warnings from qmllint for stuff related to:
- *     - org.kde.plasma.plasmoid
 */
 
 pragma ComponentBehavior: Bound
@@ -24,7 +21,7 @@ import org.kde.kirigamiaddons.components as KirigamiPComponents
 import org.kde.coreaddons as KPCoreAddons
 import org.kde.kcmutils as KCMU
 import org.kde.config as KConfig
-import org.kde.plasma.plasmoid // qmllint disable import
+import org.kde.plasma.plasmoid
 
 PExtras.PlasmoidHeading {
     id: root
@@ -248,9 +245,9 @@ PExtras.PlasmoidHeading {
                 PComponents.ToolButton {
                     id: configureButton
                     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-                    visible: Plasmoid.internalAction("configure").enabled // qmllint disable unqualified
+                    visible: Plasmoid.internalAction("configure").enabled
                     icon.name: "configure"
-                    text: Plasmoid.internalAction("configure").text // qmllint disable unqualified
+                    text: Plasmoid.internalAction("configure").text
                     display: PComponents.ToolButton.IconOnly
 
                     PComponents.ToolTip.text: text
@@ -275,7 +272,7 @@ PExtras.PlasmoidHeading {
                 PComponents.ToolButton {
                     id: pinButton
                     checkable: true
-                    checked: Plasmoid.configuration.isAppletPinned // qmllint disable unqualified
+                    checked: Plasmoid.configuration.isAppletPinned
                     icon.name: "window-pin"
                     text: i18n("Keep Open")
                     display: PComponents.ToolButton.IconOnly
@@ -285,7 +282,7 @@ PExtras.PlasmoidHeading {
                     Binding {
                         target: kickoff
                         property: "hideOnWindowDeactivate"
-                        value: !Plasmoid.configuration.isAppletPinned // qmllint disable unqualified
+                        value: !Plasmoid.configuration.isAppletPinned
                         // there should be no other bindings, so don't waste resources
                         restoreMode: Binding.RestoreNone
                     }
@@ -305,7 +302,7 @@ PExtras.PlasmoidHeading {
                             nextItemInFocusChain(false).forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
                         }
                     }
-                    onToggled: Plasmoid.configuration.isAppletPinned = checked // qmllint disable unqualified
+                    onToggled: Plasmoid.configuration.isAppletPinned = checked
                 }
             }
         }

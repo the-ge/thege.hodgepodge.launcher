@@ -5,7 +5,7 @@
 */
 
 import QtQuick
-import org.kde.plasma.configuration // qmllint disable import
+import org.kde.plasma.configuration
 
 ConfigModel {
     id: kcmRoot
