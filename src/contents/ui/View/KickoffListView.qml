@@ -12,6 +12,7 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
+import QtQuick.Layouts as QQL
 import QtQuick.Templates as T
 
 import org.kde.kirigami as Kirigami
@@ -84,6 +85,46 @@ EmptyPage {
 
     leftPadding: verticalScrollBar.visible && root.mirrored ? verticalScrollBar.implicitWidth : 0
     rightPadding: verticalScrollBar.visible && !root.mirrored ? verticalScrollBar.implicitWidth : 0
+
+    // copied /usr/lib/qt6/qml/org/kde/plasma/extras/ListSectionHeader.qml and replaced SVG with configurable Rectangle
+    component ListSectionHeader: PComponents.ItemDelegate {
+        id: listSectionHeader
+        property alias label: listSectionHeader.text
+        default property alias _contents: rowLayout.data
+
+        hoverEnabled: false
+        activeFocusOnTab: false
+        background: null // we do not need a background
+        topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+
+        contentItem: QQL.RowLayout {
+            id: rowLayout
+            spacing: Kirigami.Units.largeSpacing
+
+            Kirigami.Heading {
+                QQL.Layout.maximumWidth: rowLayout.width
+                QQL.Layout.alignment: Qt.AlignVCenter
+
+                opacity: 0.75
+                level: 5
+                type: Kirigami.Heading.Primary
+                text: listSectionHeader.text
+                elide: Text.ElideRight
+
+                // we override the Primary type's font weight (DemiBold) for Bold for contrast with small text
+                font.weight: Font.Bold
+
+                Accessible.ignored: true
+            }
+
+            Rectangle {
+                QQL.Layout.fillWidth: true
+                QQL.Layout.alignment: Qt.AlignVCenter
+                QQL.Layout.preferredHeight: Plasmoid.configuration.separatorLineWidth
+                color: Plasmoid.configuration.separatorLineColor
+            }
+        }
+    }
 
     contentItem: ListView {
         id: view
@@ -165,7 +206,7 @@ EmptyPage {
         section {
             property: "group"
             criteria: ViewSection.FullString
-            delegate: PExtras.ListSectionHeader {
+            delegate: ListSectionHeader {
                 required property string section
 
                 width: view.availableWidth
