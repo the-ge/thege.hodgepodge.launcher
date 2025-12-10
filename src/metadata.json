@@ -153,7 +153,7 @@
         "Name[x-test]": "Hodgepodge xxApplication Launcherxx",
         "Name[zh_CN]": "Hodgepodge 应用程序启动器",
         "Name[zh_TW]": "Hodgepodge 應用程式啟動器",
-        "Version": "2.0.7",
+        "Version": "2.0.8",
         "Website": "https://github.com/the-ge/thege.hodgepodge.launcher/"
     },
     "X-Plasma-API-Minimum-Version": "6.0",
