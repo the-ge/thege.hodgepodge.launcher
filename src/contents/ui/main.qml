@@ -316,7 +316,8 @@ PlasmoidItem { // qmllint disable import
                 readonly property bool nonSquareImage: sourceSize.width != sourceSize.height
 
                 visible: nonSquareImage && status == QQ.Image.Ready
-                source: Plasmoid.icon
+                source: Plasmoid.icon.startsWith("/") ? "file:" + Plasmoid.icon.split("/").map(encodeURIComponent).join("/") : ""
+
 
                 QQL.Layout.fillWidth: kickoff.isVertical
                 QQL.Layout.fillHeight: !kickoff.isVertical
