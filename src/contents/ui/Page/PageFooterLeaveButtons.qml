@@ -188,7 +188,7 @@ RowLayout {
         // Make it look pressed while the menu is open
         down: contextMenu.status === PExtras.Menu.Open || pressed
         PComponents.ToolTip.text: overflowButtonData.text
-        PComponents.ToolTip.visible: hovered
+        PComponents.ToolTip.visible: hovered || activeFocus
         PComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
         Keys.onTabPressed: event => {
             kickoff.firstHeaderItem.forceActiveFocus(Qt.TabFocusReason);
