@@ -215,6 +215,7 @@ May take quite a while. Also some todos may not make it to code.
 - [ ] Add UI and row count configuration for recent apps
 - [ ] Add `highlightNewlyInstalledApps` setting (see [rootmodel.h](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/kicker/rootmodel.h))
 - [ ] Place and order individually footer buttons in or out of overflow (drag-and-drop).
+- [ ] Remove implicit categories (shortcuts and about) or - at least - change their icons (needs C++ plugin).
 - [ ] Modify it to be more like in Windows 10:
     - left column with buttons
     - middle pane with application list group either alphabetically or by categories
