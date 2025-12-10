@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thege.hodgepodge.launcher\n"
 "Report-Msgid-Bugs-To: https://github.com/the-ge/thege.hodgepodge.launcher/issues\n"
-"POT-Creation-Date: 2025-12-10 02:07+0200\n"
+"POT-Creation-Date: 2025-12-10 02:50+0200\n"
 "PO-Revision-Date: 2025-11-28 16:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -249,7 +249,6 @@ msgid "Open launcher in:"
 msgstr "Deschide lansatorul în:"
 
 #: ../src/contents/ui/Config/KCMBehavior.qml:88
-#: ../src/contents/ui/Page/PageFooter.qml:118
 #, kde-format
 msgid "Favorites"
 msgstr "Favorite"
@@ -408,6 +407,11 @@ msgstr "Sistem"
 msgid "More"
 msgstr "Mai multe"
 
+#: ../src/contents/ui/Page/PageFooter.qml:118
+#, kde-format
+msgid "Applications"
+msgstr "Aplicații"
+
 #: ../src/contents/ui/Page/PlacesPage.qml:66
 #, kde-format
 msgctxt "category in Places sidebar"
@@ -430,7 +434,3 @@ msgstr "Folosite frecvent"
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Grilă cu %1 rânduri și %2 coloane"
-
-#, kde-format
-#~ msgid "Applications"
-#~ msgstr "Aplicații"
