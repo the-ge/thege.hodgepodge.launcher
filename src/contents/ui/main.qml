@@ -362,8 +362,6 @@ PlasmoidItem { // qmllint disable import
     ]
 
     QQ.Component.onCompleted: {
-        if (kickoff.hasOwnProperty("activationTogglesExpanded")) { //qmllint disable missing-property
-            kickoff.activationTogglesExpanded = true
-        }
+        kickoff.activationTogglesExpanded = true
     }
 } // root
