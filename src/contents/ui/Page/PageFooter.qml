@@ -115,7 +115,7 @@ PExtras.PlasmoidHeading {
             id: firstTab
             focus: !root.isAtPlaces
             icon.name: "applications-all-symbolic"
-            text: i18n("Favorites")
+            text: i18n("Applications")
             Keys.onBacktabPressed: event => (kickoff.lastCentralPane || nextItemInFocusChain(false)).forceActiveFocus(Qt.BacktabFocusReason)
         }
         BaseButton {
