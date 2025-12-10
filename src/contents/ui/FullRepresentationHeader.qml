@@ -11,8 +11,6 @@ pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
-import QtQuick.Templates as T
-import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.components as PComponents
 import org.kde.plasma.extras as PExtras
