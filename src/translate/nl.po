@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thege.hodgepodge.launcher\n"
 "Report-Msgid-Bugs-To: https://github.com/the-ge/thege.hodgepodge.launcher/issues\n"
-"POT-Creation-Date: 2025-12-10 02:07+0200\n"
+"POT-Creation-Date: 2025-12-10 02:50+0200\n"
 "PO-Revision-Date: 2025-11-27 11:19+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: none\n"
@@ -249,7 +249,6 @@ msgid "Open launcher in:"
 msgstr "Weergeven na openen:"
 
 #: ../src/contents/ui/Config/KCMBehavior.qml:88
-#: ../src/contents/ui/Page/PageFooter.qml:118
 #, kde-format
 msgid "Favorites"
 msgstr "Favorieten"
@@ -408,6 +407,11 @@ msgstr "Energie"
 msgid "More"
 msgstr "Meer"
 
+#: ../src/contents/ui/Page/PageFooter.qml:118
+#, kde-format
+msgid "Applications"
+msgstr "Programma's"
+
 #: ../src/contents/ui/Page/PlacesPage.qml:66
 #, kde-format
 msgctxt "category in Places sidebar"
@@ -430,7 +434,3 @@ msgstr "Veelgebruikt"
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Een rooster met %1 rijen en %2 kolommen"
-
-#, kde-format
-#~ msgid "Applications"
-#~ msgstr "Programma's"
