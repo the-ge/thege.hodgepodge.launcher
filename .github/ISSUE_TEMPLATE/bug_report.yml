@@ -1,10 +1,8 @@
 name: Bug Report
 description: Report a bug in HodgePodge application launcher.
-title: "bug: "
 labels: ["bug"]
 assignees:
   - the-ge
-type: bug
 body:
   - type: markdown
     attributes:
