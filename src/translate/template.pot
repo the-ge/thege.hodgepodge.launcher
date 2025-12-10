@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thege.hodgepodge.launcher\n"
 "Report-Msgid-Bugs-To: https://github.com/the-ge/thege.hodgepodge.launcher/issues\n"
-"POT-Creation-Date: 2025-12-11 00:01+0200\n"
+"POT-Creation-Date: 2025-12-11 00:55+0200\n"
 "PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Gabriel Tenita <g1704578400@tenita.eu>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -341,12 +341,12 @@ msgstr ""
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr ""
 
-#: ../src/contents/ui/FullRepresentationHeader.qml:88
+#: ../src/contents/ui/FullRepresentationHeader.qml:86
 #, kde-format
 msgid "Open user settings"
 msgstr ""
 
-#: ../src/contents/ui/FullRepresentationHeader.qml:277
+#: ../src/contents/ui/FullRepresentationHeader.qml:275
 #, kde-format
 msgid "Keep Open"
 msgstr ""
@@ -412,19 +412,19 @@ msgstr ""
 msgid "Applications"
 msgstr ""
 
-#: ../src/contents/ui/Page/PlacesPage.qml:67
+#: ../src/contents/ui/Page/PlacesPage.qml:68
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Computer"
 msgstr ""
 
-#: ../src/contents/ui/Page/PlacesPage.qml:68
+#: ../src/contents/ui/Page/PlacesPage.qml:69
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "History"
 msgstr ""
 
-#: ../src/contents/ui/Page/PlacesPage.qml:69
+#: ../src/contents/ui/Page/PlacesPage.qml:70
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
