@@ -27,6 +27,7 @@ BasePage {
 
     sidebarComponent: KickoffListView {
         id: sidebar
+        isSidebar: true
         focus: true // needed for Loaders
         model: kickoff.rootModel
         defaultIndex: root.defaultIndex

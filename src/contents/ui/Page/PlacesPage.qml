@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021 Noah Davis <noahadvs@gmail.com>
  *
  * SPDX-License-Identifier: LGPL-2.0-or-later
- */
+*/
 
 pragma ComponentBehavior: Bound
 
@@ -21,6 +21,7 @@ BasePage {
 
     sidebarComponent: KickoffListView {
         id: sidebar
+        isSidebar: true
         focus: true // needed for Loaders
         model: placesCategoryModel
         delegate: KickoffListDelegate {
