@@ -1,10 +1,8 @@
 name: Feature request
 description: Suggest an idea for the HodgePodge application launcher.
-title: "feature: "
-labels: ["feature"]
+labels: ["enhancement"]
 assignees:
   - the-ge
-type: enhancement
 body:
   - type: markdown
     attributes:
