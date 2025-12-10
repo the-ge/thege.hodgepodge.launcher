@@ -2,8 +2,6 @@
     SPDX-FileCopyrightText: 2025 Gabriel Tenita <g1704578400@tenita.eu@tenita.eu>
 
     SPDX-License-Identifier: GPL-2.0-or-later
-
-    TODO: remove implicit categories (shortcuts and about) or - at least - change their icons (needs C++ plugin)
 */
 
 import QtQuick
