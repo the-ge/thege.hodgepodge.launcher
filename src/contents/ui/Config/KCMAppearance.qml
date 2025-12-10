@@ -296,7 +296,7 @@ KCM {
                         dialogTitle: i18n("Separator lines color") // qmllint disable unqualified
                         color: root.cfg_separatorLineColorDefault
                         showAlphaChannel: true
-                        onAccepted: root.separatorLineColor = color
+                        onAccepted: root.cfg_separatorLineColor = color
                     }
                 }
             }
