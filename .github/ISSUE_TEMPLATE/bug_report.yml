@@ -52,14 +52,14 @@ body:
       description: |
         You can find this information in System Configuration > About this system or `kinfo` in CLI.
         Examples:
-          - **Hodgepodge Application Launcher**: 2.0.8
+          - **Hodgepodge Launcher**: 2.0.8
           - **KDE Plasma**: 6.5.3
           - **KDE Frameworks**: 6.20.0
           - **Qt**: 6.10.1
           - **Kernel Version:** 6.12.61-1-MANJARO (64-bit)
           - **Graphics Platform**: X11
       value: |
-          - Hodgepodge Application Launcher:
+          - Hodgepodge Launcher:
           - KDE Plasma:
           - KDE Frameworks:
           - Qt:
