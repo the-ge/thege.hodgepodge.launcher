@@ -6,6 +6,7 @@ assignees:
 body:
   - type: checkboxes
     attributes:
+      label: Prerequisites
       options:
         - label: I have already [searched in existing issues](https://github.com/the-ge/thege.hodgepodge.launcher/issues?q=is%3Aissue+label%3ABug) and found no previous report of this bug.
           required: true
