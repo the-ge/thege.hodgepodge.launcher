@@ -13,7 +13,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for taking the time to fill out this bug report!
+        Thank you for taking the time to fill out this feature request!
         
         - **Write in English.** Reports in any other language will be closed without any consideration.
         - **Provide as much detail as possible.** You may have a very clear idea, just make sure it reaches to me.
