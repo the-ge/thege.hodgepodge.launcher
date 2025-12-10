@@ -8,6 +8,9 @@
  * SPDX-FileCopyrightText: 2022 Nate Graham <nate@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ * HACK: disabled useless warnings from qmllint for stuff related to:
+ *     - i18n*()
 */
 
 pragma ComponentBehavior: Bound
@@ -63,7 +66,7 @@ T.ItemDelegate {
 
         let actions = Array.from(model.actionList);
         const favoriteActions = Tools.createFavoriteActions(
-            i18n, //i18n() function callback
+            i18n, // qmllint disable unqualified
             view.model.favoritesModel,
             model.favoriteId,
         );
