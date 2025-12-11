@@ -206,8 +206,8 @@ Thanks to the following individuals/teams for their work that helped me understa
 
 - [KDE team](https://kde.org/):
     - [Plasma Framework](https://invent.kde.org/plasma/libplasma)
-    - [Kickoff](https://invent.kde.org/plasma/plasma-desktop/-/tree/master/applets/kickoff)
-    - [Kicker](https://invent.kde.org/plasma/plasma-desktop/-/tree/master/applets/kickerf)
+    - [Application Launcher or Kickoff](https://invent.kde.org/plasma/plasma-desktop/-/tree/master/applets/kickoff)
+    - [Application Menu or Kicker](https://invent.kde.org/plasma/plasma-desktop/-/tree/master/applets/kickerf)
     - [KDE Developer Documentation](https://develop.kde.org/docs/)
     - [KDE API Reference](https://api.kde.org/index.html) (especially [Kirigami](https://api.kde.org/kirigami-index.html))
     - [Plasma 6 Wiki](https://community.kde.org/Plasma/Plasma_6)
