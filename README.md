@@ -28,7 +28,7 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 3. Click on the `Get New` button and choose 'Install Widget From Local File'
 4. Navigate to the folder where is the plasmoid and choose it.
 5. You may need to exit the KDE widget interface and re-enter to be able to see the new plasmoid. If so, right-click again on the taskbar and choose `Add or Manage Widgets`.
-5. Click on the plasmoid in the widget list, then drag and drop this widget to the taskbar.
+6. Click on the plasmoid in the widget list, then drag and drop this widget to the taskbar.
 
 ### 3. From [the GitHub repository](https://github.com/the-ge/thege.hodgepodge.launcher)
 
@@ -46,13 +46,13 @@ Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
 
 ### New configuration options:
 
-- the launcher can start with favorites, places or one of the existing categories
-- user avatar size
-- grids icons size
-- lists icons size
-- separator lines width
-- separator lines color
-- toolbar action buttons can be all moved to the overflow menu, in addition to the former power/session/power+session options
++ the launcher can start with favorites, places or one of the existing categories
++ user avatar size
++ grids icons size
++ lists icons size
++ separator lines width
++ separator lines color
++ toolbar action buttons can be all moved to the overflow menu, in addition to the former power/session/power+session options
 
 ## TRANSLATION STATUS
             
