@@ -12,6 +12,34 @@
 
 ![Configuration options](https://github.com/user-attachments/assets/b0b7d127-5288-4701-af9c-708ac8bb2105)
 
+## FEATURES
+
+### New configuration options
+
+The following configuration options were added on top of Application Launcher (Kickoff)'s:
++ the launcher can start with favorites, places or one of the existing categories
++ user avatar size
++ grids icons size
++ lists icons size
++ separator lines width
++ separator lines color
++ toolbar action buttons can be all moved to the overflow menu, in addition to the former power/session/power+session options
+
+## TRANSLATION STATUS
+            
+
+| Locale | ¹Translatable | Translated | ²Translated Ratio |
+| :---   |          ---: |       ---: |              ---: |
+| nl     | ✅         78 |         78 | ✅        100.00% |
+| ro     | ✅         78 |         78 | ✅        100.00% |
+
+*¹ The language file translatable string count is checked to be the same as in the template.*
+
+*² The language file translated string ratio is checked to be 100%.*
+
+> [!TIP]
+> See more details at [i18n-status.md](i18n-status.md).
+
 ## INSTALLATION
 
 > [!NOTE]
@@ -43,33 +71,6 @@
     ```
 3. Right-click on the taskbar and choose `Add or Manage Widgets`.
 4. Click on the plasmoid in the widget list, then drag and drop this widget to the taskbar.
-
-## FEATURES
-
-### New configuration options:
-
-+ the launcher can start with favorites, places or one of the existing categories
-+ user avatar size
-+ grids icons size
-+ lists icons size
-+ separator lines width
-+ separator lines color
-+ toolbar action buttons can be all moved to the overflow menu, in addition to the former power/session/power+session options
-
-## TRANSLATION STATUS
-            
-
-| Locale | ¹Translatable | Translated | ²Translated Ratio |
-| :---   |          ---: |       ---: |              ---: |
-| nl     | ✅         78 |         78 | ✅        100.00% |
-| ro     | ✅         78 |         78 | ✅        100.00% |
-
-*¹ The language file translatable string count is checked to be the same as in the template.*
-
-*² The language file translated string ratio is checked to be 100%.*
-
-> [!TIP]
-> See more details at [i18n-status.md](i18n-status.md).
 
 ## HOW TO TRANSLATE
 
