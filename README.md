@@ -138,7 +138,7 @@ locale --all
     LC_ALL=ro_RO.utf8 plasmoidviewer --size 960x720 --applet .
     ```
 
-2. Installing on your system from the cloned repository (see INSTALLATION, [method #3](#3-manually-cloning-the-github-repository)).
+2. Installing on your system from the cloned repository (see [INSTALLATION, method #3](#3-from-the-github-repository)).
 
 3. View the plasmashell system logs:
     ```sh
