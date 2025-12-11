@@ -188,39 +188,6 @@ locale --all
     killall plasmashell && kstart plasmashell
     ```
 
-## :construction: TODO
-
-May take quite a while. Also some todos may not make it to code.
-
-*Some of the following items are bugfixes for issues solved before creating this repository.*
-
-- [x] Fix 'All Applications' binding loop bug (grid icon size seems undefined).
-- [x] Make horizontal line separator in the sidebar use settings.
-- [x] Add separator between Power and Session buttons.
-- [x] Fix compactRepresentation height when placed on vertical panel.
-- [x] Add configuration for the user avatar size.
-- [x] Add 'Start in:' setting (Favorites/All Applications/Deveopment/Education/...)
-- [x] Test if adding (again) the i18nContext to the singleton helps with the 'Applications' and 'Places' translations. **Nope, not working.** ~~If not, get them from KDE Kicker.~~ **On second thought, I don't like the idea.**
-- [ ] ~~Add contributor column to the translations table.~~ **If translations are added by PRs, their authors become contributors automatically. Put on hold until a need appears.**
-- [x] Add proper credits.
-- [x] Add explanations to the README utilities section.
-- [x] Add utility to pack the plasmoid for KDE Store
-    - [x] check if KDE Store accepts .plasmoid files **- it does**
-    - [x] ~~compile translations~~ **- this step will remain outside ot this utility**
-    - [x] zip: cd src; zip `contents/`, `translate/`, `metadata.json`
-    - [x] change extension to plasmoid **- uses version from metadata.json**
-    - [x] ~~zip the plasmoid - name uses version from metadata.json~~ **- KDE Store accepts .plasmoid uploads, so no need to zip it again**
-- [ ] Add `--check-punctuation` option for `i18n-status`, to make the punctuation check opt-in.
-- [ ] Remove the caret-down from the launcher icon configuration control.
-- [ ] Add UI and row count configuration for recent apps
-- [ ] Add `highlightNewlyInstalledApps` setting (see [rootmodel.h](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/kicker/rootmodel.h))
-- [ ] Place and order individually footer buttons in or out of overflow (drag-and-drop).
-- [ ] Remove implicit categories (shortcuts and about) or - at least - change their icons (needs C++ plugin).
-- [ ] Modify it to be more like in Windows 10:
-    - left column with buttons
-    - middle pane with application list group either alphabetically or by categories
-    - right pane with tiles
-
 ## CREDITS
 
 Thanks to the following individuals/teams for their work that helped me understand things related to this plasmoid or code things into this plasmoid.
