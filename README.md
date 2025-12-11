@@ -19,7 +19,9 @@
 
 ### 1. From the [KDE Store](https://store.kde.org/p/2330881), using [pling-store](https://www.opendesktop.org/p/1175480/) or [ocs-url](https://www.opendesktop.org/p/1136805/)
 
-Go to the KDE Store (https://store.kde.org/p/2330881) and click on `Install`.
+1. Go to the KDE Store (https://store.kde.org/p/2330881), click on `Install`, then follow the prompts.
+2. Right-click on the taskbar and choose `Add or Manage Widgets`.
+3. Click on the plasmoid in the widget list, then drag and drop this widget to the taskbar.
 
 ### 2. From the [KDE Store](https://store.kde.org/p/2330881), manually
 
