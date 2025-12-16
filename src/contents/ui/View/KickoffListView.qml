@@ -117,6 +117,7 @@ EmptyPage {
                 Accessible.ignored: true
             }
 
+            // All Applications section header line (at the A, B, C, etc. side)
             Rectangle {
                 QQL.Layout.fillWidth: true
                 QQL.Layout.alignment: Qt.AlignVCenter

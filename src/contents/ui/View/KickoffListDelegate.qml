@@ -110,7 +110,7 @@ AbstractKickoffItemDelegate {
         active: root.isSeparator
         asynchronous: false
 
-        // replace separator line with a more subdued one
+        // Sidebar separator line above applications categories
         sourceComponent: Rectangle {
             id: separator
             color: Plasmoid.configuration.separatorLineColor

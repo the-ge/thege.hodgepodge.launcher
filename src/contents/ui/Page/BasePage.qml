@@ -77,6 +77,7 @@ FocusScope {
         }
     }
 
+    // Separator line between sidebar and main panel
     Rectangle {
         id: separator
         anchors.top: parent.top
